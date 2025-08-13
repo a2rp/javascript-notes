@@ -23,8 +23,8 @@ export default function Home() {
             <Styled.Header>JavaScript Notes</Styled.Header>
 
             <Styled.Tagline>
-                {/* 100+ topics from basics to advanced, explained clearly with runnable, in-browser examples
-                (Monaco Editor). We aim to leave nothing out. */}
+                Topics from basics to advanced, explained clearly with runnable, in-browser examples
+                (Monaco Editor).
             </Styled.Tagline>
 
             <Styled.Divider />
