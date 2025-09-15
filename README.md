@@ -1,33 +1,23 @@
-# SDE QnA Handbook
+# Javascript Notes
 
-**Theory QnA** + **Programs QnA** for SDE roles - focused on **JavaScript, React, and Node** (phase-1).  
-Built from everything I've studied and shipped; each QnA is a mini-note with clear examples and gotchas.
+## About
 
----
-
-## Live
-
--   **Site:** https://a2rp.github.io/sde-qna-handbook/
--   **About:** https://a2rp.github.io/sde-qna-handbook/about
+Concise, micro-topic notes on JavaScript—from fundamentals to internals—with a production-first mindset.
+Each topic follows a tight structure (What/Why • Core Rules • Pitfalls • Checklist • See Also) for fast recall.
+Ideal for code reviews, interviews, and daily engineering; growing into a searchable GitHub Pages site.
 
 ---
 
-## Clone & Run
+## Links
+
+-   **GitHub:** https://github.com/a2rp/javascript-notes
+-   **Live (GH Pages):** https://a2rp.github.io/javascript-notes/
+
+## Clone & Run (local)
 
 ```bash
-# clone
-git clone https://github.com/a2rp/sde-qna-handbook.git
-cd sde-qna-handbook
-
-# install deps
+git clone https://github.com/a2rp/javascript-notes.git
+cd javascript-notes
 npm install
-
-# start dev server
 npm run dev
-
-# build for production
-npm run build
-
-# preview the built app
-npm run preview
 ```
