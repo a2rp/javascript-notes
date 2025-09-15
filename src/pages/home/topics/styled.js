@@ -4,7 +4,7 @@ const border = "1px solid hsl(0 0% 100% / 0.12)";
 
 export const Styled = {
     Page: styled.article`
-        padding: 24px;
+        /* padding: 24px; */
     `,
     H1: styled.h1`
         margin: 0 0 8px;

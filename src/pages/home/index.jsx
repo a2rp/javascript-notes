@@ -13,6 +13,32 @@ import ImportExportForms from './topics/ImportExportForms'
 import DynamicImport from './topics/DynamicImport'
 import TopLevelAwait from './topics/TopLevelAwait'
 import CjsVsEsmInterop from './topics/CjsVsEsmInterop'
+import PrimitiveTypesOverview from './topics/PrimitiveTypesOverview'
+import ObjectTypeOverview from './topics/ObjectTypeOverview'
+import TypeofNuances from './topics/TypeofNuances'
+import ValueVsReference from './topics/ValueVsReference'
+import MutabilityVsImmutability from './topics/MutabilityVsImmutability'
+import FreezeSealPreventExtensions from './topics/FreezeSealPreventExtensions'
+import BoxingAndUnboxing from './topics/BoxingAndUnboxing'
+import ToPrimitive from './topics/ToPrimitive'
+import TruthyAndFalsy from './topics/TruthyAndFalsy'
+import CoercionToNumberAndString from './topics/CoercionToNumberAndString'
+import EqualityAlgorithms from './topics/EqualityAlgorithms'
+import SameValueZeroAndEdgeCases from './topics/SameValueZeroAndEdgeCases'
+import NumberLiteralsAndSeparators from './topics/NumberLiteralsAndSeparators'
+import FloatingPointPrecision from './topics/FloatingPointPrecision'
+import NumberParsing from './topics/NumberParsing'
+import NumberChecks from './topics/NumberChecks'
+import MathEssentials from './topics/MathEssentials'
+import BigIntBasics from './topics/BigIntBasics'
+import StringLiteralsAndEscapes from './topics/StringLiteralsAndEscapes'
+import TemplateLiterals from './topics/TemplateLiterals'
+import TaggedTemplates from './topics/TaggedTemplates'
+import UnicodeAndCodePoints from './topics/UnicodeAndCodePoints'
+import StringOperations from './topics/StringOperations'
+import StringIterationAndNormalization from './topics/StringIterationAndNormalization'
+import LogicalOperators from './topics/LogicalOperators'
+import NullishCoalescing from './topics/NullishCoalescing'
 
 const Home = () => {
 
@@ -53,6 +79,32 @@ const Home = () => {
                 <DynamicImport />
                 <TopLevelAwait />
                 <CjsVsEsmInterop />
+                <PrimitiveTypesOverview />
+                <ObjectTypeOverview />
+                <TypeofNuances />
+                <ValueVsReference />
+                <MutabilityVsImmutability />
+                <FreezeSealPreventExtensions />
+                <BoxingAndUnboxing />
+                <ToPrimitive />
+                <TruthyAndFalsy />
+                <CoercionToNumberAndString />
+                <EqualityAlgorithms />
+                <SameValueZeroAndEdgeCases />
+                <NumberLiteralsAndSeparators />
+                <FloatingPointPrecision />
+                <NumberParsing />
+                <NumberChecks />
+                <MathEssentials />
+                <BigIntBasics />
+                <StringLiteralsAndEscapes />
+                <TemplateLiterals />
+                <TaggedTemplates />
+                <UnicodeAndCodePoints />
+                <StringOperations />
+                <StringIterationAndNormalization />
+                <LogicalOperators />
+                <NullishCoalescing />
             </Styled.Wrapper>
         </>
     )
