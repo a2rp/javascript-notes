@@ -39,6 +39,16 @@ import StringOperations from './topics/StringOperations'
 import StringIterationAndNormalization from './topics/StringIterationAndNormalization'
 import LogicalOperators from './topics/LogicalOperators'
 import NullishCoalescing from './topics/NullishCoalescing'
+import OptionalChaining from './topics/OptionalChaining'
+import LogicalAssignmentOperators from './topics/LogicalAssignmentOperators'
+import TernaryOperator from './topics/TernaryOperator'
+import OperatorPrecedenceAndAssociativity from './topics/OperatorPrecedenceAndAssociativity'
+import ArithmeticOperators from './topics/ArithmeticOperators'
+import BitwiseOperators from './topics/BitwiseOperators'
+import UnaryOperators from './topics/UnaryOperators'
+import CommaOperator from './topics/CommaOperator'
+import SpreadAndRest from './topics/SpreadAndRest'
+import DestructuringBasics from './topics/DestructuringBasics'
 
 const Home = () => {
 
@@ -105,6 +115,16 @@ const Home = () => {
                 <StringIterationAndNormalization />
                 <LogicalOperators />
                 <NullishCoalescing />
+                <OptionalChaining />
+                <LogicalAssignmentOperators />
+                <TernaryOperator />
+                <OperatorPrecedenceAndAssociativity />
+                <ArithmeticOperators />
+                <BitwiseOperators />
+                <UnaryOperators />
+                <CommaOperator />
+                <SpreadAndRest />
+                <DestructuringBasics />
             </Styled.Wrapper>
         </>
     )
