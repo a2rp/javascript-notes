@@ -3,20 +3,24 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://a2rp.github.io/javascript-notes",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "predeploy": "npm run build && copy dist\\index.html dist\\404.html",
+        "deploy": "npx gh-pages -d dist -b gh-pages"
     },
     "dependencies": {
-        "@monaco-editor/react": "^4.7.0",
-        "gh-pages": "^6.3.0",
+        "@emotion/react": "^11.14.0",
+        "@emotion/styled": "^11.14.1",
+        "@mui/material": "^7.3.2",
+        "jsqr": "^1.4.0",
+        "qrcode": "^1.5.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-icons": "^5.5.0",
+        "react-router-dom": "^6.30.1",
         "styled-components": "^6.1.19"
     },
     "devDependencies": {

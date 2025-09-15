@@ -1,25 +1,33 @@
-# JavaScript Mastery Notes
+# SDE QnA Handbook
 
-Interactive JavaScript notes - topics from basics to advanced, explained clearly with **runnable Monaco editor** examples.  
-I treat this as a living study notebook: fast to skim for revision, deep enough to learn properly.
-
-[Live Site](https://a2rp.github.io/javascript-notes/)
+**Theory QnA** + **Programs QnA** for SDE roles - focused on **JavaScript, React, and Node** (phase-1).  
+Built from everything I've studied and shipped; each QnA is a mini-note with clear examples and gotchas.
 
 ---
 
-## Why this exists
+## Live
 
--   I wanted a **single place** to read short theory, see a **minimal example**, and **run it instantly** in the browser.
--   Focus is on **clarity, pitfalls, and patterns** I actually use.
--   Everything is built with **Vite + React + Monaco** for a smooth, VS Code–like editing experience.
+-   **Site:** https://a2rp.github.io/sde-qna-handbook/
+-   **About:** https://a2rp.github.io/sde-qna-handbook/about
 
 ---
 
-## Quick Start (Local)
+## Clone & Run
 
 ```bash
-git clone https://github.com/a2rp/javascript-notes.git
-cd javascript-notes
+# clone
+git clone https://github.com/a2rp/sde-qna-handbook.git
+cd sde-qna-handbook
+
+# install deps
 npm install
+
+# start dev server
 npm run dev
+
+# build for production
+npm run build
+
+# preview the built app
+npm run preview
 ```
