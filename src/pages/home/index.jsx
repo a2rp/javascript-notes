@@ -1,6 +1,18 @@
 import { Styled } from './styled'
+import EcmaScriptEditions from './topics/EcmaScriptEditions'
 import EngineVsRuntimeVsHost from './topics/EngineVsRuntimeVsHost'
 import WhatIsJavaScript from './topics/WhatIsJavaScript'
+import StatementsVsExpressions from './topics/StatementsVsExpressions'
+import StrictMode from './topics/StrictMode'
+import AutomaticSemicolonInsertion from './topics/AutomaticSemicolonInsertion'
+import IdentifiersAndReservedWords from './topics/IdentifiersAndReservedWords'
+import CommentsAndPragmas from './topics/CommentsAndPragmas'
+import ScriptVsModule from './topics/ScriptVsModule'
+import ModuleScopeAndLiveBindings from './topics/ModuleScopeAndLiveBindings'
+import ImportExportForms from './topics/ImportExportForms'
+import DynamicImport from './topics/DynamicImport'
+import TopLevelAwait from './topics/TopLevelAwait'
+import CjsVsEsmInterop from './topics/CjsVsEsmInterop'
 
 const Home = () => {
 
@@ -29,6 +41,18 @@ const Home = () => {
 
                 <WhatIsJavaScript />
                 <EngineVsRuntimeVsHost />
+                <EcmaScriptEditions />
+                <StrictMode />
+                <StatementsVsExpressions />
+                <AutomaticSemicolonInsertion />
+                <IdentifiersAndReservedWords />
+                <CommentsAndPragmas />
+                <ScriptVsModule />
+                <ModuleScopeAndLiveBindings />
+                <ImportExportForms />
+                <DynamicImport />
+                <TopLevelAwait />
+                <CjsVsEsmInterop />
             </Styled.Wrapper>
         </>
     )
