@@ -1,5 +1,6 @@
-import React from 'react'
 import { Styled } from './styled'
+import EngineVsRuntimeVsHost from './topics/EngineVsRuntimeVsHost'
+import WhatIsJavaScript from './topics/WhatIsJavaScript'
 
 const Home = () => {
 
@@ -25,6 +26,9 @@ const Home = () => {
                         Although Java and JavaScript are similar in name and syntax, the two languages are distinct and differ greatly in design.
                     </p>
                 </fieldset>
+
+                <WhatIsJavaScript />
+                <EngineVsRuntimeVsHost />
             </Styled.Wrapper>
         </>
     )
