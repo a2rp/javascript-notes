@@ -1,4 +1,4 @@
-import{d as n,j as e}from"./index-BI2v9MHw.js";const o=n.div`
+import{d as n,j as e}from"./index-B1SY6Gps.js";const o=n.div`
     background-color: #010409;
     color: #aaa;
     margin-top: 50px;

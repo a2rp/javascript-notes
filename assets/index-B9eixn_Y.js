@@ -1,4 +1,4 @@
-import{d as n,r as m,u as b,a as f,j as e,N as i}from"./index-BI2v9MHw.js";const o="1px solid hsl(0 0% 100% / 0.10)",j="hsl(0 0% 100% / 0.02)",s="hsl(0 0% 100% / 0.70)",p="0 0 0 3px hsl(200 80% 60% / 0.35)",t={Page:n.main`
+import{d as n,r as m,u as b,a as f,j as e,N as i}from"./index-B1SY6Gps.js";const o="1px solid hsl(0 0% 100% / 0.10)",j="hsl(0 0% 100% / 0.02)",s="hsl(0 0% 100% / 0.70)",p="0 0 0 3px hsl(200 80% 60% / 0.35)",t={Page:n.main`
         min-height: 100dvh;
         display: grid;
         place-items: center;
