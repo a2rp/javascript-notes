@@ -1,4 +1,4 @@
-import{d as n,r as g,u as m,a as b,j as e,N as s}from"./index-BrSP9hbI.js";const o="1px solid hsl(0 0% 100% / 0.10)",f="hsl(0 0% 100% / 0.02)",l="hsl(0 0% 100% / 0.70)",p="0 0 0 3px hsl(200 80% 60% / 0.35)",t={Page:n.main`
+import{d as n,r as m,u as b,a as f,j as e,N as i}from"./index-BI2v9MHw.js";const o="1px solid hsl(0 0% 100% / 0.10)",j="hsl(0 0% 100% / 0.02)",s="hsl(0 0% 100% / 0.70)",p="0 0 0 3px hsl(200 80% 60% / 0.35)",t={Page:n.main`
         min-height: 100dvh;
         display: grid;
         place-items: center;
@@ -6,7 +6,7 @@ import{d as n,r as g,u as m,a as b,j as e,N as s}from"./index-BrSP9hbI.js";const
     `,Container:n.div`
         width: min(960px, 100%);
     `,Card:n.section`
-        background: ${f};
+        background: ${j};
         border: ${o};
         border-radius: 18px;
         padding: clamp(20px, 4vw, 44px);
@@ -42,11 +42,11 @@ import{d as n,r as g,u as m,a as b,j as e,N as s}from"./index-BrSP9hbI.js";const
         font-weight: 700;
     `,Subtitle:n.p`
         margin: 0;
-        color: ${l};
+        color: ${s};
         font-size: clamp(14px, 2.4vw, 16px);
     `,PathHint:n.p`
         margin: 2px 0 10px;
-        color: ${l};
+        color: ${s};
         font-size: 13px;
 
         & > span {
@@ -126,5 +126,5 @@ import{d as n,r as g,u as m,a as b,j as e,N as s}from"./index-BrSP9hbI.js";const
     `,Small:n.p`
         margin: 8px 0 0;
         font-size: 12px;
-        color: ${l};
-    `},w=({homePath:r="/",indexPath:j="/",enableSearch:c=!0})=>{const[a,x]=g.useState(""),h=m(),d=b(),u=i=>{i.preventDefault(),a.trim()&&d(`/search?q=${encodeURIComponent(a.trim())}`)};return e.jsx(t.Page,{children:e.jsx(t.Container,{children:e.jsxs(t.Card,{role:"region","aria-labelledby":"nf-title",children:[e.jsx(t.Code,{"aria-hidden":!0,children:"404"}),e.jsx(t.Title,{id:"nf-title",children:"Route not found"}),e.jsx(t.Subtitle,{children:"This URL doesn't match any current pages. It may be outdated, renamed, or in a private draft."}),e.jsxs(t.PathHint,{children:[e.jsx("span",{children:"Requested:"})," ",e.jsx("code",{children:h.pathname})]}),c&&e.jsxs(t.SearchForm,{onSubmit:u,role:"search","aria-label":"Search notes",children:[e.jsx(t.Input,{type:"search",placeholder:"Search notes, topics, or keywords…",value:a,onChange:i=>x(i.target.value),"aria-label":"Search query",autoComplete:"off"}),e.jsx(t.Button,{as:s,to:r,children:"Search"})]}),e.jsxs(t.Actions,{children:[e.jsx(t.Button,{as:s,to:r,children:"Go to Home"}),e.jsx(t.Button,{as:s,to:r,children:"Browse All Notes"}),e.jsx(t.Button,{as:"button",type:"button",onClick:()=>d(-1),children:"Go Back"})]})]})})})};export{w as default};
+        color: ${s};
+    `},w=({homePath:l="/",indexPath:c="/",enableSearch:x=!0})=>{const[r,h]=m.useState(""),u=b(),d=f(),g=a=>{a.preventDefault(),r.trim()&&d(`/search?q=${encodeURIComponent(r.trim())}`)};return e.jsx(t.Page,{children:e.jsx(t.Container,{children:e.jsxs(t.Card,{role:"region","aria-labelledby":"nf-title",children:[e.jsx(t.Code,{"aria-hidden":!0,children:"404"}),e.jsx(t.Title,{id:"nf-title",children:"Route not found"}),e.jsx(t.Subtitle,{children:"This URL doesn't match any current pages. It may be outdated, renamed, or in a private draft."}),e.jsxs(t.PathHint,{children:[e.jsx("span",{children:"Requested:"})," ",e.jsx("code",{children:u.pathname})]}),x&&e.jsxs(t.SearchForm,{onSubmit:g,role:"search","aria-label":"Search notes",children:[e.jsx(t.Input,{type:"search",placeholder:"Search notes, topics, or keywords…",value:r,onChange:a=>h(a.target.value),"aria-label":"Search query",autoComplete:"off"}),e.jsx(t.Button,{as:i,to:l,children:"Search"})]}),e.jsxs(t.Actions,{children:[e.jsx(t.Button,{as:i,to:l,children:"Go to Home"}),e.jsx(t.Button,{as:i,to:c,children:"Browse All Notes"}),e.jsx(t.Button,{as:"button",type:"button",onClick:()=>d(-1),children:"Go Back"})]})]})})})};export{w as default};
