@@ -41,14 +41,14 @@ const TypeofNuances = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — The <code>null</code> quirk</Styled.H3>
+                <Styled.H3>Example 1 - The <code>null</code> quirk</Styled.H3>
                 <Styled.Code>{`console.log(typeof null); // "object"  <-- historical bug
 console.log(null === null);     // true (use direct comparison)
 console.log(Object.prototype.toString.call(null)); // "[object Null]"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Functions (incl. arrows, async, generators)</Styled.H3>
+                <Styled.H3>Example 2 - Functions (incl. arrows, async, generators)</Styled.H3>
                 <Styled.Code>{`function f() {}
 const g = () => {};
 async function h() {}
@@ -61,7 +61,7 @@ console.log(typeof gen); // "function"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Classes report <code>"function"</code></Styled.H3>
+                <Styled.H3>Example 3 - Classes report <code>"function"</code></Styled.H3>
                 <Styled.Code>{`class C { static s(){} m(){} }
 console.log(typeof C); // "function"
 // But calling without 'new' throws:
@@ -69,7 +69,7 @@ console.log(typeof C); // "function"
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Symbols</Styled.H3>
+                <Styled.H3>Example 4 - Symbols</Styled.H3>
                 <Styled.Code>{`const s = Symbol("id");
 console.log(typeof s);              // "symbol"
 console.log(typeof Symbol.iterator); // "symbol"
@@ -83,7 +83,7 @@ console.log(typeof w);              // "object" (a Symbol wrapper object)`}</Sty
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Arrays, dates, regexps are still <code>"object"</code></Styled.H3>
+                <Styled.H3>Example 5 - Arrays, dates, regexps are still <code>"object"</code></Styled.H3>
                 <Styled.Code>{`console.log(typeof [1,2,3]);          // "object"
 console.log(typeof new Date());       // "object"
 console.log(typeof /abc/);            // "object"
@@ -93,7 +93,7 @@ console.log(Object.prototype.toString.call(new Date())); // "[object Date]"`}</S
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Numbers: NaN, Infinity, -0</Styled.H3>
+                <Styled.H3>Example 6 - Numbers: NaN, Infinity, -0</Styled.H3>
                 <Styled.Code>{`console.log(typeof NaN);      // "number"
 console.log(typeof Infinity); // "number"
 console.log(typeof -0);       // "number"
@@ -101,13 +101,13 @@ console.log(Object.is(+0, -0)); // false (distinct signs)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — BigInt</Styled.H3>
+                <Styled.H3>Example 7 - BigInt</Styled.H3>
                 <Styled.Code>{`console.log(typeof 10n);           // "bigint"
 console.log(typeof BigInt(10));   // "bigint"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Safe checks for undeclared variables</Styled.H3>
+                <Styled.H3>Example 8 - Safe checks for undeclared variables</Styled.H3>
                 <Styled.Code>{`// console.log(notDeclared); // ❌ ReferenceError
 console.log(typeof notDeclared);   // "undefined" (safe)
 let x;
@@ -115,7 +115,7 @@ console.log(typeof x);             // "undefined"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Callable Proxy still reports <code>"function"</code></Styled.H3>
+                <Styled.H3>Example 9 - Callable Proxy still reports <code>"function"</code></Styled.H3>
                 <Styled.Code>{`const target = () => "ok";
 const prox = new Proxy(target, {});
 console.log(typeof prox); // "function"
@@ -123,7 +123,7 @@ console.log(prox());      // "ok"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Module namespace objects & <code>import.meta</code></Styled.H3>
+                <Styled.H3>Example 10 - Module namespace objects & <code>import.meta</code></Styled.H3>
                 <Styled.Code>{`// In modules:
 // const ns = await import('./some-module.js');
 // console.log(typeof ns);      // "object" (module namespace is an exotic object)
@@ -131,7 +131,7 @@ console.log(prox());      // "ok"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 11 — Host oddity: <code>document.all</code> (browser)</Styled.H3>
+                <Styled.H3>Example 11 - Host oddity: <code>document.all</code> (browser)</Styled.H3>
                 <Styled.Code>{`// In browsers (for legacy web-compat):
 // typeof document.all === "undefined"  → true
 // Yet Boolean(document.all) === false and it's also loosely equal to undefined/null.
@@ -139,7 +139,7 @@ console.log(prox());      // "ok"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 12 — Practical guard patterns</Styled.H3>
+                <Styled.H3>Example 12 - Practical guard patterns</Styled.H3>
                 <Styled.Code>{`// 1) Distinguish null from objects:
 const isObject = v => v !== null && typeof v === "object";
 

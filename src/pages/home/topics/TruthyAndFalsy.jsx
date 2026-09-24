@@ -47,7 +47,7 @@ const TruthyAndFalsy = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Converting to boolean</Styled.H3>
+                <Styled.H3>Example 1 - Converting to boolean</Styled.H3>
                 <Styled.Code>{`console.log(Boolean(false));   // false
 console.log(Boolean(0));       // false
 console.log(Boolean(""));      // false
@@ -60,7 +60,7 @@ console.log(Boolean(NaN));     // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Objects are truthy (even empty ones)</Styled.H3>
+                <Styled.H3>Example 2 - Objects are truthy (even empty ones)</Styled.H3>
                 <Styled.Code>{`if ([]) { console.log("[] is truthy"); }
 if ({}) { console.log("{} is truthy"); }
 if (function(){}) { console.log("functions are truthy"); }
@@ -72,7 +72,7 @@ if (function(){}) { console.log("functions are truthy"); }
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Wrapper objects vs primitives</Styled.H3>
+                <Styled.H3>Example 3 - Wrapper objects vs primitives</Styled.H3>
                 <Styled.Code>{`if (new Boolean(false)) {
   console.log("Runs, because objects are truthy"); // runs
 }
@@ -80,7 +80,7 @@ console.log(Boolean(new Boolean(false))); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — <code>||</code> returns first truthy; <code>&amp;&amp;</code> first falsy</Styled.H3>
+                <Styled.H3>Example 4 - <code>||</code> returns first truthy; <code>&amp;&amp;</code> first falsy</Styled.H3>
                 <Styled.Code>{`console.log("" || "fallback");     // "fallback"  ("" is falsy)
 console.log("hi" || "fallback");   // "hi"
 
@@ -94,7 +94,7 @@ console.log(a, b);                 // 10 0`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — <code>??</code> vs <code>||</code> for defaults</Styled.H3>
+                <Styled.H3>Example 5 - <code>??</code> vs <code>||</code> for defaults</Styled.H3>
                 <Styled.Code>{`const input = "";
 const usingOr  = input || "default";   // "default" ("" is falsy)
 const usingNN  = input ?? "default";   // ""        (non-nullish, so keep "")
@@ -102,14 +102,14 @@ console.log(usingOr, usingNN);         // "default" ""`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — BigInt zero is falsy; other BigInts truthy</Styled.H3>
+                <Styled.H3>Example 6 - BigInt zero is falsy; other BigInts truthy</Styled.H3>
                 <Styled.Code>{`console.log(Boolean(0n));     // false
 console.log(Boolean(12n));    // true
 console.log(0n || 99n);       // 99n`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Numbers: <code>-0</code> and <code>NaN</code> are falsy</Styled.H3>
+                <Styled.H3>Example 7 - Numbers: <code>-0</code> and <code>NaN</code> are falsy</Styled.H3>
                 <Styled.Code>{`console.log(Boolean(-0));     // false
 console.log(Boolean(NaN));    // false
 console.log(-0 || 1);         // 1
@@ -117,7 +117,7 @@ console.log(NaN || 1);        // 1`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Common pitfalls</Styled.H3>
+                <Styled.H3>Example 8 - Common pitfalls</Styled.H3>
                 <Styled.Code>{`if ("0") { console.log("string '0' is truthy"); } // runs
 if (" ")  { console.log("space is truthy"); }           // runs
 if ([])   { console.log("[] is truthy but Number([]) == 0"); } // runs
@@ -125,21 +125,21 @@ console.log(Number([])); // 0 (different coercion, not ToBoolean)`}</Styled.Code
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Filtering truthy items</Styled.H3>
+                <Styled.H3>Example 9 - Filtering truthy items</Styled.H3>
                 <Styled.Code>{`const mixed = [0, 1, "", "hi", null, undefined, "ok", NaN, 2];
 const truthies = mixed.filter(Boolean);
 console.log(truthies); // [1, "hi", "ok", 2]`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Browser quirk: <code>document.all</code> is falsy</Styled.H3>
+                <Styled.H3>Example 10 - Browser quirk: <code>document.all</code> is falsy</Styled.H3>
                 <Styled.Code>{`// In browsers for legacy reasons:
 console.log(Boolean(document.all)); // false
 // Treat this as a historical special case; avoid using it in logic.`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 11 — Force real booleans with <code>!!</code></Styled.H3>
+                <Styled.H3>Example 11 - Force real booleans with <code>!!</code></Styled.H3>
                 <Styled.Code>{`const v = "hello";
 const bool1 = Boolean(v);
 const bool2 = !!v;

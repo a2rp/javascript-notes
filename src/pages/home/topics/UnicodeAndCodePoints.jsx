@@ -49,7 +49,7 @@ const UnicodeAndCodePoints = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Code units vs code points</Styled.H3>
+                <Styled.H3>Example 1 - Code units vs code points</Styled.H3>
                 <Styled.Code>{`const A = "A";          // U+0041 (BMP)
 const face = "😀";    // U+1F600 (non-BMP, surrogate pair)
 
@@ -71,7 +71,7 @@ console.log(face[1]); // "\uDE00" (half)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Creating characters</Styled.H3>
+                <Styled.H3>Example 2 - Creating characters</Styled.H3>
                 <Styled.Code>{`// BMP via \\uXXXX
 const snow = "\\u2744"; // "❄"
 console.log(snow); // "❄"
@@ -86,7 +86,7 @@ console.log(String.fromCodePoint(0x1F680)); // "🚀" (code point)`}</Styled.Cod
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Iterating &amp; counting by code points</Styled.H3>
+                <Styled.H3>Example 3 - Iterating &amp; counting by code points</Styled.H3>
                 <Styled.Code>{`const str = "A😀B";
 for (const ch of str) {
   console.log(ch);
@@ -105,7 +105,7 @@ console.log(str.at(-2));    // second half of 😀`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Combining marks &amp; normalization (NFC/NFD)</Styled.H3>
+                <Styled.H3>Example 4 - Combining marks &amp; normalization (NFC/NFD)</Styled.H3>
                 <Styled.Code>{`// "ñ" as composed vs decomposed
 const nTilde1 = "\\u00F1";          // "ñ" (NFC single code point)
 const nTilde2 = "n\\u0303";         // "n" + COMBINING TILDE (NFD)
@@ -122,7 +122,7 @@ console.log(nTilde2); // "ñ"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Grapheme clusters (emoji sequences)</Styled.H3>
+                <Styled.H3>Example 5 - Grapheme clusters (emoji sequences)</Styled.H3>
                 <Styled.Code>{`// Some visible characters are sequences of multiple code points
 const family = "👨‍👩‍👧‍👦"; // ZWJ sequence (multiple code points)
 const flagIN = "🇮🇳";        // two regional indicators
@@ -139,7 +139,7 @@ if (typeof Intl !== "undefined" && Intl.Segmenter) {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Regex with Unicode mode &amp; properties</Styled.H3>
+                <Styled.H3>Example 6 - Regex with Unicode mode &amp; properties</Styled.H3>
                 <Styled.Code>{`// Without 'u', '.' matches code units (splits surrogate pair)
 console.log("😀".match(/./g));   // ["\\uD83D","\\uDE00"] (two halves)
 
@@ -155,7 +155,7 @@ console.log(/\\u{1F680}/u.test("🚀")); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Safe slicing by code points</Styled.H3>
+                <Styled.H3>Example 7 - Safe slicing by code points</Styled.H3>
                 <Styled.Code>{`const s = "Hi 😀 World";
 const cp = [...s];        // array of code points (grapheme-ish for simple cases)
 console.log(cp.slice(0, 4).join("")); // "Hi 😀"

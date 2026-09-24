@@ -5,7 +5,7 @@ import { Styled } from "./styled";
 const ObjectTypeOverview = () => {
     return (
         <Styled.Page>
-            <Styled.H1>Object type — overview</Styled.H1>
+            <Styled.H1>Object type - overview</Styled.H1>
 
             <Styled.Lead>
                 Objects are dynamic collections of key–value pairs with prototype-based
@@ -43,13 +43,13 @@ const ObjectTypeOverview = () => {
                     </li>
                     <li>
                         <code>typeof obj</code> is <code>"object"</code> (for functions,{" "}
-                        <code>"function"</code>—a historical special case, but functions are still objects).
+                        <code>"function"</code>-a historical special case, but functions are still objects).
                     </li>
                 </Styled.UL>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Creating objects</Styled.H3>
+                <Styled.H3>Example 1 - Creating objects</Styled.H3>
                 <Styled.Code>{`const user = { name: "Ash", city: "Bengaluru" }; // literal
 const anon = Object.create(null); // no prototype (pure dictionary)
 const base = { kind: "base" };
@@ -61,7 +61,7 @@ console.log(child.kind);           // "base" (found via prototype)`}</Styled.Cod
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Keys: string vs symbol</Styled.H3>
+                <Styled.H3>Example 2 - Keys: string vs symbol</Styled.H3>
                 <Styled.Code>{`const s = Symbol("id");
 const obj = { regular: 1, "1": "one" };
 obj[s] = 99;
@@ -73,7 +73,7 @@ console.log(obj[1]);               // "one" (numeric literal → "1")`}</Styled.
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Property access & computed names</Styled.H3>
+                <Styled.H3>Example 3 - Property access & computed names</Styled.H3>
                 <Styled.Code>{`const key = "score";
 const o = { ["first"+"Name"]: "Ada", [key]: 42 };
 console.log(o.firstName); // "Ada"
@@ -82,7 +82,7 @@ console.log(o.score);     // 42`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Identity vs structure</Styled.H3>
+                <Styled.H3>Example 4 - Identity vs structure</Styled.H3>
                 <Styled.Code>{`const a = { x: 1 };
 const b = { x: 1 };
 const c = a;
@@ -93,7 +93,7 @@ console.log(JSON.stringify(a) === JSON.stringify(b)); // true (same structure, b
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Reference semantics</Styled.H3>
+                <Styled.H3>Example 5 - Reference semantics</Styled.H3>
                 <Styled.Code>{`function touch(p) { p.hit = true; }
 const obj = {};
 touch(obj);
@@ -106,7 +106,7 @@ console.log(x.n); // 2 (both names point to the same object)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Descriptors (data vs accessor)</Styled.H3>
+                <Styled.H3>Example 6 - Descriptors (data vs accessor)</Styled.H3>
                 <Styled.Code>{`const box = {};
 Object.defineProperty(box, "locked", {
   value: true, writable: false, enumerable: true, configurable: false
@@ -125,7 +125,7 @@ console.log(box.locked, box.value); // true 10`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Prototype lookup & shadowing</Styled.H3>
+                <Styled.H3>Example 7 - Prototype lookup & shadowing</Styled.H3>
                 <Styled.Code>{`const proto = { greet(){ return "hi"; } };
 const inst = Object.create(proto);
 console.log(inst.greet()); // "hi"  (found on prototype)
@@ -135,7 +135,7 @@ console.log(inst.greet()); // "hello"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Arrays & functions are objects</Styled.H3>
+                <Styled.H3>Example 8 - Arrays & functions are objects</Styled.H3>
                 <Styled.Code>{`const arr = [10, 20];
 arr.extra = "ok";
 console.log(typeof arr, Array.isArray(arr)); // "object" true
@@ -148,7 +148,7 @@ console.log(f.meta);   // "info"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Cloning (shallow) vs deep</Styled.H3>
+                <Styled.H3>Example 9 - Cloning (shallow) vs deep</Styled.H3>
                 <Styled.Code>{`const state = { a: 1, nested: { k: 9 } };
 const shallow1 = { ...state };
 const shallow2 = Object.assign({}, state);
@@ -164,7 +164,7 @@ console.log(deep.nested === state.nested);     // false (different object)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Deleting & existence checks</Styled.H3>
+                <Styled.H3>Example 10 - Deleting & existence checks</Styled.H3>
                 <Styled.Code>{`const settings = { theme: "dark" };
 console.log("theme" in settings); // true
 console.log(settings.hasOwnProperty("theme")); // true (own only)
@@ -175,7 +175,7 @@ console.log("theme" in settings); // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 11 — Freezing & extensibility (preview)</Styled.H3>
+                <Styled.H3>Example 11 - Freezing & extensibility (preview)</Styled.H3>
                 <Styled.Code>{`const cfg = { a: 1 };
 console.log(Object.isExtensible(cfg)); // true
 Object.preventExtensions(cfg);
@@ -187,7 +187,7 @@ console.log(Object.isFrozen(cfg)); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 12 — Safe dictionary objects</Styled.H3>
+                <Styled.H3>Example 12 - Safe dictionary objects</Styled.H3>
                 <Styled.Code>{`// Object.create(null) avoids prototype collisions with keys like "constructor"
 const dict = Object.create(null);
 dict["__proto__"] = "safe";

@@ -47,13 +47,13 @@ const FloatingPointPrecision = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Classic rounding surprise</Styled.H3>
+                <Styled.H3>Example 1 - Classic rounding surprise</Styled.H3>
                 <Styled.Code>{`console.log(0.1 + 0.2);          // 0.30000000000000004
 console.log((0.1 + 0.2) === 0.3); // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Compare with a tolerance (EPSILON)</Styled.H3>
+                <Styled.H3>Example 2 - Compare with a tolerance (EPSILON)</Styled.H3>
                 <Styled.Code>{`const nearlyEqual = (a, b, tol = Number.EPSILON) =>
   Math.abs(a - b) <= tol * Math.max(1, Math.abs(a), Math.abs(b));
 
@@ -61,7 +61,7 @@ console.log(nearlyEqual(0.1 + 0.2, 0.3)); // true (within EPSILON-scaled toleran
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Safe integer range and bit limits</Styled.H3>
+                <Styled.H3>Example 3 - Safe integer range and bit limits</Styled.H3>
                 <Styled.Code>{`console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991 (2^53 - 1)
 console.log(Number.MIN_SAFE_INTEGER); // -9007199254740991
 
@@ -72,14 +72,14 @@ console.log(two53 + 3 === two53 + 4); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Non-associativity</Styled.H3>
+                <Styled.H3>Example 4 - Non-associativity</Styled.H3>
                 <Styled.Code>{`const a = (0.1 + 0.2) + 0.3;  // 0.6000000000000001
 const b = 0.1 + (0.2 + 0.3);  // 0.6
 console.log(a === b);         // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Underflow, overflow, subnormals</Styled.H3>
+                <Styled.H3>Example 5 - Underflow, overflow, subnormals</Styled.H3>
                 <Styled.Code>{`console.log(Number.MAX_VALUE * 2);   // Infinity (overflow)
 console.log(Number.MIN_VALUE / 2);   // 0 (underflow to zero)
 console.log(Number.MIN_VALUE);       // ~5e-324 (smallest positive subnormal)
@@ -87,7 +87,7 @@ console.log(1e-324);                 // 0  (too small to represent)`}</Styled.Co
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — <code>NaN</code> rules</Styled.H3>
+                <Styled.H3>Example 6 - <code>NaN</code> rules</Styled.H3>
                 <Styled.Code>{`console.log(NaN === NaN);            // false
 console.log(Number.isNaN(NaN));       // true
 console.log(isNaN("foo"));            // true  (coerces → NaN)  ← prefer Number.isNaN
@@ -99,7 +99,7 @@ console.log(0 * Infinity);            // NaN`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — <code>Infinity</code> rules</Styled.H3>
+                <Styled.H3>Example 7 - <code>Infinity</code> rules</Styled.H3>
                 <Styled.Code>{`console.log(1 / 0);         // Infinity
 console.log(-1 / 0);        // -Infinity
 console.log(Infinity + 1);  // Infinity
@@ -108,14 +108,14 @@ console.log(-1 / Infinity); // -0 (signed zero)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Signed zero matters</Styled.H3>
+                <Styled.H3>Example 8 - Signed zero matters</Styled.H3>
                 <Styled.Code>{`console.log(+0 === -0);         // true (strict equality)
 console.log(Object.is(+0, -0));  // false (SameValue distinguishes)
 console.log(1 / +0, 1 / -0);     // Infinity -Infinity (different signs)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Rounding & formatting numbers</Styled.H3>
+                <Styled.H3>Example 9 - Rounding & formatting numbers</Styled.H3>
                 <Styled.Code>{`console.log(Math.round(2.5));   // 3
 console.log(Math.floor(-1.2));  // -2
 console.log(Math.trunc(-1.2));  // -1
@@ -130,7 +130,7 @@ console.log(add(1999, 1) / 100); // 20.0`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Summation error & Kahan compensation (brief)</Styled.H3>
+                <Styled.H3>Example 10 - Summation error & Kahan compensation (brief)</Styled.H3>
                 <Styled.Code>{`// Naive sum can accumulate error:
 const xs = Array(1000).fill(0.1);
 const naive = xs.reduce((s, x) => s + x, 0);
@@ -151,7 +151,7 @@ console.log(kahanSum(xs)); // 100`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 11 — Parsing & literals vs conversion</Styled.H3>
+                <Styled.H3>Example 11 - Parsing & literals vs conversion</Styled.H3>
                 <Styled.Code>{`console.log(parseFloat("3.14rad")); // 3.14 (stops at 'r')
 console.log(Number("3.14rad"));   // NaN  (whole string must be numeric)
 console.log(Number("Infinity"));   // Infinity
@@ -159,7 +159,7 @@ console.log(Number("-0"));         // -0 (signed zero preserved)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 12 — BigInt for precise integers</Styled.H3>
+                <Styled.H3>Example 12 - BigInt for precise integers</Styled.H3>
                 <Styled.Code>{`// For integers beyond 2^53-1, use BigInt (no decimals):
 const big = 9007199254740993n; // > MAX_SAFE_INTEGER
 console.log(big + 2n);         // 9007199254740995n
@@ -167,7 +167,7 @@ console.log(big + 2n);         // 9007199254740995n
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 13 — Practical guidance</Styled.H3>
+                <Styled.H3>Example 13 - Practical guidance</Styled.H3>
                 <Styled.UL>
                     <li>Use <code>Number.isNaN</code> (not global <code>isNaN</code>) to check NaN without coercion.</li>
                     <li>Compare floats with a tolerance (<code>Number.EPSILON</code> scaled to magnitude).</li>

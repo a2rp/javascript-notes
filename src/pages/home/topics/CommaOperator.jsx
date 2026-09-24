@@ -25,7 +25,7 @@ const CommaOperator = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Basics: result is the last expression</Styled.H3>
+                <Styled.H3>Example 1 - Basics: result is the last expression</Styled.H3>
                 <Styled.Code>{`console.log( (1, 2, 3) ); // 3
 
 // Contrast with function arguments (three separate args, not a comma operator result):
@@ -33,7 +33,7 @@ console.log(1, 2, 3); // prints 1 2 3 as three arguments`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Evaluation order and side effects</Styled.H3>
+                <Styled.H3>Example 2 - Evaluation order and side effects</Styled.H3>
                 <Styled.Code>{`let a = 0, b = 0;
 const out = (a = 1, b = a + 2, a + b);
 console.log(a, b, out);
@@ -41,7 +41,7 @@ console.log(a, b, out);
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Precedence: use parentheses</Styled.H3>
+                <Styled.H3>Example 3 - Precedence: use parentheses</Styled.H3>
                 <Styled.Code>{`// Comma has the lowest precedence; without parentheses it splits expressions.
 let x = 1, y = 2;
 const r1 = (x += 1, y += 2, x + y);
@@ -57,7 +57,7 @@ console.log(r2); // 99 (result is last expression)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — In conditions (only the last value decides)</Styled.H3>
+                <Styled.H3>Example 4 - In conditions (only the last value decides)</Styled.H3>
                 <Styled.Code>{`let i = 0, j = 0;
 if ((i++, j++, j > i)) {
   console.log("j greater"); // j++ runs after i++; then j>i is tested
@@ -68,7 +68,7 @@ console.log(i, j); // 1 1`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Arrow functions: sequence then return last</Styled.H3>
+                <Styled.H3>Example 5 - Arrow functions: sequence then return last</Styled.H3>
                 <Styled.Code>{`const nextDouble = (n) => (n++, n * 2);
 console.log(nextDouble(3)); // 8  (n++ executed, then n*2 returned)
 
@@ -77,7 +77,7 @@ console.log(sqLog(5)); // logs, then returns 25`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — <code>for</code> loop: multiple init/update expressions</Styled.H3>
+                <Styled.H3>Example 6 - <code>for</code> loop: multiple init/update expressions</Styled.H3>
                 <Styled.Code>{`for (let i = 0, j = 5; i < j; i++, j--) {
   // i increments, j decrements each iteration
   console.log(i, j);
@@ -86,7 +86,7 @@ console.log(sqLog(5)); // logs, then returns 25`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Map/filter with a tiny side effect, then value</Styled.H3>
+                <Styled.H3>Example 7 - Map/filter with a tiny side effect, then value</Styled.H3>
                 <Styled.Code>{`const logs = [];
 const xs = [1,2,3];
 const squares = xs.map(x => (logs.push(x), x * x));
@@ -95,7 +95,7 @@ console.log(logs);    // [1,2,3] (side effect happened first)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Returning last while discarding earlier results</Styled.H3>
+                <Styled.H3>Example 8 - Returning last while discarding earlier results</Styled.H3>
                 <Styled.Code>{`function compute() {
   // do two calls, return only the last result
   return (doSideEffect(), heavyCalc());
@@ -106,14 +106,14 @@ console.log(compute()); // 42`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — With <code>delete</code>, <code>void</code>, etc.</Styled.H3>
+                <Styled.H3>Example 9 - With <code>delete</code>, <code>void</code>, etc.</Styled.H3>
                 <Styled.Code>{`const obj = { flag: true };
 const result = (delete obj.flag, void 0, "done");
 console.log("flag" in obj, result); // false "done"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Compare with array/destructuring commas (not the operator)</Styled.H3>
+                <Styled.H3>Example 10 - Compare with array/destructuring commas (not the operator)</Styled.H3>
                 <Styled.Code>{`// Array/param commas are syntax separators, not the comma operator:
 const arr = [ (1, 2, 3) ]; // array with a single element: 3 (comma operator inside parentheses)
 console.log(arr); // [3]

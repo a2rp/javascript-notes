@@ -17,14 +17,14 @@ const ToPrimitive = () => {
                 <Styled.H3>Definition</Styled.H3>
                 <Styled.UL>
                     <li><strong>Order of preference:</strong> If present, call <code>obj[Symbol.toPrimitive](hint)</code>. Otherwise try <code>valueOf()</code>, then <code>toString()</code> until a primitive is produced.</li>
-                    <li><strong>Hints:</strong> The engine passes a <em>hint</em> — <code>"number"</code>, <code>"string"</code>, or <code>"default"</code>. Most objects treat <code>"default"</code> like <code>"number"</code>, but <code>Date</code> prefers <code>"string"</code>.</li>
+                    <li><strong>Hints:</strong> The engine passes a <em>hint</em> - <code>"number"</code>, <code>"string"</code>, or <code>"default"</code>. Most objects treat <code>"default"</code> like <code>"number"</code>, but <code>Date</code> prefers <code>"string"</code>.</li>
                     <li><strong>Failure:</strong> If none of the methods return a primitive, the coercion throws <code>TypeError</code> when a primitive is required.</li>
                     <li><strong>Common triggers:</strong> arithmetic (<code>+</code> (numeric side), <code>-</code>, <code>*</code>, <code>/</code>, unary <code>+</code>), string contexts (<code>String(x)</code>, template literals), loose equality (<code>obj == prim</code>), relational (<code>&lt;</code>, <code>&gt;</code>), and property keys via <em>ToPropertyKey</em>.</li>
                 </Styled.UL>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Resolution order &amp; the hint</Styled.H3>
+                <Styled.H3>Example 1 - Resolution order &amp; the hint</Styled.H3>
                 <Styled.Code>{`const obj = {
   [Symbol.toPrimitive](hint) {
     // hint is "number" | "string" | "default"
@@ -42,7 +42,7 @@ console.log(obj + 1);        // 101     (default hint → 100, then + 1 → 101)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Without <code>Symbol.toPrimitive</code>: valueOf then toString</Styled.H3>
+                <Styled.H3>Example 2 - Without <code>Symbol.toPrimitive</code>: valueOf then toString</Styled.H3>
                 <Styled.Code>{`const noSym = {
   valueOf() { return 7; },      // primitive → used first for number/default hints
   toString() { return "seven"; }
@@ -53,7 +53,7 @@ console.log(String(noSym));  // "seven" (string hint → toString())`}</Styled.C
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Date prefers string for "default"</Styled.H3>
+                <Styled.H3>Example 3 - Date prefers string for "default"</Styled.H3>
                 <Styled.Code>{`const d = new Date("2024-01-02T00:00:00Z");
 console.log(String(d)); // e.g., "Tue Jan 02 2024 ..." (string hint)
 console.log(d + "");    // same as above (default hint behaves like string for Date)
@@ -61,7 +61,7 @@ console.log(+d);        // 1704153600000  (number hint → timestamp in ms)`}</S
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Failure to produce a primitive throws</Styled.H3>
+                <Styled.H3>Example 4 - Failure to produce a primitive throws</Styled.H3>
                 <Styled.Code>{`const bad = {
   valueOf(){ return {}; },   // not primitive
   toString(){ return {}; }   // not primitive
@@ -74,7 +74,7 @@ try {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Operators that trigger ToPrimitive</Styled.H3>
+                <Styled.H3>Example 5 - Operators that trigger ToPrimitive</Styled.H3>
                 <Styled.Code>{`const box = { valueOf(){ return 5; }, toString(){ return "five"; } };
 
 console.log(1 + box);     // 6    (default/number hint)
@@ -85,7 +85,7 @@ console.log(box == "5");  // true (loose eq: object coerces with default hint)`}
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — The <code>+</code> operator: string vs numeric</Styled.H3>
+                <Styled.H3>Example 6 - The <code>+</code> operator: string vs numeric</Styled.H3>
                 <Styled.Code>{`const a = { toString(){ return "A"; }, valueOf(){ return 1; } };
 const b = { toString(){ return "B"; }, valueOf(){ return 2; } };
 
@@ -95,7 +95,7 @@ console.log("" + a + b); // "AB"    (once string context starts, both ToString)`
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Property keys use ToPropertyKey (string-ish)</Styled.H3>
+                <Styled.H3>Example 7 - Property keys use ToPropertyKey (string-ish)</Styled.H3>
                 <Styled.Code>{`const keyObj = { toString(){ return "id"; } };
 const o = {};
 o[keyObj] = 123;                 // key becomes "id"
@@ -109,7 +109,7 @@ console.log(Object.getOwnPropertySymbols(o2).length > 0); // true`}</Styled.Code
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Custom formatting via <code>Symbol.toPrimitive</code></Styled.H3>
+                <Styled.H3>Example 8 - Custom formatting via <code>Symbol.toPrimitive</code></Styled.H3>
                 <Styled.Code>{`const money = {
   amount: 2500,
   currency: "INR",
@@ -123,14 +123,14 @@ console.log(money + 500);   // 3000`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Wrappers unbox via <code>valueOf()</code></Styled.H3>
+                <Styled.H3>Example 9 - Wrappers unbox via <code>valueOf()</code></Styled.H3>
                 <Styled.Code>{`console.log(+new Number(4));   // 4   (valueOf → 4)
 console.log("" + new String("hi")); // "hi" (toString)
 console.log(Boolean(new Boolean(false))); // true (object truthy; unboxing differs from truthiness)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Practical guard patterns</Styled.H3>
+                <Styled.H3>Example 10 - Practical guard patterns</Styled.H3>
                 <Styled.UL>
                     <li>Prefer defining <code>Symbol.toPrimitive</code> on custom numeric/string-like objects for clarity.</li>
                     <li>Ensure your conversion methods return a <em>primitive</em> (number/string/bigint/symbol/boolean).</li>

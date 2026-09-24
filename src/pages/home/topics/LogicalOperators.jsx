@@ -9,7 +9,7 @@ const LogicalOperators = () => {
 
             <Styled.Lead>
                 We use logical operators for control flow and value selection. In JavaScript,
-                <code>&amp;&amp;</code> and <code>||</code> don’t force boolean results — they
+                <code>&amp;&amp;</code> and <code>||</code> don’t force boolean results - they
                 return one of the original operands after applying truthiness rules and
                 short-circuiting. <code>!</code> negates after converting with ToBoolean.
             </Styled.Lead>
@@ -38,7 +38,7 @@ const LogicalOperators = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Basic behavior &amp; returned operand</Styled.H3>
+                <Styled.H3>Example 1 - Basic behavior &amp; returned operand</Styled.H3>
                 <Styled.Code>{`console.log(true && "ok");    // "ok"   (first truthy -> returns second)
 console.log(false && "ok");   // false  (first falsy -> returns first)
 console.log("hi" || "bye");   // "hi"   (first truthy -> returns first)
@@ -49,7 +49,7 @@ console.log(!!"text");        // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Short-circuit evaluation order</Styled.H3>
+                <Styled.H3>Example 2 - Short-circuit evaluation order</Styled.H3>
                 <Styled.Code>{`const L = (v) => (console.log("L"), v);
 const R = (v) => (console.log("R"), v);
 
@@ -75,7 +75,7 @@ R
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Conditional execution with <code>&amp;&amp;</code></Styled.H3>
+                <Styled.H3>Example 3 - Conditional execution with <code>&amp;&amp;</code></Styled.H3>
                 <Styled.Code>{`const isLoggedIn = true;
 isLoggedIn && console.log("Show dashboard"); // prints
 
@@ -84,7 +84,7 @@ hasToken && console.log("This won't print"); // "" is falsy`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Defaulting with <code>||</code> (falsy pitfall)</Styled.H3>
+                <Styled.H3>Example 4 - Defaulting with <code>||</code> (falsy pitfall)</Styled.H3>
                 <Styled.Code>{`const page = 0;
 const p1 = page || 1;
 console.log(p1); // 1 (0 is falsy, so || falls back)
@@ -94,7 +94,7 @@ console.log(p1); // 1 (0 is falsy, so || falls back)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Chaining</Styled.H3>
+                <Styled.H3>Example 5 - Chaining</Styled.H3>
                 <Styled.Code>{`// && returns the first falsy, else the last
 console.log(1 && "a" && 0 && "b"); // 0
 console.log("x" && 5 && true);     // true
@@ -105,7 +105,7 @@ console.log(undefined || 0 || "");              // ""`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Precedence and parentheses</Styled.H3>
+                <Styled.H3>Example 6 - Precedence and parentheses</Styled.H3>
                 <Styled.Code>{`const A = false, B = true, C = true;
 
 console.log(A || B && C);     // true  (&& first -> A || (B && C))
@@ -115,7 +115,7 @@ console.log(!A && B);         // true  (! before &&)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Pattern: safe property access (pre-optional chaining)</Styled.H3>
+                <Styled.H3>Example 7 - Pattern: safe property access (pre-optional chaining)</Styled.H3>
                 <Styled.Code>{`const obj = { user: { name: "Ada" } };
 
 const name =
@@ -126,7 +126,7 @@ console.log(name); // "Ada"
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Combining with functions</Styled.H3>
+                <Styled.H3>Example 8 - Combining with functions</Styled.H3>
                 <Styled.Code>{`function getUser() { return { name: "Lin" }; }
 function fallbackUser() { return { name: "Guest" }; }
 
@@ -138,7 +138,7 @@ debug && console.log("Only logs when debug is truthy");`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Coercion with <code>!</code> and <code>!!</code></Styled.H3>
+                <Styled.H3>Example 9 - Coercion with <code>!</code> and <code>!!</code></Styled.H3>
                 <Styled.Code>{`console.log(![]);        // false  ([] is truthy)
 console.log(!!0);        // false
 console.log(!!"0");      // true

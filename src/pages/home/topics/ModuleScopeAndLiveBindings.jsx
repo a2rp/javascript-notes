@@ -47,7 +47,7 @@ const ModuleScopeAndLiveBindings = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Module scope is not global</Styled.H3>
+                <Styled.H3>Example 1 - Module scope is not global</Styled.H3>
                 <Styled.Code>{`// a.js (module)
 var a = 1;
 let b = 2;
@@ -59,7 +59,7 @@ console.log(globalThis.a); // undefined (even for var in modules)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Basic live binding</Styled.H3>
+                <Styled.H3>Example 2 - Basic live binding</Styled.H3>
                 <Styled.Code>{`// counter.js (module)
 export let n = 0;
 export function inc() { n += 1; }
@@ -76,7 +76,7 @@ console.log(n); // 1  ← importer sees updated value automatically
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Import is read-only in importer</Styled.H3>
+                <Styled.H3>Example 3 - Import is read-only in importer</Styled.H3>
                 <Styled.Code>{`// app.js (module)
 import { n } from "./counter.js";
 // n = 5; // ❌ SyntaxError: Cannot assign to import 'n'
@@ -87,7 +87,7 @@ inc(); // OK`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Namespace import also reflects updates</Styled.H3>
+                <Styled.H3>Example 4 - Namespace import also reflects updates</Styled.H3>
                 <Styled.Code>{`// app.js (module)
 import * as Counter from "./counter.js";
 console.log(Counter.n); // 1 (assuming a prior inc)
@@ -100,7 +100,7 @@ console.log(Counter.n); // 2
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Objects vs rebinding</Styled.H3>
+                <Styled.H3>Example 5 - Objects vs rebinding</Styled.H3>
                 <Styled.Code>{`// store.js
 export const state = { count: 0 };
 export function bump() { state.count++; }
@@ -117,7 +117,7 @@ console.log(state.count); // 1
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Re-exports preserve liveness</Styled.H3>
+                <Styled.H3>Example 6 - Re-exports preserve liveness</Styled.H3>
                 <Styled.Code>{`// source.js
 export let value = 0;
 export const inc = () => { value++; };
@@ -137,7 +137,7 @@ console.log(value); // 1
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Default export nuances</Styled.H3>
+                <Styled.H3>Example 7 - Default export nuances</Styled.H3>
                 <Styled.Code>{`// mode A: default is a binding (via alias)
 let current = 1;
 export { current as default };   // default aliases binding 'current'
@@ -157,7 +157,7 @@ export default 42;                // takes a snapshot value at export time
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Single evaluation shared by all importers</Styled.H3>
+                <Styled.H3>Example 8 - Single evaluation shared by all importers</Styled.H3>
                 <Styled.Code>{`// once.js
 console.log("evaluated once");
 export let hits = 0;
@@ -183,7 +183,7 @@ import "./b.js";
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Cycles & temporal dead zone</Styled.H3>
+                <Styled.H3>Example 9 - Cycles & temporal dead zone</Styled.H3>
                 <Styled.Code>{`// a.js
 import { b } from "./b.js";
 console.log("a reads b =", b); // ❗ may throw if 'b' not initialized yet
@@ -201,7 +201,7 @@ export const b = a + 1;
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Top-level await and liveness</Styled.H3>
+                <Styled.H3>Example 10 - Top-level await and liveness</Styled.H3>
                 <Styled.Code>{`// config.js (module with TLA)
 export let config = { ready: false };
 const res = await fetch("/config.json");

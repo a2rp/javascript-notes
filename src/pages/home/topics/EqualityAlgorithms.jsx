@@ -42,7 +42,7 @@ const EqualityAlgorithms = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Quick contrasts</Styled.H3>
+                <Styled.H3>Example 1 - Quick contrasts</Styled.H3>
                 <Styled.Code>{`console.log(1 == "1");    // true  (coerces string → number)
 console.log(1 === "1");   // false (different types)
 console.log(Object.is(1, "1")); // false
@@ -53,7 +53,7 @@ console.log(null === undefined);// false
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — <code>null</code>/<code>undefined</code> with <code>==</code></Styled.H3>
+                <Styled.H3>Example 2 - <code>null</code>/<code>undefined</code> with <code>==</code></Styled.H3>
                 <Styled.Code>{`const v1 = null;
 const v2 = undefined;
 console.log(v1 == v2);     // true
@@ -68,7 +68,7 @@ console.log(getOrDefault(0, 10));         // 0 (kept)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — <code>NaN</code> and signed zero</Styled.H3>
+                <Styled.H3>Example 3 - <code>NaN</code> and signed zero</Styled.H3>
                 <Styled.Code>{`console.log(NaN === NaN);           // false
 console.log(Object.is(NaN, NaN));    // true
 console.log([NaN].includes(NaN));    // true (SameValueZero)
@@ -79,7 +79,7 @@ console.log(1 / +0, 1 / -0);         // Infinity -Infinity (sign matters)`}</Sty
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — BigInt interop with <code>==</code> and <code>===</code></Styled.H3>
+                <Styled.H3>Example 4 - BigInt interop with <code>==</code> and <code>===</code></Styled.H3>
                 <Styled.Code>{`console.log(10n == 10);       // true   (numeric compare)
 console.log(10n === 10);      // false  (different types)
 console.log(10n == "10");     // true   (string → BigInt)
@@ -88,7 +88,7 @@ console.log(9007199254740993n == 9007199254740993); // false (number is rounded)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Booleans with <code>==</code> coerce to numbers</Styled.H3>
+                <Styled.H3>Example 5 - Booleans with <code>==</code> coerce to numbers</Styled.H3>
                 <Styled.Code>{`console.log(true == 1);    // true
 console.log(false == 0);   // true
 console.log("0" == false); // true ("0" → 0, false → 0)
@@ -96,7 +96,7 @@ console.log("0" == false); // true ("0" → 0, false → 0)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Objects vs primitives</Styled.H3>
+                <Styled.H3>Example 6 - Objects vs primitives</Styled.H3>
                 <Styled.Code>{`console.log([1] == 1);         // true (["1"].toString() → "1" → 1)
 console.log(["1","2"] == "1,2"); // true (array → "1,2")
 console.log({} == "[object Object]"); // true-ish? No → false ({} → "[object Object]" <> string; "==" doesn't flip both sides)
@@ -105,7 +105,7 @@ console.log({} == "[object Object]"); // true-ish? No → false ({} → "[object
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Arrays: <code>indexOf</code> vs <code>includes</code></Styled.H3>
+                <Styled.H3>Example 7 - Arrays: <code>indexOf</code> vs <code>includes</code></Styled.H3>
                 <Styled.Code>{`const xs = [NaN, 0, -0];
 console.log(xs.indexOf(NaN));   // -1  (uses ===; NaN !== NaN)
 console.log(xs.includes(NaN));  // true (SameValueZero)
@@ -113,7 +113,7 @@ console.log(xs.includes(-0));   // true (SameValueZero treats +0/-0 equal)`}</St
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Map/Set key equality (SameValueZero)</Styled.H3>
+                <Styled.H3>Example 8 - Map/Set key equality (SameValueZero)</Styled.H3>
                 <Styled.Code>{`const s = new Set([NaN]);
 console.log(s.has(NaN)); // true (NaN equals NaN)
 
@@ -122,7 +122,7 @@ console.log(m.has(-0));  // true (+0 and -0 treated equal)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Practical patterns</Styled.H3>
+                <Styled.H3>Example 9 - Practical patterns</Styled.H3>
                 <Styled.Code>{`// 1) Prefer strict equality:
 const isUser = id => typeof id === "string" && id === "user_123";
 
@@ -136,7 +136,7 @@ console.log(isNegZero(-0));       // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — DIY semantics snippets</Styled.H3>
+                <Styled.H3>Example 10 - DIY semantics snippets</Styled.H3>
                 <Styled.Code>{`// SameValueZero (used by includes/Set/Map):
 const sameValueZero = (a, b) => a === b || (a !== a && b !== b);
 // SameValue (Object.is):
@@ -148,7 +148,7 @@ console.log(sameValue(+0, -0));       // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 11 — Common pitfalls to avoid</Styled.H3>
+                <Styled.H3>Example 11 - Common pitfalls to avoid</Styled.H3>
                 <Styled.UL>
                     <li><code>"" == 0</code> is <code>true</code> (empty string → 0). Prefer explicit casts.</li>
                     <li><code>[] == 0</code> is <code>true</code> (<code>[]</code> → <code>""</code> → <code>0</code>), but <code>[] === 0</code> is <code>false</code>.</li>

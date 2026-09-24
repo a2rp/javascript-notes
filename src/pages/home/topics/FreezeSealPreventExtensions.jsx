@@ -47,7 +47,7 @@ const FreezeSealPreventExtensions = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — <code>preventExtensions</code></Styled.H3>
+                <Styled.H3>Example 1 - <code>preventExtensions</code></Styled.H3>
                 <Styled.Code>{`const a = { x: 1 };
 console.log(Object.isExtensible(a)); // true
 Object.preventExtensions(a);
@@ -63,7 +63,7 @@ console.log(a.x);        // 9`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — <code>seal</code> (no add, no delete, no reconfigure)</Styled.H3>
+                <Styled.H3>Example 2 - <code>seal</code> (no add, no delete, no reconfigure)</Styled.H3>
                 <Styled.Code>{`const b = { k: 1 };
 Object.seal(b);
 console.log(Object.isExtensible(b)); // false
@@ -80,7 +80,7 @@ console.log(b.k);        // 7`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — <code>freeze</code> (values fixed, accessors unchanged)</Styled.H3>
+                <Styled.H3>Example 3 - <code>freeze</code> (values fixed, accessors unchanged)</Styled.H3>
                 <Styled.Code>{`const c = { p: 1 };
 Object.freeze(c);
 console.log(Object.isFrozen(c)); // true
@@ -105,7 +105,7 @@ console.log(d.val);      // 42`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Descriptors before/after</Styled.H3>
+                <Styled.H3>Example 4 - Descriptors before/after</Styled.H3>
                 <Styled.Code>{`const obj = {};
 Object.defineProperty(obj, "x", {
   value: 10, writable: true, enumerable: true, configurable: true
@@ -121,11 +121,11 @@ Object.freeze(obj);
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Arrays under the three locks</Styled.H3>
+                <Styled.H3>Example 5 - Arrays under the three locks</Styled.H3>
                 <Styled.Code>{`// preventExtensions: no new indices
 const A = [1, 2];
 Object.preventExtensions(A);
-A.push(3);        // fails (cannot add index 2) — ignored / TypeError (strict)
+A.push(3);        // fails (cannot add index 2) - ignored / TypeError (strict)
 A[0] = 9;         // OK (existing index still writable)
 console.log(A);   // [9, 2]
 
@@ -146,14 +146,14 @@ console.log(C);   // [1, 2]`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Shallow: nested objects still mutable</Styled.H3>
+                <Styled.H3>Example 6 - Shallow: nested objects still mutable</Styled.H3>
                 <Styled.Code>{`const cfg = Object.freeze({ theme: { dark: true } });
 cfg.theme.dark = false;    // allowed: inner object wasn't frozen
 console.log(cfg.theme.dark); // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Simple deep freezer</Styled.H3>
+                <Styled.H3>Example 7 - Simple deep freezer</Styled.H3>
                 <Styled.Code>{`function deepFreeze(o) {
   // Freeze children first
   for (const k of Object.getOwnPropertyNames(o)) {
@@ -168,7 +168,7 @@ console.log(locked.a.b);   // 1`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Reconfiguration is blocked</Styled.H3>
+                <Styled.H3>Example 8 - Reconfiguration is blocked</Styled.H3>
                 <Styled.Code>{`const e = {};
 Object.defineProperty(e, "x", {
   value: 1, writable: true, configurable: true
@@ -182,7 +182,7 @@ console.log(Object.getOwnPropertyDescriptor(e, "x").enumerable); // true`}</Styl
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Quick reference</Styled.H3>
+                <Styled.H3>Example 9 - Quick reference</Styled.H3>
                 <Styled.UL>
                     <li><code>preventExtensions</code>: ❌ add, ✅ delete, ✅ reconfigure, ✅/❌ write (unchanged)</li>
                     <li><code>seal</code>: ❌ add, ❌ delete, ❌ reconfigure, ✅/❌ write (unchanged)</li>
@@ -191,7 +191,7 @@ console.log(Object.getOwnPropertyDescriptor(e, "x").enumerable); // true`}</Styl
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Detecting state</Styled.H3>
+                <Styled.H3>Example 10 - Detecting state</Styled.H3>
                 <Styled.Code>{`const o = { a: 1 };
 console.log(Object.isExtensible(o)); // true
 Object.preventExtensions(o);

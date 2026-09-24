@@ -13,7 +13,7 @@ const EngineVsRuntimeVsHost = () => {
             <Styled.Section>
                 <Styled.H3>Definition (bullet points)</Styled.H3>
                 <Styled.UL>
-                    <li><strong>Engine</strong>: Implements the ECMAScript language (parser, compiler/JIT, executor, GC). Examples: V8, SpiderMonkey, JavaScriptCore. It knows numbers, strings, objects, functions—<em>not</em> DOM, files, or network.</li>
+                    <li><strong>Engine</strong>: Implements the ECMAScript language (parser, compiler/JIT, executor, GC). Examples: V8, SpiderMonkey, JavaScriptCore. It knows numbers, strings, objects, functions-<em>not</em> DOM, files, or network.</li>
                     <li><strong>Runtime</strong>: The execution environment around the engine: event loop, task/microtask queues, module loader, job scheduling, and a selection of globals. In browsers this is the “web runtime”; in Node.js it’s “Node runtime”.</li>
                     <li><strong>Host</strong>: The embedding application that provides platform capabilities and globals (e.g., <code>document</code>, <code>window</code>, timers, fetch, filesystem, process, console). Hosts define what I/O is possible and how modules are resolved.</li>
                     <li><strong>Boundary</strong>: ECMAScript spec defines core language; host specs (WHATWG HTML/Web IDL; Node’s docs) define environment APIs and event loop details.</li>
@@ -22,7 +22,7 @@ const EngineVsRuntimeVsHost = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Core language vs host globals</Styled.H3>
+                <Styled.H3>Example 1 - Core language vs host globals</Styled.H3>
                 <Styled.Code>{`// These are language-level:
 typeof 42;          // "number"
 typeof (() => {});  // "function"
@@ -39,7 +39,7 @@ typeof process;     // "undefined" (browser)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — No I/O in the engine itself</Styled.H3>
+                <Styled.H3>Example 2 - No I/O in the engine itself</Styled.H3>
                 <Styled.Code>{`// ECMAScript doesn't define file/network/DOM.
 // File read is host-specific (Node.js example):
 // const data = require('fs').readFileSync('notes.txt', 'utf8'); // Node.js only
@@ -54,7 +54,7 @@ typeof process;     // "undefined" (browser)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Event loop ownership (tasks vs microtasks)</Styled.H3>
+                <Styled.H3>Example 3 - Event loop ownership (tasks vs microtasks)</Styled.H3>
                 <Styled.Code>{`console.log("A");
 
 setTimeout(() => console.log("C (timer task)"), 0);   // task (host scheduling)
@@ -72,7 +72,7 @@ console.log("D");
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Global object differences (unified via <code>globalThis</code>)</Styled.H3>
+                <Styled.H3>Example 4 - Global object differences (unified via <code>globalThis</code>)</Styled.H3>
                 <Styled.Code>{`// Browser:
 typeof window;               // "object"
 globalThis === window;       // true
@@ -86,7 +86,7 @@ globalThis === global;       // true
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Module loading differs by host</Styled.H3>
+                <Styled.H3>Example 5 - Module loading differs by host</Styled.H3>
                 <Styled.Code>{`// Browser ESM (URL-based, usually with file extensions):
 // <script type="module" src="/app.js"></script>
 // import utils from "/utils.js";

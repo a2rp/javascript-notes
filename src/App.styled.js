@@ -80,16 +80,41 @@ const NavLinkWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #aaa;
+    background: #010409;
+    border: 1px solid #333;
+    transition: border-color 180ms ease, box-shadow 180ms ease, text-shadow 180ms ease;
+
+    &:hover,
+    &:focus-visible {
+        border-color: #888;
+        box-shadow: 0 0 0 3px #ffffff14, 0 8px 22px #0008;
+        text-shadow: 0 0 10px #ffffff66;
+        outline: none;
+    }
 `;
 
 const Heading = styled.h1`
     font-size: 14px;
     a {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
         color: #aaa;
         text-decoration: none;
         padding: 2px;
+
+        img {
+            width: 34px;
+            height: 34px;
+            object-fit: contain;
+            border: 1px solid #333;
+            border-radius: 7px;
+        }
+
         &:hover {
-            border-bottom: 1px solid #aaa;
+            color: #fff;
+            text-shadow: 0 0 10px #ffffff66;
         }
     }
 `;

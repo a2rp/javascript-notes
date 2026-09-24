@@ -50,7 +50,7 @@ const NotFound = ({
 
                     <Styled.Actions>
                         <Styled.Button as={NavLink} to={homePath}>Go to Home</Styled.Button>
-                        <Styled.Button as={NavLink} to={homePath}>Browse All Notes</Styled.Button>
+                        <Styled.Button as={NavLink} to={indexPath}>Browse All Notes</Styled.Button>
                         <Styled.Button as="button" type="button" onClick={() => navigate(-1)}>
                             Go Back
                         </Styled.Button>

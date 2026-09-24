@@ -49,7 +49,7 @@ const ImportExportForms = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Named exports &amp; imports</Styled.H3>
+                <Styled.H3>Example 1 - Named exports &amp; imports</Styled.H3>
                 <Styled.Code>{`// math.js
 export const add = (a, b) => a + b;
 export const mul = (a, b) => a * b;
@@ -61,7 +61,7 @@ console.log(mul(2, 3)); // 6`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Default export &amp; default import</Styled.H3>
+                <Styled.H3>Example 2 - Default export &amp; default import</Styled.H3>
                 <Styled.Code>{`// greeter.js
 export default function greet(name) {
   return "Hi, " + name;
@@ -73,7 +73,7 @@ console.log(greet("Ada")); // "Hi, Ada"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Namespace import</Styled.H3>
+                <Styled.H3>Example 3 - Namespace import</Styled.H3>
                 <Styled.Code>{`// counter.js
 export let n = 0;
 export function inc() { n += 1; }
@@ -87,7 +87,7 @@ console.log(Counter.n); // 1
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Mixed: default + named</Styled.H3>
+                <Styled.H3>Example 4 - Mixed: default + named</Styled.H3>
                 <Styled.Code>{`// user.js
 export default class User { constructor(name){ this.name = name; } }
 export const VERSION = "1.0.0";
@@ -99,7 +99,7 @@ console.log(VERSION);              // "1.0.0"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Renaming with <code>as</code> (both sides)</Styled.H3>
+                <Styled.H3>Example 5 - Renaming with <code>as</code> (both sides)</Styled.H3>
                 <Styled.Code>{`// lib.js
 const internalAdd = (a, b) => a + b;
 export { internalAdd as add };     // rename when exporting
@@ -110,11 +110,11 @@ console.log(sum(4, 5)); // 9`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Re-exports (forwarding)</Styled.H3>
+                <Styled.H3>Example 6 - Re-exports (forwarding)</Styled.H3>
                 <Styled.Code>{`// math.js
 export const sub = (a, b) => a - b;
 
-// ops.js — collect & forward
+// ops.js - collect & forward
 export { add, mul } from "./mathA.js";
 export * from "./math.js";                // forwards all named (sub)
 export * as extra from "./extras.js";     // namespace re-export
@@ -128,7 +128,7 @@ console.log(Object.keys(extra).length >= 0); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Side-effect-only import</Styled.H3>
+                <Styled.H3>Example 7 - Side-effect-only import</Styled.H3>
                 <Styled.Code>{`// setup.js
 console.log("setup run once");
 
@@ -141,7 +141,7 @@ import "./setup.js"; // cached; no second log
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Import is read-only; mutate via exporter</Styled.H3>
+                <Styled.H3>Example 8 - Import is read-only; mutate via exporter</Styled.H3>
                 <Styled.Code>{`// store.js
 export const state = { count: 0 };
 export const bump = () => { state.count++; };
@@ -155,7 +155,7 @@ console.log(state.count); // 1`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Common mistakes</Styled.H3>
+                <Styled.H3>Example 9 - Common mistakes</Styled.H3>
                 <Styled.Code>{`// ❌ 1) default export duplicates
 // export default 1;
 // export default 2; // SyntaxError (only one default allowed)

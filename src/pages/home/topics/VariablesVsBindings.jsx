@@ -63,7 +63,7 @@ export default function VariablesVsBindings() {
             <T.Section>
                 <T.H3>Pitfalls</T.H3>
                 <T.UL>
-                    <li>“<code>const</code> object cannot change” is a myth — the binding is constant, not the object.</li>
+                    <li>“<code>const</code> object cannot change” is a myth - the binding is constant, not the object.</li>
                     <li>Prefer <code>const</code> by default; switch to <code>let</code> only when rebinding is required.</li>
                     <li>Use <code>Object.freeze()</code> to prevent accidental mutation of object internals (shallow).</li>
                 </T.UL>

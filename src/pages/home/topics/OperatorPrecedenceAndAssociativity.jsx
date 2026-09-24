@@ -27,13 +27,13 @@ const OperatorPrecedenceAndAssociativity = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Parentheses win</Styled.H3>
+                <Styled.H3>Example 1 - Parentheses win</Styled.H3>
                 <Styled.Code>{`console.log(2 + 3 * 4);     // 14  (* before +)
 console.log((2 + 3) * 4);   // 20  (parentheses first)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Member/call/index bind tight</Styled.H3>
+                <Styled.H3>Example 2 - Member/call/index bind tight</Styled.H3>
                 <Styled.Code>{`const obj = { xs: [10, 20], f(){ return n => n * 2; } };
 console.log(obj.xs[1]);     // 20
 console.log(obj.f()(7));    // 14
@@ -42,7 +42,7 @@ console.log(obj?.xs?.[0]);  // 10`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Unary vs exponentiation</Styled.H3>
+                <Styled.H3>Example 3 - Unary vs exponentiation</Styled.H3>
                 <Styled.Code>{`console.log(2 ** 3 ** 2);     // 512  (2 ** (3 ** 2)), right-assoc
 // Unary - cannot be directly on the left of **:
 try { eval("-2 ** 2"); } catch (e) { console.log("SyntaxError"); }
@@ -52,7 +52,7 @@ console.log(-(2 ** 2));     // -4`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Left- vs right-associative chains</Styled.H3>
+                <Styled.H3>Example 4 - Left- vs right-associative chains</Styled.H3>
                 <Styled.Code>{`// Left-assoc (most binary ops)
 console.log(10 - 3 - 2);    // (10 - 3) - 2 -> 5
 // Right-assoc (assignment)
@@ -65,14 +65,14 @@ console.log(tag(-1));       // "neg"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Logical AND before OR</Styled.H3>
+                <Styled.H3>Example 5 - Logical AND before OR</Styled.H3>
                 <Styled.Code>{`console.log(false && true || true);   // true  -> (false && true) || true
 console.log(true || false && false); // true  -> true || (false && false)
 // Always add parentheses for clarity in complex conditions.`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Mixing <code>??</code> with <code>&amp;&amp;</code>/<code>||</code></Styled.H3>
+                <Styled.H3>Example 6 - Mixing <code>??</code> with <code>&amp;&amp;</code>/<code>||</code></Styled.H3>
                 <Styled.Code>{`// JavaScript requires parentheses when mixing ?? with || or &&.
 // The following would be a syntax error:
 // const x = a ?? b || c;
@@ -84,7 +84,7 @@ console.log(a ?? (b || c));   // "C"  (b || c -> "C", then a ?? "C" -> "C")`}</S
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Conditional vs logical</Styled.H3>
+                <Styled.H3>Example 7 - Conditional vs logical</Styled.H3>
                 <Styled.Code>{`const n = 0;
 // Logical OR falls back on falsy:
 console.log(n || 1);               // 1
@@ -93,14 +93,14 @@ console.log(n !== null && n !== undefined ? n : 1); // 0`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Comma operator has the lowest precedence</Styled.H3>
+                <Styled.H3>Example 8 - Comma operator has the lowest precedence</Styled.H3>
                 <Styled.Code>{`let x = (1, 2, 3);   // evaluates left-to-right, result is last -> 3
 console.log(x); // 3
 // Beware in for-loops: comma often used intentionally in the update clause.`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — When in doubt, parenthesize</Styled.H3>
+                <Styled.H3>Example 9 - When in doubt, parenthesize</Styled.H3>
                 <Styled.Code>{`// Readability and correctness:
 const ok = isReady && (count > 0 || hasBypass);
 const out = (cfg?.port ?? 0) || 3000; // force a number but keep explicit 0

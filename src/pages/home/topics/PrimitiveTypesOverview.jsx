@@ -5,7 +5,7 @@ import { Styled } from "./styled";
 const PrimitiveTypesOverview = () => {
     return (
         <Styled.Page>
-            <Styled.H1>Primitive types — overview</Styled.H1>
+            <Styled.H1>Primitive types - overview</Styled.H1>
 
             <Styled.Lead>
                 JavaScript has seven primitive types. They are not objects (no internal
@@ -55,7 +55,7 @@ const PrimitiveTypesOverview = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — All primitive kinds & <code>typeof</code></Styled.H3>
+                <Styled.H3>Example 1 - All primitive kinds & <code>typeof</code></Styled.H3>
                 <Styled.Code>{`console.log(typeof undefined);  // "undefined"
 console.log(typeof true);       // "boolean"
 console.log(typeof 42);         // "number"
@@ -75,7 +75,7 @@ console.log(typeof null);       // "object"  <-- historical quirk
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Immutability & copy-by-value</Styled.H3>
+                <Styled.H3>Example 2 - Immutability & copy-by-value</Styled.H3>
                 <Styled.Code>{`let a = "hi";
 let b = a;          // copy the value
 b = b + "!";
@@ -89,7 +89,7 @@ console.log(x, y);  // 7 8`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Auto-boxing for property access</Styled.H3>
+                <Styled.H3>Example 3 - Auto-boxing for property access</Styled.H3>
                 <Styled.Code>{`console.log("abc".length);     // 3  (temporary String object)
 console.log((42).toFixed(1));   // "42.0" (temporary Number object)
 console.log(true.toString());    // "true"
@@ -100,7 +100,7 @@ console.log(typeof "x");             // "string"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — <code>null</code> vs <code>undefined</code></Styled.H3>
+                <Styled.H3>Example 4 - <code>null</code> vs <code>undefined</code></Styled.H3>
                 <Styled.Code>{`let u;                 // declared, not assigned
 const n = null;         // explicit "no value"
 
@@ -113,7 +113,7 @@ console.log(n === null);      // true
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Number peculiarities (quick look)</Styled.H3>
+                <Styled.H3>Example 5 - Number peculiarities (quick look)</Styled.H3>
                 <Styled.Code>{`console.log(Number.isNaN(NaN));  // true
 console.log(1 / 0);               // Infinity
 console.log(-1 / 0);              // -Infinity
@@ -124,7 +124,7 @@ console.log(typeof NaN);          // "number"
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — BigInt basics (no mixing with Number)</Styled.H3>
+                <Styled.H3>Example 6 - BigInt basics (no mixing with Number)</Styled.H3>
                 <Styled.Code>{`const big = 9007199254740993n; // > Number.MAX_SAFE_INTEGER
 console.log(big + 2n);           // 9007199254740995n
 // console.log(big + 2);         // ❌ TypeError: Cannot mix BigInt and other types
@@ -135,7 +135,7 @@ console.log(2n == 2);            // true  (loose equality coerces)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Symbols as unique keys</Styled.H3>
+                <Styled.H3>Example 7 - Symbols as unique keys</Styled.H3>
                 <Styled.Code>{`const k = Symbol("id");
 const obj = { [k]: 123, id: 456 };
 console.log(obj[k]);     // 123

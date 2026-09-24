@@ -35,7 +35,7 @@ const DestructuringBasics = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Array basics</Styled.H3>
+                <Styled.H3>Example 1 - Array basics</Styled.H3>
                 <Styled.Code>{`const arr = [10, 20, 30, 40];
 const [a, b] = arr;
 console.log(a, b); // 10 20
@@ -49,7 +49,7 @@ console.log(head, tail); // 10 [20, 30, 40]`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Array defaults &amp; iterables</Styled.H3>
+                <Styled.H3>Example 2 - Array defaults &amp; iterables</Styled.H3>
                 <Styled.Code>{`const xs = [1];
 const [p = 100, q = 200] = xs;
 console.log(p, q); // 1 200  (q default used because xs[1] is undefined)
@@ -59,7 +59,7 @@ console.log(c1, c2); // "A" "😀"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Object basics &amp; renaming</Styled.H3>
+                <Styled.H3>Example 3 - Object basics &amp; renaming</Styled.H3>
                 <Styled.Code>{`const user = { id: 7, name: "Ada" };
 const { id, name } = user;
 console.log(id, name); // 7 "Ada"
@@ -74,7 +74,7 @@ console.log(role); // undefined`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Object defaults (only for undefined)</Styled.H3>
+                <Styled.H3>Example 4 - Object defaults (only for undefined)</Styled.H3>
                 <Styled.Code>{`const cfg1 = { port: undefined };
 const { port = 3000 } = cfg1;
 console.log(port); // 3000 (default used because value is undefined)
@@ -85,7 +85,7 @@ console.log(retries); // null (default NOT used because value is null, not undef
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Nested destructuring</Styled.H3>
+                <Styled.H3>Example 5 - Nested destructuring</Styled.H3>
                 <Styled.Code>{`const profile = { name: "Lin", loc: { city: "Bengaluru", pin: 560001 } };
 const { loc: { city } } = profile;
 console.log(city); // "Bengaluru"
@@ -97,14 +97,14 @@ console.log(one, two, three); // 1 2 3`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Rest properties</Styled.H3>
+                <Styled.H3>Example 6 - Rest properties</Styled.H3>
                 <Styled.Code>{`const obj = { a: 1, b: 2, c: 3 };
 const { a, ...restObj } = obj;
 console.log(a, restObj); // 1 { b: 2, c: 3 }`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Function parameters with destructuring</Styled.H3>
+                <Styled.H3>Example 7 - Function parameters with destructuring</Styled.H3>
                 <Styled.Code>{`// Object param with defaults
 function connect({ host = "127.0.0.1", port = 3000 } = {}) {
   return host + ":" + port;
@@ -121,7 +121,7 @@ console.log(firstTwo());                      // 0`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Destructuring assignment to existing variables</Styled.H3>
+                <Styled.H3>Example 8 - Destructuring assignment to existing variables</Styled.H3>
                 <Styled.Code>{`let x, y;
 ({ x, y } = { x: 5, y: 9 }); // parentheses required around object pattern in assignment
 console.log(x, y); // 5 9
@@ -133,7 +133,7 @@ console.log(a1, b1); // "right" "left"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Pulling from function returns</Styled.H3>
+                <Styled.H3>Example 9 - Pulling from function returns</Styled.H3>
                 <Styled.Code>{`function getPair() { return [10, 20]; }
 const [m, n] = getPair();
 console.log(m, n); // 10 20

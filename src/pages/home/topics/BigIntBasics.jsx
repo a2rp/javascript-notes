@@ -50,7 +50,7 @@ const BigIntBasics = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Creating BigInts</Styled.H3>
+                <Styled.H3>Example 1 - Creating BigInts</Styled.H3>
                 <Styled.Code>{`const a = 123n;         // literal
 const b = 0xFFn;        // hex literal → 255n
 const c = BigInt("9007199254740993"); // from string (> Number.MAX_SAFE_INTEGER)
@@ -60,7 +60,7 @@ console.log(typeof a, a); // "bigint" 123n`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Arithmetic (truncating division)</Styled.H3>
+                <Styled.H3>Example 2 - Arithmetic (truncating division)</Styled.H3>
                 <Styled.Code>{`console.log(5n + 7n);   // 12n
 console.log(5n - 7n);   // -2n
 console.log(5n * 7n);   // 35n
@@ -72,7 +72,7 @@ console.log(2n ** 63n); // 9223372036854775808n`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Bitwise with BigInt</Styled.H3>
+                <Styled.H3>Example 3 - Bitwise with BigInt</Styled.H3>
                 <Styled.Code>{`console.log(0b1010n & 0b1100n); // 0b1000n (8n)
 console.log(0b1010n | 0b1100n); // 0b1110n (14n)
 console.log(0b1010n ^ 0b1100n); // 0b0110n (6n)
@@ -83,14 +83,14 @@ console.log(-2n >> 1n);         // -1n (arithmetic shift)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Mixing throws; convert explicitly</Styled.H3>
+                <Styled.H3>Example 4 - Mixing throws; convert explicitly</Styled.H3>
                 <Styled.Code>{`// 10n + 1;           // ❌ TypeError: Cannot mix BigInt and other types
 console.log(10n + BigInt(1));    // 11n
 console.log(Number(10n) + 1);    // 11  (possible precision loss for huge BigInts)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Comparisons</Styled.H3>
+                <Styled.H3>Example 5 - Comparisons</Styled.H3>
                 <Styled.Code>{`console.log(10n === 10);   // false  (different types)
 console.log(10n == 10);     // true   (loose equality)
 console.log(10n < 20);      // true   (relational comparison allowed)
@@ -99,7 +99,7 @@ console.log(Object.is(0n, -0n)); // true (BigInt has no signed zero)`}</Styled.C
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Coercion rules & errors</Styled.H3>
+                <Styled.H3>Example 6 - Coercion rules & errors</Styled.H3>
                 <Styled.Code>{`// Valid:
 console.log(BigInt("0xFF")); // 255n
 console.log(BigInt(true));   // 1n
@@ -116,7 +116,7 @@ catch (e) { console.log(e.name); } // TypeError`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Formatting & JSON</Styled.H3>
+                <Styled.H3>Example 7 - Formatting & JSON</Styled.H3>
                 <Styled.Code>{`const x = 12345678901234567890n;
 console.log(x.toString());           // "12345678901234567890"
 console.log(x.toLocaleString("en-IN")); // locale string
@@ -130,7 +130,7 @@ console.log(json); // {"x":"12345678901234567890"}`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Bit-width truncation helpers</Styled.H3>
+                <Styled.H3>Example 8 - Bit-width truncation helpers</Styled.H3>
                 <Styled.Code>{`// Constrain a BigInt to N bits:
 console.log(BigInt.asUintN(8, 300n)); // 44n  (300 mod 2^8)
 console.log(BigInt.asIntN(8, 300n));  // 44n  (interpreted as signed 8-bit)
@@ -138,18 +138,18 @@ console.log(BigInt.asIntN(8, 0xFFn)); // -1n  (two's-complement)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Typed arrays for 64-bit lanes</Styled.H3>
+                <Styled.H3>Example 9 - Typed arrays for 64-bit lanes</Styled.H3>
                 <Styled.Code>{`const a = new BigInt64Array([1n, 2n, -3n]);
 const b = new BigUint64Array([1n, 2n, 3n]);
 console.log(a[2], b[2]); // -3n 3n`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Practical tips</Styled.H3>
+                <Styled.H3>Example 10 - Practical tips</Styled.H3>
                 <Styled.UL>
                     <li>Use BigInt for <em>integers</em> that must be exact (IDs, counters, cryptography math).</li>
                     <li>Avoid mixing with <code>number</code>; convert at boundaries only.</li>
-                    <li>No <code>Math.*</code> support—roll your own integer math or use libraries.</li>
+                    <li>No <code>Math.*</code> support-roll your own integer math or use libraries.</li>
                     <li>Beware performance: BigInt operations are generally slower than on small Numbers.</li>
                     <li>When storing/transmitting, convert to decimal or hex strings; parse back with <code>BigInt(str)</code>.</li>
                 </Styled.UL>

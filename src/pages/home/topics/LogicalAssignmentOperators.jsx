@@ -39,7 +39,7 @@ const LogicalAssignmentOperators = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — <code>||=</code> for defaults (falsy triggers)</Styled.H3>
+                <Styled.H3>Example 1 - <code>||=</code> for defaults (falsy triggers)</Styled.H3>
                 <Styled.Code>{`let title = "";
 title ||= "Untitled";
 console.log(title); // "Untitled"  ("" is falsy)
@@ -54,7 +54,7 @@ console.log(flag); // true  (false is falsy)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — <code>??=</code> for null/undefined only</Styled.H3>
+                <Styled.H3>Example 2 - <code>??=</code> for null/undefined only</Styled.H3>
                 <Styled.Code>{`let port = 0;
 port ??= 3000;
 console.log(port); // 0  (kept; 0 is not nullish)
@@ -69,7 +69,7 @@ console.log(timeout); // 5000  (was undefined)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — <code>&amp;&amp;=</code> to update only when present</Styled.H3>
+                <Styled.H3>Example 3 - <code>&amp;&amp;=</code> to update only when present</Styled.H3>
                 <Styled.Code>{`let token = "abc123";
 token &&= token.toUpperCase();
 console.log(token); // "ABC123"
@@ -80,7 +80,7 @@ console.log(perms); // 0  (unchanged; 0 is falsy)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Single evaluation of the left side</Styled.H3>
+                <Styled.H3>Example 4 - Single evaluation of the left side</Styled.H3>
                 <Styled.Code>{`const o = {
   _v: 0,
   get v() { console.log("get"); return this._v; },
@@ -101,7 +101,7 @@ console.log(o._v); // 2`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Properties and dynamic keys</Styled.H3>
+                <Styled.H3>Example 5 - Properties and dynamic keys</Styled.H3>
                 <Styled.Code>{`const user = {};
 user.name ||= "Guest";
 console.log(user.name); // "Guest"
@@ -114,7 +114,7 @@ console.log(cart.items); // ["ID-1"]`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Right side runs only when needed</Styled.H3>
+                <Styled.H3>Example 6 - Right side runs only when needed</Styled.H3>
                 <Styled.Code>{`const make = (v) => (console.log("compute"), v);
 
 let a = "has";
@@ -134,7 +134,7 @@ console.log(c); // 0`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Chaining is right-associative</Styled.H3>
+                <Styled.H3>Example 7 - Chaining is right-associative</Styled.H3>
                 <Styled.Code>{`let x = null, y = 0, z = 5;
 x ??= y ??= z;
 console.log({ x, y, z });
@@ -148,7 +148,7 @@ console.log({ p, q });
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Initializing nested config</Styled.H3>
+                <Styled.H3>Example 8 - Initializing nested config</Styled.H3>
                 <Styled.Code>{`const cfg = {};
 cfg.server ??= {};
 cfg.server.host ??= "127.0.0.1";
@@ -159,7 +159,7 @@ console.log(cfg);
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Invalid left sides (as comments)</Styled.H3>
+                <Styled.H3>Example 9 - Invalid left sides (as comments)</Styled.H3>
                 <Styled.Code>{`const obj = { x: 1 };
 // obj?.x ||= 2;   // ❌ SyntaxError (optional chaining not allowed on assignment target)
 // (obj?.x) ||= 2; // ❌ still invalid
@@ -168,7 +168,7 @@ if (obj && obj.x == null) obj.x = 2;`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Numbers, NaN, and BigInt zero</Styled.H3>
+                <Styled.H3>Example 10 - Numbers, NaN, and BigInt zero</Styled.H3>
                 <Styled.Code>{`let n = NaN;
 n ||= 10;
 console.log(n); // 10  (NaN is falsy)

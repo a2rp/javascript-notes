@@ -52,14 +52,14 @@ const CommentsAndPragmas = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Single-line comments</Styled.H3>
+                <Styled.H3>Example 1 - Single-line comments</Styled.H3>
                 <Styled.Code>{`// This is a single-line comment
 const a = 1; // trailing comment after code
 console.log(a); // 1`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Block comments (not nested)</Styled.H3>
+                <Styled.H3>Example 2 - Block comments (not nested)</Styled.H3>
                 <Styled.Code>{`/* This is a block comment
 spanning multiple lines */
 const x = 10;
@@ -74,7 +74,7 @@ console.log(x); // 10
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — JSDoc-style block comments</Styled.H3>
+                <Styled.H3>Example 3 - JSDoc-style block comments</Styled.H3>
                 <Styled.Code>{`/**
  * Adds two numbers.
  * @param {number} a
@@ -89,7 +89,7 @@ console.log(add(2, 3)); // 5`}</Styled.Code>
 
             <Styled.Section>
                 <Styled.H3>
-                    Example 4 — Directive prologue and <code>"use strict"</code>
+                    Example 4 - Directive prologue and <code>"use strict"</code>
                 </Styled.H3>
                 <Styled.Code>{`"use strict";           // a literal string at top → strict mode is ON
 
@@ -113,7 +113,7 @@ function sloppyHere() {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Shebang for CLI scripts</Styled.H3>
+                <Styled.H3>Example 5 - Shebang for CLI scripts</Styled.H3>
                 <Styled.Code>{`#!/usr/bin/env node
 // ^ must be the very first line; parsers treat it as a comment.
 // Useful to make a JS file directly executable on POSIX systems.
@@ -125,7 +125,7 @@ console.log("Hello from a CLI script!");
 
             <Styled.Section>
                 <Styled.H3>
-                    Example 6 — Tooling pragmas: <code>sourceURL</code> &{" "}
+                    Example 6 - Tooling pragmas: <code>sourceURL</code> &{" "}
                     <code>sourceMappingURL</code>
                 </Styled.H3>
                 <Styled.Code>{`// Useful in devtools and bundlers:
@@ -138,7 +138,7 @@ console.log("Hello from a CLI script!");
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Legacy HTML comment tokens</Styled.H3>
+                <Styled.H3>Example 7 - Legacy HTML comment tokens</Styled.H3>
                 <Styled.Code>{`// In some environments (browsers), the following can behave like single-line comments:
 <!-- hidden from old HTML parsers
 console.log("This may not run depending on environment");
@@ -149,7 +149,7 @@ console.log("This may not run depending on environment");
 
             <Styled.Section>
                 <Styled.H3>
-                    Example 8 — Comments inside template literals (use expressions)
+                    Example 8 - Comments inside template literals (use expressions)
                 </Styled.H3>
                 <Styled.Code>{`const name = "Ada";
 // You can't put // or /* */ inside the raw template text to comment it out,
@@ -159,7 +159,7 @@ console.log(msg); // "Hello, Ada!"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Comments and regex literals</Styled.H3>
+                <Styled.H3>Example 9 - Comments and regex literals</Styled.H3>
                 <Styled.Code>{`// JavaScript regex does NOT support an 'x' (extended) flag for inline comments.
 // Use non-capturing groups or whitespace where allowed, or build regexes from strings.
 const re = /\\d{3}-\\d{2}-\\d{4}/; // simple form
@@ -167,7 +167,7 @@ console.log(re.test("123-45-6789")); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Commenting out blocks of code safely</Styled.H3>
+                <Styled.H3>Example 10 - Commenting out blocks of code safely</Styled.H3>
                 <Styled.Code>{`// Prefer line comments for large temporary blocks to avoid accidental */ issues:
 //// const config = {
 ////   url: "https://api.example.com",

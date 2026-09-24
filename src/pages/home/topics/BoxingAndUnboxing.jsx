@@ -52,7 +52,7 @@ const BoxingAndUnboxing = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Autoboxing lets methods work on primitives</Styled.H3>
+                <Styled.H3>Example 1 - Autoboxing lets methods work on primitives</Styled.H3>
                 <Styled.Code>{`console.log("abc".toUpperCase()); // "ABC"
 console.log((42).toFixed(1));       // "42.0"
 console.log(true.toString());        // "true"
@@ -61,7 +61,7 @@ console.log(true.toString());        // "true"
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Writes to boxed primitives don’t stick</Styled.H3>
+                <Styled.H3>Example 2 - Writes to boxed primitives don’t stick</Styled.H3>
                 <Styled.Code>{`let s = "hi";
 s.x = 123;                 // ignored (assigned on a temporary wrapper)
 // In strict mode this may throw TypeError.
@@ -70,7 +70,7 @@ console.log(s.x);          // undefined`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Converters (functions) vs wrappers (constructors)</Styled.H3>
+                <Styled.H3>Example 3 - Converters (functions) vs wrappers (constructors)</Styled.H3>
                 <Styled.Code>{`console.log(Number("42"));   // 42        (primitive)
 console.log(String(99));   // "99"      (primitive)
 console.log(Boolean(0));   // false     (primitive)
@@ -81,7 +81,7 @@ console.log(typeof new Boolean(0));  // "object"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Equality differences</Styled.H3>
+                <Styled.H3>Example 4 - Equality differences</Styled.H3>
                 <Styled.Code>{`console.log(new Number(5) === 5);   // false (object vs primitive)
 console.log(new Number(5) == 5);    // true  (unboxed via valueOf during ==)
 console.log(Object.is(new Number(0), 0)); // false
@@ -90,7 +90,7 @@ console.log(Object.is(new Number(0), 0)); // false
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Truthiness trap with <code>new Boolean(false)</code></Styled.H3>
+                <Styled.H3>Example 5 - Truthiness trap with <code>new Boolean(false)</code></Styled.H3>
                 <Styled.Code>{`if (new Boolean(false)) {
   console.log("I run"); // runs, because objects are truthy
 }
@@ -101,7 +101,7 @@ console.log(Boolean(b));  // true  (because b is an object)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Arithmetic/concat cause unboxing</Styled.H3>
+                <Styled.H3>Example 6 - Arithmetic/concat cause unboxing</Styled.H3>
                 <Styled.Code>{`const n = new Number(7);
 console.log(n + 1);      // 8   (valueOf() -> 7)
 console.log("v=" + n);   // "v=7" (toString() used in string context)
@@ -111,7 +111,7 @@ console.log(str + "!");  // "ok!" (toString())`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Detecting wrappers & getting primitives</Styled.H3>
+                <Styled.H3>Example 7 - Detecting wrappers & getting primitives</Styled.H3>
                 <Styled.Code>{`const x = new Number(3);
 console.log(x instanceof Number); // true (wrapper)
 console.log(typeof x);            // "object"
@@ -120,7 +120,7 @@ console.log(typeof x.valueOf());  // "number"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Symbols & BigInts</Styled.H3>
+                <Styled.H3>Example 8 - Symbols & BigInts</Styled.H3>
                 <Styled.Code>{`// Symbols:
 const s = Symbol("id");
 // new Symbol("id");     // ❌ TypeError (not a constructor)
@@ -136,7 +136,7 @@ console.log(typeof biw, typeof bi); // "object" "bigint"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Objects are always truthy; avoid wrappers as Map keys</Styled.H3>
+                <Styled.H3>Example 9 - Objects are always truthy; avoid wrappers as Map keys</Styled.H3>
                 <Styled.Code>{`const m = new Map();
 m.set(new Number(5), "A");
 console.log(m.get(5));           // undefined (different identity & type)
@@ -145,7 +145,7 @@ console.log(key.valueOf());      // 5 (but still a distinct object key)`}</Style
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Custom unboxing via <code>Symbol.toPrimitive</code> (FYI)</Styled.H3>
+                <Styled.H3>Example 10 - Custom unboxing via <code>Symbol.toPrimitive</code> (FYI)</Styled.H3>
                 <Styled.Code>{`const obj = {
   x: 10,
   [Symbol.toPrimitive](hint) {
@@ -157,10 +157,10 @@ console.log(String(obj));      // "[obj]" (string hint)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 11 — Practical guidance</Styled.H3>
+                <Styled.H3>Example 11 - Practical guidance</Styled.H3>
                 <Styled.UL>
                     <li>Use <code>Number(x)</code>, <code>String(x)</code>, <code>Boolean(x)</code> for conversion.</li>
-                    <li>Avoid <code>new Number</code>/<code>new String</code>/<code>new Boolean</code>—prefer primitives.</li>
+                    <li>Avoid <code>new Number</code>/<code>new String</code>/<code>new Boolean</code>-prefer primitives.</li>
                     <li>Never rely on setting properties on primitives; they won’t persist (and may throw in strict mode).</li>
                     <li>Be careful with truthiness: wrapper objects are always truthy.</li>
                 </Styled.UL>

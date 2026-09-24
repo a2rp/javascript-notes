@@ -55,7 +55,7 @@ const CoercionToNumberAndString = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — ToNumber basics</Styled.H3>
+                <Styled.H3>Example 1 - ToNumber basics</Styled.H3>
                 <Styled.Code>{`console.log(Number(undefined));   // NaN
 console.log(Number(null));        // 0
 console.log(Number(true));        // 1
@@ -71,7 +71,7 @@ console.log(Number("1_000"));     // NaN (underscore not allowed in strings)`}</
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — ToString basics</Styled.H3>
+                <Styled.H3>Example 2 - ToString basics</Styled.H3>
                 <Styled.Code>{`console.log(String(undefined));  // "undefined"
 console.log(String(null));       // "null"
 console.log(String(true));       // "true"
@@ -82,7 +82,7 @@ console.log(String(10n));        // "10"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Symbols: explicit ok, implicit throws</Styled.H3>
+                <Styled.H3>Example 3 - Symbols: explicit ok, implicit throws</Styled.H3>
                 <Styled.Code>{`const s = Symbol("id");
 console.log(String(s));    // "Symbol(id)"
 // "" + s;                 // ❌ TypeError: Cannot convert a Symbol value to a string
@@ -90,7 +90,7 @@ console.log(String(s));    // "Symbol(id)"
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Unary <code>+</code> and numeric operators</Styled.H3>
+                <Styled.H3>Example 4 - Unary <code>+</code> and numeric operators</Styled.H3>
                 <Styled.Code>{`console.log(+"42");          // 42
 console.log(+"  \\n  ");     // 0
 console.log(+true);          // 1
@@ -103,7 +103,7 @@ console.log("10" / 2);       // 5`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — <code>+</code>: concatenation vs addition</Styled.H3>
+                <Styled.H3>Example 5 - <code>+</code>: concatenation vs addition</Styled.H3>
                 <Styled.Code>{`console.log("a" + 1);     // "a1" (string concatenation)
 console.log(1 + "a");       // "1a"
 console.log(1 + 2 + "3");   // "33"  (1+2 → 3, then "3" → "3"; 3 + "3" → "33")
@@ -111,7 +111,7 @@ console.log("3" + 1 + 2);   // "312" (string context from the start)`}</Styled.C
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Arrays/objects via ToPrimitive → ToNumber/ToString</Styled.H3>
+                <Styled.H3>Example 6 - Arrays/objects via ToPrimitive → ToNumber/ToString</Styled.H3>
                 <Styled.Code>{`console.log(Number([]));           // 0   ("" → 0)
 console.log(Number([""]));         // 0
 console.log(Number([" 5 "]));      // 5
@@ -122,14 +122,14 @@ console.log(String([1,2,3]));      // "1,2,3"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Dates: number vs string</Styled.H3>
+                <Styled.H3>Example 7 - Dates: number vs string</Styled.H3>
                 <Styled.Code>{`const d = new Date("2024-01-01T00:00:00Z");
 console.log(+d);           // 1704067200000  (ms since epoch; numeric coercion)
 console.log(String(d));    // e.g., "Mon Jan 01 2024 ..." (string coercion)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — parseInt/parseFloat vs Number</Styled.H3>
+                <Styled.H3>Example 8 - parseInt/parseFloat vs Number</Styled.H3>
                 <Styled.Code>{`console.log(parseInt("42px"));   // 42      (stops at non-digit)
 console.log(Number("42px"));        // NaN     (whole string must be numeric)
 console.log(parseFloat("3.14rad")); // 3.14
@@ -141,7 +141,7 @@ console.log(parseInt("1010", 2));   // 10      (use radix for bases)`}</Styled.C
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — BigInt & number mixing rules</Styled.H3>
+                <Styled.H3>Example 9 - BigInt & number mixing rules</Styled.H3>
                 <Styled.Code>{`const bi = 10n;
 // console.log(bi + 1);      // ❌ TypeError (can't mix BigInt and Number)
 console.log(bi + 2n);        // 12n
@@ -151,7 +151,7 @@ console.log(Number(10n) + 1); // 11   (explicit, but beware precision for large 
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Custom objects controlling coercion</Styled.H3>
+                <Styled.H3>Example 10 - Custom objects controlling coercion</Styled.H3>
                 <Styled.Code>{`const price = {
   amount: 2500,
   currency: "INR",
@@ -163,7 +163,7 @@ console.log(String(price));   // "INR 2500"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 11 — Whitespace & empty string nuances</Styled.H3>
+                <Styled.H3>Example 11 - Whitespace & empty string nuances</Styled.H3>
                 <Styled.Code>{`console.log(Number("\\u00A0\\t\\n")); // 0   (Unicode whitespace trims to empty → 0)
 console.log(Number("\\u2003 5 "));   // 5   (em space trimmed)
 console.log("" + 0);                 // "0" (ToString on number)
@@ -171,11 +171,11 @@ console.log(Number(""));             // 0`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 12 — Practical guidance</Styled.H3>
+                <Styled.H3>Example 12 - Practical guidance</Styled.H3>
                 <Styled.UL>
                     <li>Need a number? Prefer <code>Number(x)</code> or <code>parseInt/parseFloat</code> (with radix) over implicit coercion.</li>
                     <li>Need a string? Prefer template literals or <code>String(x)</code> instead of relying on <code>+</code> concatenation with non-strings.</li>
-                    <li>Avoid implicit symbol/string or BigInt/number coercions—they often throw or surprise.</li>
+                    <li>Avoid implicit symbol/string or BigInt/number coercions-they often throw or surprise.</li>
                     <li>Be mindful that arrays/objects first go through <em>ToPrimitive</em>; <code>[]</code> becomes <code>0</code> via <code>""</code>.</li>
                 </Styled.UL>
             </Styled.Section>

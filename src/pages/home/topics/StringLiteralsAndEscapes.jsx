@@ -54,7 +54,7 @@ const StringLiteralsAndEscapes = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Basics &quot; vs ' and escaping</Styled.H3>
+                <Styled.H3>Example 1 - Basics &quot; vs ' and escaping</Styled.H3>
                 <Styled.Code>{`console.log("She said \\"hi\\"."); // She said "hi".
 console.log('It\\'s fine.');       // It's fine.
 console.log("Path: C:\\\\tmp\\\\file.txt"); // Path: C:\\tmp\\file.txt
@@ -68,7 +68,7 @@ console.log(b); // "line1line2"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Template literals: multiline & interpolation</Styled.H3>
+                <Styled.H3>Example 2 - Template literals: multiline & interpolation</Styled.H3>
                 <Styled.Code>{`const name = "Ada";
 const multi = \`Hello, \${name}!
 This is on the next line.\`;
@@ -83,7 +83,7 @@ console.log(\`Use a backtick: \\\` and a literal \\\${ value }\`);`}</Styled.Cod
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Unicode escapes</Styled.H3>
+                <Styled.H3>Example 3 - Unicode escapes</Styled.H3>
                 <Styled.Code>{`// BMP escape (4 hex):
 console.log("\\u0041");     // "A"
 
@@ -98,7 +98,7 @@ console.log("\\0");         // "\\u0000"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Code points beyond BMP (surrogates vs \u&#123;…&#125;)</Styled.H3>
+                <Styled.H3>Example 4 - Code points beyond BMP (surrogates vs \u&#123;…&#125;)</Styled.H3>
                 <Styled.Code>{`const rocket1 = "\\uD83D\\uDE80";  // surrogate pair
 const rocket2 = "\\u{1F680}";     // direct code point (preferred)
 console.log(rocket1 === rocket2); // true
@@ -106,16 +106,16 @@ console.log(rocket2.length);      // 2 code units (one visible emoji)`}</Styled.
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — String.raw for unescaped backslashes</Styled.H3>
+                <Styled.H3>Example 5 - String.raw for unescaped backslashes</Styled.H3>
                 <Styled.Code>{`console.log(String.raw\`C:\\new\\file\\nnot-a-newline\`);
 // "C:\\new\\file\\nnot-a-newline"
 
-const re = String.raw\`^\\d+\\.\\d+\$\\n\`;
+const re = String.raw\`^\\d+\\.\\d+$\\n\`;
 console.log(re); // ^\\d+\\.\\d+$\\n (useful for writing regex source text)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Strict mode vs legacy octal escapes</Styled.H3>
+                <Styled.H3>Example 6 - Strict mode vs legacy octal escapes</Styled.H3>
                 <Styled.Code>{`"use strict";
 // const s = "\\123"; // ❌ SyntaxError in strict mode (legacy octal escape)
 // Safe alternatives:
@@ -125,7 +125,7 @@ const ok3 = "\\u{53}";       // "S"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Invalid escapes throw (early error)</Styled.H3>
+                <Styled.H3>Example 7 - Invalid escapes throw (early error)</Styled.H3>
                 <Styled.Code>{`// These are syntax errors if uncommented:
 // "\\xG1"         // invalid hex
 // "\\u12G4"       // invalid Unicode escape
@@ -133,14 +133,14 @@ const ok3 = "\\u{53}";       // "S"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Useful non-breaking & invisible chars</Styled.H3>
+                <Styled.H3>Example 8 - Useful non-breaking & invisible chars</Styled.H3>
                 <Styled.Code>{`const nbsp = "\\u00A0"; // non-breaking space
 const zwnbsp = "\\uFEFF"; // BOM / zero-width no-break space
 console.log("A" + nbsp + "B"); // "A B"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Paths & regex strings need double escaping</Styled.H3>
+                <Styled.H3>Example 9 - Paths & regex strings need double escaping</Styled.H3>
                 <Styled.Code>{`// Windows path:
 const path = "C:\\\\Users\\\\Ada\\\\file.txt";
 
@@ -150,7 +150,7 @@ console.log(numberRe);`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — JSON vs JS string escapes</Styled.H3>
+                <Styled.H3>Example 10 - JSON vs JS string escapes</Styled.H3>
                 <Styled.UL>
                     <li>JSON is stricter: only allows <code>\\b \\f \\n \\r \\t \\\\ \\/ \\\"</code> and <code>\\uXXXX</code>.</li>
                     <li>JavaScript allows more (<code>\\v</code>, <code>\\0</code>, <code>\\xNN</code>, <code>\\u&#123;…&#125;</code>, etc.).</li>

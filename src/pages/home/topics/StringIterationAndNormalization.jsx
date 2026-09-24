@@ -27,7 +27,7 @@ const StringIterationAndNormalization = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Iterate code points safely</Styled.H3>
+                <Styled.H3>Example 1 - Iterate code points safely</Styled.H3>
                 <Styled.Code>{`const s = "A😀B";
 for (const ch of s) {
   console.log(ch);
@@ -43,21 +43,21 @@ console.log([...s]); // ["A","😀","B"]`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Map to code point values (hex)</Styled.H3>
+                <Styled.H3>Example 2 - Map to code point values (hex)</Styled.H3>
                 <Styled.Code>{`const word = "Go🚀";
 const hex = Array.from(word, ch => ch.codePointAt(0).toString(16));
 console.log(hex.join(" ")); // "47 6f 1f680"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Rebuilding from code points</Styled.H3>
+                <Styled.H3>Example 3 - Rebuilding from code points</Styled.H3>
                 <Styled.Code>{`const cps = [0x41, 0x1F600, 0x42]; // A, 😀, B
 const rebuilt = String.fromCodePoint(...cps);
 console.log(rebuilt); // "A😀B"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Grapheme clusters with <code>Intl.Segmenter</code></Styled.H3>
+                <Styled.H3>Example 4 - Grapheme clusters with <code>Intl.Segmenter</code></Styled.H3>
                 <Styled.Code>{`const family = "👨‍👩‍👧‍👦"; // multiple code points joined by ZWJ
 if (typeof Intl !== "undefined" && Intl.Segmenter) {
   const seg = new Intl.Segmenter(undefined, { granularity: "grapheme" });
@@ -70,7 +70,7 @@ if (typeof Intl !== "undefined" && Intl.Segmenter) {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Slice by grapheme clusters</Styled.H3>
+                <Styled.H3>Example 5 - Slice by grapheme clusters</Styled.H3>
                 <Styled.Code>{`const text = "Hi 👋🏽, family: 👨‍👩‍👧‍👦!";
 function sliceGraphemes(str, n) {
   if (!Intl.Segmenter) return [...str].slice(0, n).join(""); // fallback by code points
@@ -82,7 +82,7 @@ console.log(sliceGraphemes(text, 5)); // e.g., "Hi 👋🏽" (emoji stays intact
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — NFC vs NFD equality</Styled.H3>
+                <Styled.H3>Example 6 - NFC vs NFD equality</Styled.H3>
                 <Styled.Code>{`const composed = "\\u00E9";     // "é" as single code point
 const decomposed = "e\\u0301";  // "e" + COMBINING ACUTE
 console.log(composed === decomposed); // false (different sequences)
@@ -90,7 +90,7 @@ console.log(composed.normalize("NFC") === decomposed.normalize("NFC")); // true`
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Strip diacritics (accent removal)</Styled.H3>
+                <Styled.H3>Example 7 - Strip diacritics (accent removal)</Styled.H3>
                 <Styled.Code>{`// NFD splits base letters and combining marks; then drop marks
 const removeDiacritics = (str) =>
   str.normalize("NFD").replace(/\\p{M}+/gu, "");
@@ -98,7 +98,7 @@ console.log(removeDiacritics("naïvé résumé")); // "naive resume"`}</Styled.C
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Normalized search</Styled.H3>
+                <Styled.H3>Example 8 - Normalized search</Styled.H3>
                 <Styled.Code>{`function includesNormalized(haystack, needle, form = "NFC") {
   const H = haystack.normalize(form);
   const N = needle.normalize(form);
@@ -108,7 +108,7 @@ console.log(includesNormalized("café", "cafe\\u0301")); // true (after NFC)`}</
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Case-insensitive &amp; accent-insensitive compare</Styled.H3>
+                <Styled.H3>Example 9 - Case-insensitive &amp; accent-insensitive compare</Styled.H3>
                 <Styled.Code>{`function equalLoose(a, b) {
   const strip = s => s.normalize("NFD").replace(/\\p{M}+/gu, "");
   return strip(a).toLocaleLowerCase() === strip(b).toLocaleLowerCase();

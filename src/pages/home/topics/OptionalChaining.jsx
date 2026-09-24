@@ -26,7 +26,7 @@ const OptionalChaining = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Property &amp; bracket access</Styled.H3>
+                <Styled.H3>Example 1 - Property &amp; bracket access</Styled.H3>
                 <Styled.Code>{`const user = null;
 
 console.log(user?.name);        // undefined (no throw)
@@ -38,7 +38,7 @@ console.log(cfg?.bad?.prop);    // undefined`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Optional call (method and function refs)</Styled.H3>
+                <Styled.H3>Example 2 - Optional call (method and function refs)</Styled.H3>
                 <Styled.Code>{`const api = {
   log(msg) { return "OK: " + msg; }
 };
@@ -61,7 +61,7 @@ console.log(counter.n); // 1`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Array/Map safe access</Styled.H3>
+                <Styled.H3>Example 3 - Array/Map safe access</Styled.H3>
                 <Styled.Code>{`const arr = null;
 console.log(arr?.[0]); // undefined (no throw)
 
@@ -74,7 +74,7 @@ console.log(m.get?.("z")); // undefined`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Only null/undefined short-circuit</Styled.H3>
+                <Styled.H3>Example 4 - Only null/undefined short-circuit</Styled.H3>
                 <Styled.Code>{`const obj = { toFixed: Number.prototype.toFixed };
 const zero = 0;
 
@@ -87,7 +87,7 @@ console.log((false.toString?.()));  // "false"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — With nullish coalescing (defaults)</Styled.H3>
+                <Styled.H3>Example 5 - With nullish coalescing (defaults)</Styled.H3>
                 <Styled.Code>{`const settings = { theme: { name: "solarized" } };
 const theme = settings?.theme?.name ?? "light";
 console.log(theme); // "solarized"
@@ -98,7 +98,7 @@ console.log(theme2); // "light"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Short-circuit also skips argument evaluation</Styled.H3>
+                <Styled.H3>Example 6 - Short-circuit also skips argument evaluation</Styled.H3>
                 <Styled.Code>{`function sideEffect() { console.log("ARG EVALUATED"); return 1; }
 
 const maybe = null;
@@ -111,7 +111,7 @@ console.log(sure.call?.(sideEffect()));
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Safe deep reads with dynamic keys</Styled.H3>
+                <Styled.H3>Example 7 - Safe deep reads with dynamic keys</Styled.H3>
                 <Styled.Code>{`const data = { user: { profile: { socials: { x: "@a2rp" } } } };
 const key = "socials";
 console.log(data.user?.profile?.[key]?.x); // "@a2rp"
@@ -121,7 +121,7 @@ console.log(missing.user?.profile?.[key]?.x); // undefined`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Optional chaining with <code>delete</code></Styled.H3>
+                <Styled.H3>Example 8 - Optional chaining with <code>delete</code></Styled.H3>
                 <Styled.Code>{`const bag = null;
 // delete returns true when operand is missing or unconfigurable check passes
 console.log(delete bag?.prop); // true (safe, no throw)
@@ -132,7 +132,7 @@ console.log(o.a);              // undefined`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Common patterns</Styled.H3>
+                <Styled.H3>Example 9 - Common patterns</Styled.H3>
                 <Styled.Code>{`// DOM example
 const title = document.querySelector("h1")?.textContent ?? "(no title)";
 console.log(title);
@@ -151,7 +151,7 @@ console.log(port); // 3000`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Invalid uses (showing as comments)</Styled.H3>
+                <Styled.H3>Example 10 - Invalid uses (showing as comments)</Styled.H3>
                 <Styled.Code>{`const obj2 = {};
 
 // ❌ Left-hand assignment is not allowed with ?.

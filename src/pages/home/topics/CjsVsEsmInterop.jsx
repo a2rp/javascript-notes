@@ -51,7 +51,7 @@ const CjsVsEsmInterop = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Choosing CJS vs ESM via file/packaging</Styled.H3>
+                <Styled.H3>Example 1 - Choosing CJS vs ESM via file/packaging</Styled.H3>
                 <Styled.Code>{`// package.json (ESM-by-default in this package)
 {
   "type": "module"
@@ -64,7 +64,7 @@ const CjsVsEsmInterop = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Importing CJS from ESM (use <code>default</code>)</Styled.H3>
+                <Styled.H3>Example 2 - Importing CJS from ESM (use <code>default</code>)</Styled.H3>
                 <Styled.Code>{`// common.cjs  (CJS)
 module.exports = {
   add(a,b){ return a+b; },
@@ -81,7 +81,7 @@ console.log(cjs.version);          // "1.0.0"
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Loading ESM from CJS (use dynamic <code>import()</code>)</Styled.H3>
+                <Styled.H3>Example 3 - Loading ESM from CJS (use dynamic <code>import()</code>)</Styled.H3>
                 <Styled.Code>{`// lib.mjs (ESM)
 export const x = 42;
 export default function greet(n){ return "Hi, " + n; }
@@ -98,7 +98,7 @@ export default function greet(n){ return "Hi, " + n; }
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Default vs named shapes across the boundary</Styled.H3>
+                <Styled.H3>Example 4 - Default vs named shapes across the boundary</Styled.H3>
                 <Styled.Code>{`// CJS exporting a function directly:
 module.exports = function add(a,b){ return a+b; };
 
@@ -116,7 +116,7 @@ console.log(add(4,1), sub(4,1)); // 3 3`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — JSON interop</Styled.H3>
+                <Styled.H3>Example 5 - JSON interop</Styled.H3>
                 <Styled.Code>{`// data.json
 { "name": "demo", "n": 7 }
 
@@ -130,7 +130,7 @@ console.log(data2.name); // "demo"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — __dirname/__filename (CJS) vs import.meta.url (ESM)</Styled.H3>
+                <Styled.H3>Example 6 - __dirname/__filename (CJS) vs import.meta.url (ESM)</Styled.H3>
                 <Styled.Code>{`// CJS:
 console.log(__filename.endsWith(".cjs")); // true
 console.log(__dirname.includes("/"));     // true (platform-dependent)
@@ -146,7 +146,7 @@ console.log(!!__dirname);                 // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Top-level await only in ESM (CJS must async)</Styled.H3>
+                <Styled.H3>Example 7 - Top-level await only in ESM (CJS must async)</Styled.H3>
                 <Styled.Code>{`// fetcher.mjs (ESM)
 export const txt = await Promise.resolve("ready");
 
@@ -158,7 +158,7 @@ export const txt = await Promise.resolve("ready");
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Dual package via conditional exports</Styled.H3>
+                <Styled.H3>Example 8 - Dual package via conditional exports</Styled.H3>
                 <Styled.Code>{`// package.json (publish both ESM and CJS builds)
 {
   "name": "mypkg",
@@ -174,7 +174,7 @@ export const txt = await Promise.resolve("ready");
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Avoid brittle interop assumptions</Styled.H3>
+                <Styled.H3>Example 9 - Avoid brittle interop assumptions</Styled.H3>
                 <Styled.Code>{`// ❌ Don't rely on 'named' imports from CJS:
 // import { add } from "./common.cjs"; // may be undefined / error
 
@@ -194,7 +194,7 @@ console.log(add(2,2)); // 4
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Note on transpiler interop (<code>__esModule</code>)</Styled.H3>
+                <Styled.H3>Example 10 - Note on transpiler interop (<code>__esModule</code>)</Styled.H3>
                 <Styled.Code>{`// Some bundlers/transpilers emit '__esModule' and put the ESM default at .default:
 // CJS:
 const mod = require("./built-esm.js");

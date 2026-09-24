@@ -27,7 +27,7 @@ const StrictMode = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Enabling strict mode</Styled.H3>
+                <Styled.H3>Example 1 - Enabling strict mode</Styled.H3>
                 <Styled.Code>{`"use strict"; // file-level (must be the first statement)
 
 function f() {
@@ -40,7 +40,7 @@ function f() {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — No implicit globals</Styled.H3>
+                <Styled.H3>Example 2 - No implicit globals</Styled.H3>
                 <Styled.Code>{`// Sloppy (non-strict):
 // x = 10;            // creates a global (bad)
 
@@ -57,7 +57,7 @@ try {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — <code>this</code> is <code>undefined</code> in simple calls</Styled.H3>
+                <Styled.H3>Example 3 - <code>this</code> is <code>undefined</code> in simple calls</Styled.H3>
                 <Styled.Code>{`function sloppy() { return this; }      // not strict
 function strictFn() { "use strict"; return this; }
 
@@ -72,7 +72,7 @@ console.log(strictFn());               // undefined
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Duplicate parameters are forbidden</Styled.H3>
+                <Styled.H3>Example 4 - Duplicate parameters are forbidden</Styled.H3>
                 <Styled.Code>{`// Sloppy (pre-ES2015 engines allowed this, last param wins):
 // function g(a, a) { return a; }
 
@@ -85,7 +85,7 @@ console.log(strictFn());               // undefined
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Writes to non-writable properties throw</Styled.H3>
+                <Styled.H3>Example 5 - Writes to non-writable properties throw</Styled.H3>
                 <Styled.Code>{`"use strict";
 const obj = {};
 Object.defineProperty(obj, "id", { value: 1, writable: false });
@@ -101,7 +101,7 @@ try {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — <code>with</code> is disallowed</Styled.H3>
+                <Styled.H3>Example 6 - <code>with</code> is disallowed</Styled.H3>
                 <Styled.Code>{`"use strict";
 // with ({ a: 1 }) { console.log(a); } // SyntaxError in strict
 
@@ -110,7 +110,7 @@ try {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Legacy octal vs modern octal</Styled.H3>
+                <Styled.H3>Example 7 - Legacy octal vs modern octal</Styled.H3>
                 <Styled.Code>{`"use strict";
 // const m = 0755;   // SyntaxError in strict (legacy octal)
 // Use modern ES2015 octal literal:
@@ -122,7 +122,7 @@ console.log(m); // 493
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — <code>eval</code> doesn’t leak bindings; <code>arguments</code> decoupled</Styled.H3>
+                <Styled.H3>Example 8 - <code>eval</code> doesn’t leak bindings; <code>arguments</code> decoupled</Styled.H3>
                 <Styled.Code>{`function testEval() {
   "use strict";
   eval("var t = 1;");  // 't' is local to the eval code, not the surrounding scope
@@ -144,7 +144,7 @@ testArgs(1);
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — <code>delete</code> restrictions</Styled.H3>
+                <Styled.H3>Example 9 - <code>delete</code> restrictions</Styled.H3>
                 <Styled.Code>{`"use strict";
 let x = 1;
 // delete x; // SyntaxError: deleting an unqualified identifier is not allowed

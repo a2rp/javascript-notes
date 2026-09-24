@@ -43,7 +43,7 @@ const NumberChecks = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — <code>isNaN</code> vs <code>Number.isNaN</code></Styled.H3>
+                <Styled.H3>Example 1 - <code>isNaN</code> vs <code>Number.isNaN</code></Styled.H3>
                 <Styled.Code>{`console.log(isNaN(NaN));            // true
 console.log(Number.isNaN(NaN));   // true
 
@@ -55,7 +55,7 @@ console.log(Number.isNaN(undefined)); // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Arrays/objects trigger coercion in global <code>isNaN</code></Styled.H3>
+                <Styled.H3>Example 2 - Arrays/objects trigger coercion in global <code>isNaN</code></Styled.H3>
                 <Styled.Code>{`console.log(isNaN([]));        // false (Number([]) -> 0)
 console.log(isNaN([1]));       // false (-> 1)
 console.log(isNaN([1,2]));     // true  (-> "1,2" -> NaN)
@@ -67,7 +67,7 @@ console.log(Number.isNaN({}));      // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — <code>isFinite</code> vs <code>Number.isFinite</code></Styled.H3>
+                <Styled.H3>Example 3 - <code>isFinite</code> vs <code>Number.isFinite</code></Styled.H3>
                 <Styled.Code>{`console.log(isFinite("0"));          // true  ("0" -> 0)
 console.log(Number.isFinite("0"));   // false (string, not number)
 
@@ -80,7 +80,7 @@ console.log(Number.isFinite(42));    // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Recommended numeric guard</Styled.H3>
+                <Styled.H3>Example 4 - Recommended numeric guard</Styled.H3>
                 <Styled.Code>{`const isRealNumber = x => typeof x === "number" && Number.isFinite(x);
 
 console.log(isRealNumber(12.3));     // true
@@ -90,14 +90,14 @@ console.log(isRealNumber("12.3"));   // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Detecting NaN (alternatives)</Styled.H3>
+                <Styled.H3>Example 5 - Detecting NaN (alternatives)</Styled.H3>
                 <Styled.Code>{`console.log(Number.isNaN(NaN));  // true
 console.log(Object.is(NaN, NaN));  // true (SameValue)
 console.log((x => x !== x)(NaN));  // true (only NaN is not equal to itself)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Form/input handling patterns</Styled.H3>
+                <Styled.H3>Example 6 - Form/input handling patterns</Styled.H3>
                 <Styled.Code>{`const raw = "42px";
 const n1 = Number(raw);               // NaN (strict)
 const n2 = parseFloat(raw);           // 42
@@ -110,7 +110,7 @@ console.log(n1, n2); // NaN 42`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Avoid pitfalls with globals</Styled.H3>
+                <Styled.H3>Example 7 - Avoid pitfalls with globals</Styled.H3>
                 <Styled.Code>{`// Want to validate numeric strings?
 // DON'T:
 console.log(isNaN("  "));   // false (-> 0)  ← misleading
@@ -123,7 +123,7 @@ console.log(Number.isFinite(parsed)); // false ("" -> NaN after trim)`}</Styled.
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Quick polyfills (spec-accurate enough)</Styled.H3>
+                <Styled.H3>Example 8 - Quick polyfills (spec-accurate enough)</Styled.H3>
                 <Styled.Code>{`if (!Number.isNaN) {
   Number.isNaN = x => typeof x === "number" && x !== x;
 }
@@ -133,7 +133,7 @@ if (!Number.isFinite) {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Infinity & signed zero notes</Styled.H3>
+                <Styled.H3>Example 9 - Infinity & signed zero notes</Styled.H3>
                 <Styled.Code>{`console.log(Number.isFinite(Infinity));  // false
 console.log(Number.isFinite(-Infinity)); // false
 console.log(Number.isFinite(-0));        // true   (-0 is a finite number)
@@ -143,8 +143,8 @@ console.log(1 / -0);                     // -Infinity (sign preserved)`}</Styled
             <Styled.Section>
                 <Styled.H3>Cheat sheet</Styled.H3>
                 <Styled.UL>
-                    <li><code>Number.isNaN(x)</code> — best way to test for the actual <code>NaN</code>.</li>
-                    <li><code>Number.isFinite(x)</code> — best way to ensure <code>x</code> is a finite <em>number</em>.</li>
+                    <li><code>Number.isNaN(x)</code> - best way to test for the actual <code>NaN</code>.</li>
+                    <li><code>Number.isFinite(x)</code> - best way to ensure <code>x</code> is a finite <em>number</em>.</li>
                     <li>Avoid relying on global <code>isNaN</code>/<code>isFinite</code> due to coercion.</li>
                     <li>Accept only “safe to compute” numbers with <code>typeof x === "number" &amp;&amp; Number.isFinite(x)</code>.</li>
                 </Styled.UL>

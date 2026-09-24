@@ -27,7 +27,7 @@ const ArithmeticOperators = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Basic math</Styled.H3>
+                <Styled.H3>Example 1 - Basic math</Styled.H3>
                 <Styled.Code>{`console.log(10 + 2);   // 12
 console.log(10 - 2);   // 8
 console.log(10 * 2);   // 20
@@ -37,7 +37,7 @@ console.log(2 ** 3);   // 8`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Addition vs concatenation</Styled.H3>
+                <Styled.H3>Example 2 - Addition vs concatenation</Styled.H3>
                 <Styled.Code>{`console.log("2" + 3);          // "23" (string concatenation)
 console.log(2 + "3");          // "23"
 console.log(2 + true);         // 3   (true -> 1)
@@ -48,7 +48,7 @@ console.log("A" + obj);        // "AX" (becomes string)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Other ops always numeric</Styled.H3>
+                <Styled.H3>Example 3 - Other ops always numeric</Styled.H3>
                 <Styled.Code>{`console.log("6" - "2");   // 4
 console.log("3" * "2");   // 6
 console.log("10" / 2);    // 5
@@ -58,7 +58,7 @@ try { console.log(1 + Symbol()); } catch(e){ console.log("TypeError"); }`}</Styl
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Division by zero, NaN propagation</Styled.H3>
+                <Styled.H3>Example 4 - Division by zero, NaN propagation</Styled.H3>
                 <Styled.Code>{`console.log(1 / 0);     // Infinity
 console.log(-1 / 0);    // -Infinity
 console.log(0 / 0);     // NaN
@@ -67,7 +67,7 @@ console.log(Infinity - Infinity); // NaN`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Remainder sign (follows dividend)</Styled.H3>
+                <Styled.H3>Example 5 - Remainder sign (follows dividend)</Styled.H3>
                 <Styled.Code>{`console.log(5 % 2);     // 1
 console.log(-5 % 2);    // -1
 console.log(5 % -2);    // 1
@@ -75,7 +75,7 @@ console.log(-5 % -2);   // -1`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Exponentiation details</Styled.H3>
+                <Styled.H3>Example 6 - Exponentiation details</Styled.H3>
                 <Styled.Code>{`console.log(2 ** 3 ** 2); // 512  (2 ** (3 ** 2))
 try { eval("-2 ** 2"); } catch (e) { console.log("SyntaxError"); }
 console.log((-2) ** 2);       // 4
@@ -84,7 +84,7 @@ console.log(0 ** 0);          // 1`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Increment & decrement (prefix vs postfix)</Styled.H3>
+                <Styled.H3>Example 7 - Increment & decrement (prefix vs postfix)</Styled.H3>
                 <Styled.Code>{`let x = 5;
 console.log(x++); // 5  (returns old, then x becomes 6)
 console.log(x);   // 6
@@ -99,7 +99,7 @@ console.log(s);   // 2
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Objects and ToPrimitive for arithmetic</Styled.H3>
+                <Styled.H3>Example 8 - Objects and ToPrimitive for arithmetic</Styled.H3>
                 <Styled.Code>{`const a = { valueOf(){ return 3; } };
 const b = { toString(){ return "4"; } };
 console.log(a * 2);      // 6 (valueOf used)
@@ -107,7 +107,7 @@ console.log(b - 1);      // 3 (toString -> "4" -> 4, then 4 - 1)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — BigInt arithmetic (no mixing with Number)</Styled.H3>
+                <Styled.H3>Example 9 - BigInt arithmetic (no mixing with Number)</Styled.H3>
                 <Styled.Code>{`console.log(10n + 2n);     // 12n
 console.log(7n * 3n);      // 21n
 console.log(7n / 3n);      // 2n   (truncates toward 0)
@@ -117,7 +117,7 @@ try { console.log(1n + 1); } catch(e){ console.log("TypeError: cannot mix BigInt
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Compound with <code>+=</code> follows <code>+</code> rules</Styled.H3>
+                <Styled.H3>Example 10 - Compound with <code>+=</code> follows <code>+</code> rules</Styled.H3>
                 <Styled.Code>{`let msg = "Count: ";
 let n = 2;
 msg += n;          // concatenation ("Count: 2")

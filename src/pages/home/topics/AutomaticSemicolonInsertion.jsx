@@ -15,14 +15,14 @@ const AutomaticSemicolonInsertion = () => {
                 <Styled.UL>
                     <li><strong>What ASI does:</strong> When the parser would otherwise fail, a semicolon may be inserted at specific points (e.g., before a closing <code>{`}`}</code>, at end of input, or after certain tokens).</li>
                     <li><strong>Restricted keywords:</strong> A line terminator <em>cannot</em> appear immediately after <code>return</code>, <code>throw</code>, <code>break</code>, <code>continue</code>, or <code>yield</code>. If you put a newline there, ASI ends the statement right after the keyword.</li>
-                    <li><strong>Not magical:</strong> ASI does <em>not</em> insert semicolons before tokens like <code>(</code>, <code>[</code>, <code>+</code>, <code>-</code>, <code>/</code>, or template backticks if the previous line can continue — lines may “glue together”.</li>
+                    <li><strong>Not magical:</strong> ASI does <em>not</em> insert semicolons before tokens like <code>(</code>, <code>[</code>, <code>+</code>, <code>-</code>, <code>/</code>, or template backticks if the previous line can continue - lines may “glue together”.</li>
                     <li><strong>Postfix operators:</strong> Postfix <code>++</code>/<code>--</code> cannot be split by a newline from their operand; the newline turns them into separate statements (or changes to prefix form).</li>
                     <li><strong>Safe practice:</strong> Prefer explicit semicolons or ensure lines starting with <code>(</code> / <code>[</code> / <code>+</code> / <code>-</code> / <code>/</code> / <code>`</code> are prefixed by a semicolon when concatenation or minification is possible.</li>
                 </Styled.UL>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — <code>return</code> followed by a newline</Styled.H3>
+                <Styled.H3>Example 1 - <code>return</code> followed by a newline</Styled.H3>
                 <Styled.Code>{`function f() {
   return
   { ok: true }
@@ -36,7 +36,7 @@ console.log(f()); // undefined
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — <code>throw</code> followed by a newline</Styled.H3>
+                <Styled.H3>Example 2 - <code>throw</code> followed by a newline</Styled.H3>
                 <Styled.Code>{`function g() {
   // SyntaxError at parse time:
   // throw
@@ -48,7 +48,7 @@ console.log(f()); // undefined
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Postfix <code>++</code> split across lines</Styled.H3>
+                <Styled.H3>Example 3 - Postfix <code>++</code> split across lines</Styled.H3>
                 <Styled.Code>{`let i = 0;
 i++;
 console.log(i); // 1
@@ -65,7 +65,7 @@ console.log(j); // 1
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Leading <code>(</code> can attach to the previous line</Styled.H3>
+                <Styled.H3>Example 4 - Leading <code>(</code> can attach to the previous line</Styled.H3>
                 <Styled.Code>{`// File A (no trailing semicolon):
 console.log("A")
 // File B starting with an IIFE:
@@ -81,7 +81,7 @@ console.log("A")(function(){ console.log("IIFE"); })()
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Leading <code>[</code> can become indexing</Styled.H3>
+                <Styled.H3>Example 5 - Leading <code>[</code> can become indexing</Styled.H3>
                 <Styled.Code>{`// Previous line ends with an expression (no ';'):
 doSomething()
 // Next line begins with '[':
@@ -95,7 +95,7 @@ doSomething()
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Unary <code>+</code>/<code>-</code> across lines</Styled.H3>
+                <Styled.H3>Example 6 - Unary <code>+</code>/<code>-</code> across lines</Styled.H3>
                 <Styled.Code>{`let a = 1;
 let b = 2;
 
@@ -110,7 +110,7 @@ console.log(s); // 3
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — ASI before <code>{`}`}</code> or end-of-file</Styled.H3>
+                <Styled.H3>Example 7 - ASI before <code>{`}`}</code> or end-of-file</Styled.H3>
                 <Styled.Code>{`function h() {
   const x = 1   // no explicit ';'
   const y = 2   // ASI inserts ';' at line ends/'}'

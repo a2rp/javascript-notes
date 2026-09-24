@@ -38,14 +38,14 @@ const NumberLiteralsAndSeparators = () => {
                         use <code>0o77</code> instead.
                     </li>
                     <li>
-                        <strong>Infinity/NaN:</strong> Not literals—identifiers on <code>globalThis</code> (e.g., <code>Infinity</code>, <code>NaN</code>).
+                        <strong>Infinity/NaN:</strong> Not literals-identifiers on <code>globalThis</code> (e.g., <code>Infinity</code>, <code>NaN</code>).
                         <code>-Infinity</code> is the unary <code>-</code> operator applied to <code>Infinity</code>.
                     </li>
                 </Styled.UL>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Decimal, fraction, exponent</Styled.H3>
+                <Styled.H3>Example 1 - Decimal, fraction, exponent</Styled.H3>
                 <Styled.Code>{`console.log(123);        // 123
 console.log(12.34);      // 12.34
 console.log(.5);         // 0.5 (leading 0 optional)
@@ -55,7 +55,7 @@ console.log(1.5e-3);     // 0.0015`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Binary, octal, hex</Styled.H3>
+                <Styled.H3>Example 2 - Binary, octal, hex</Styled.H3>
                 <Styled.Code>{`console.log(0b1010);     // 10
 console.log(0o755);      // 493
 console.log(0xFF);       // 255
@@ -67,7 +67,7 @@ console.log(0xCA_FE);     // 51966`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — BigInt literals</Styled.H3>
+                <Styled.H3>Example 3 - BigInt literals</Styled.H3>
                 <Styled.Code>{`console.log(10n + 2n);            // 12n
 console.log(0xFFn);                 // 255n
 console.log(1_000_000_000_000n);    // 1000000000000n
@@ -77,7 +77,7 @@ console.log(1_000_000_000_000n);    // 1000000000000n
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Numeric separators: valid vs invalid</Styled.H3>
+                <Styled.H3>Example 4 - Numeric separators: valid vs invalid</Styled.H3>
                 <Styled.Code>{`// ✅ Valid uses:
 console.log(1_000_000);         // 1000000
 console.log(123_456.78_90);     // 123456.789
@@ -95,7 +95,7 @@ console.log(0xFF_FF_FF);        // 16777215
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Legacy octal vs modern octal</Styled.H3>
+                <Styled.H3>Example 5 - Legacy octal vs modern octal</Styled.H3>
                 <Styled.Code>{`// Non-strict (historical):
 // console.log(077);   // 63  (legacy octal)
 // Strict mode:
@@ -105,13 +105,13 @@ const y = 0o77;        // 63 (use this form)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Separators don’t affect numeric value</Styled.H3>
+                <Styled.H3>Example 6 - Separators don’t affect numeric value</Styled.H3>
                 <Styled.Code>{`console.log(1000000 === 1_000_000); // true
 console.log(0xDEAD_BEEF === 0xDEADBEEF); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Readability patterns</Styled.H3>
+                <Styled.H3>Example 7 - Readability patterns</Styled.H3>
                 <Styled.UL>
                     <li>Group decimal digits by thousands: <code>1_234_567_890</code>.</li>
                     <li>Group hex by bytes/words: <code>0xDE_AD_BE_EF</code> or <code>0xFFFF_FFFF</code>.</li>
@@ -121,7 +121,7 @@ console.log(0xDEAD_BEEF === 0xDEADBEEF); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Numbers vs identifiers (Infinity/NaN)</Styled.H3>
+                <Styled.H3>Example 8 - Numbers vs identifiers (Infinity/NaN)</Styled.H3>
                 <Styled.Code>{`console.log(Infinity);     // Infinity (identifier, not a literal)
 console.log(-Infinity);    // -Infinity (unary minus + Infinity)
 console.log(NaN);          // NaN (identifier)

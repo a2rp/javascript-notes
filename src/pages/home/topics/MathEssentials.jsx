@@ -14,7 +14,7 @@ const MathEssentials = () => {
             </Styled.Lead>
 
             <Styled.Section>
-                <Styled.H3>Rounding — <code>Math.round</code>, <code>floor</code>, <code>ceil</code>, <code>trunc</code>, <code>fround</code></Styled.H3>
+                <Styled.H3>Rounding - <code>Math.round</code>, <code>floor</code>, <code>ceil</code>, <code>trunc</code>, <code>fround</code></Styled.H3>
                 <Styled.UL>
                     <li><code>Math.round(x)</code>: nearest integer; halves (±0.5) round toward <em>+∞</em>. Examples: <code>round(0.5)=1</code>, <code>round(-1.5)=-1</code>, <code>round(-0.5)=-0</code> (negative zero).</li>
                     <li><code>Math.floor(x)</code>: largest integer ≤ <code>x</code>. <code>floor(-1.2) = -2</code>.</li>
@@ -48,7 +48,7 @@ console.log(roundTo(1.005, 2)); // 1.01`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Clamp — keep a value within [min, max]</Styled.H3>
+                <Styled.H3>Clamp - keep a value within [min, max]</Styled.H3>
                 <Styled.UL>
                     <li>No built-in <code>Math.clamp</code> (write your own).</li>
                     <li>Handle swapped bounds defensively if inputs are untrusted.</li>
@@ -69,7 +69,7 @@ const clampSafe = (x, a, b) => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Random — <code>Math.random()</code> basics</Styled.H3>
+                <Styled.H3>Random - <code>Math.random()</code> basics</Styled.H3>
                 <Styled.UL>
                     <li><code>Math.random()</code> returns a float in <code>[0, 1)</code>.</li>
                     <li>It’s <em>not</em> cryptographically secure; do not use for tokens/passwords.</li>

@@ -24,7 +24,7 @@ const NullishCoalescing = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Basics</Styled.H3>
+                <Styled.H3>Example 1 - Basics</Styled.H3>
                 <Styled.Code>{`console.log(null ?? "fallback");      // "fallback"
 console.log(undefined ?? "fallback"); // "fallback"
 console.log(0 ?? 42);                 // 0      (0 is not nullish)
@@ -34,7 +34,7 @@ console.log(NaN ?? 99);               // NaN    (still returned)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Short-circuit evaluation</Styled.H3>
+                <Styled.H3>Example 2 - Short-circuit evaluation</Styled.H3>
                 <Styled.Code>{`const left = 5;
 const right = () => { console.log("evaluated"); return 10; };
 
@@ -47,7 +47,7 @@ console.log(null ?? right());
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Difference from <code>||</code></Styled.H3>
+                <Styled.H3>Example 3 - Difference from <code>||</code></Styled.H3>
                 <Styled.Code>{`const page = 0;
 console.log(page || 1); // 1   (|| treats 0 as falsy -> falls back)
 console.log(page ?? 1); // 0   (?? keeps 0)
@@ -58,7 +58,7 @@ console.log(name ?? "Anonymous"); // ""  (kept as provided)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — With optional chaining</Styled.H3>
+                <Styled.H3>Example 4 - With optional chaining</Styled.H3>
                 <Styled.Code>{`const user = { settings: { theme: "dark" } };
 const theme1 = user.settings?.theme ?? "light";
 console.log(theme1); // "dark"
@@ -69,14 +69,14 @@ console.log(theme2); // "light" (settings is undefined)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Chaining defaults</Styled.H3>
+                <Styled.H3>Example 5 - Chaining defaults</Styled.H3>
                 <Styled.Code>{`const a = null, b = undefined, c = 0, d = 7;
 console.log(a ?? b ?? c ?? d); // 0 (first non-nullish wins)
 console.log(a ?? b ?? d);      // 7`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Environment/config defaults</Styled.H3>
+                <Styled.H3>Example 6 - Environment/config defaults</Styled.H3>
                 <Styled.Code>{`// Keep 0 if explicitly provided, else default to 3000
 const env = { PORT: 0, HOST: undefined };
 const port = env.PORT ?? 3000;
@@ -85,7 +85,7 @@ console.log({ port, host }); // { port: 0, host: "127.0.0.1" }`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Parentheses when mixing</Styled.H3>
+                <Styled.H3>Example 7 - Parentheses when mixing</Styled.H3>
                 <Styled.Code>{`const A = null, B = "x", C = "y";
 
 // ❌ SyntaxError if we try to mix without parentheses:
@@ -97,7 +97,7 @@ console.log(A ?? (B || C)); // "x"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Working with functions</Styled.H3>
+                <Styled.H3>Example 8 - Working with functions</Styled.H3>
                 <Styled.Code>{`function greet(name) {
   const n = name ?? "(no name)";
   return \`Hello, \${n}!\`;
@@ -108,7 +108,7 @@ console.log(greet(""));      // "Hello, !" (empty string preserved)`}</Styled.Co
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Arrays/objects with explicit empty values</Styled.H3>
+                <Styled.H3>Example 9 - Arrays/objects with explicit empty values</Styled.H3>
                 <Styled.Code>{`const list = [];
 const map = {};
 
@@ -121,7 +121,7 @@ console.log((list.length ? list : ["fallback"])); // ["fallback"]`}</Styled.Code
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Interaction with numbers and NaN</Styled.H3>
+                <Styled.H3>Example 10 - Interaction with numbers and NaN</Styled.H3>
                 <Styled.Code>{`function toNumber(s) {
   const n = Number(s);
   // If parsing failed -> NaN (still non-nullish), so ?? won't swap it.

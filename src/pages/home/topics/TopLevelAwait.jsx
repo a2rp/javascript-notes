@@ -43,7 +43,7 @@ const TopLevelAwait = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Basic TLA in a browser module</Styled.H3>
+                <Styled.H3>Example 1 - Basic TLA in a browser module</Styled.H3>
                 <Styled.Code>{`<!-- index.html -->
 <script type="module" src="./main.js"></script>
 
@@ -57,7 +57,7 @@ console.log(Array.isArray(data)); // e.g., true
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Importers automatically wait</Styled.H3>
+                <Styled.H3>Example 2 - Importers automatically wait</Styled.H3>
                 <Styled.Code>{`// config.js (module)
 export let config = { ready: false };
 const res = await fetch("/config.json");
@@ -72,7 +72,7 @@ console.log(!!config.ready); // true (by the time this runs, config resolved)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Avoiding waterfalls with parallel awaits</Styled.H3>
+                <Styled.H3>Example 3 - Avoiding waterfalls with parallel awaits</Styled.H3>
                 <Styled.Code>{`// slow (serial):
 const a = await fetch("/a.json").then(r => r.json());
 const b = await fetch("/b.json").then(r => r.json());
@@ -87,7 +87,7 @@ console.log(!!a2 && !!b2); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — TLA across module boundaries</Styled.H3>
+                <Styled.H3>Example 4 - TLA across module boundaries</Styled.H3>
                 <Styled.Code>{`// userService.js (module)
 export const users = await fetch("/api/users").then(r => r.json());
 
@@ -100,7 +100,7 @@ console.log(Array.isArray(users)); // true
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Handling errors inside the module</Styled.H3>
+                <Styled.H3>Example 5 - Handling errors inside the module</Styled.H3>
                 <Styled.Code>{`// settings.js (module)
 export let settings = { theme: "dark" };
 try {
@@ -117,7 +117,7 @@ console.log(settings.theme); // "dark" or value from JSON`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Catching load failures via <code>import()</code></Styled.H3>
+                <Styled.H3>Example 6 - Catching load failures via <code>import()</code></Styled.H3>
                 <Styled.Code>{`// main.js (module)
 try {
   const mod = await import("./might-fail.js"); // TLA inside might reject
@@ -130,7 +130,7 @@ try {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Node.js (ESM) with <code>fs/promises</code></Styled.H3>
+                <Styled.H3>Example 7 - Node.js (ESM) with <code>fs/promises</code></Styled.H3>
                 <Styled.Code>{`// package.json
 // { "type": "module" }
 
@@ -146,7 +146,7 @@ console.log(!!config); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Classic script: no TLA (use an async IIFE)</Styled.H3>
+                <Styled.H3>Example 8 - Classic script: no TLA (use an async IIFE)</Styled.H3>
                 <Styled.Code>{`<!-- index.html -->
 <script>
   (async () => {
@@ -157,7 +157,7 @@ console.log(!!config); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Top-level <code>for await...of</code> in a module</Styled.H3>
+                <Styled.H3>Example 9 - Top-level <code>for await...of</code> in a module</Styled.H3>
                 <Styled.Code>{`// stream.js (module)
 async function* numbers() {
   for (let i = 1; i <= 3; i++) {
@@ -178,7 +178,7 @@ console.log(sum); // 6 (after the async loop completes)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Don't create dependency deadlocks</Styled.H3>
+                <Styled.H3>Example 10 - Don't create dependency deadlocks</Styled.H3>
                 <Styled.Code>{`// a.js
 import "./b.js";
 await new Promise(r => setTimeout(r, 100));

@@ -1,43 +1,31 @@
-# Javascript Notes
+# JavaScript Notes
 
-## About
+JavaScript Notes is a searchable, single-page reference for JavaScript fundamentals, language internals, browser APIs, asynchronous code, and practical engineering patterns.
 
-Concise, micro-topic notes on JavaScript—from fundamentals to internals—with a production-first mindset.
-Each topic follows a tight structure (What/Why • Core Rules • Pitfalls • Checklist • See Also) for fast recall.
-Ideal for code reviews, interviews, and daily engineering; growing into a searchable GitHub Pages site.
+## Features
 
----
+- Micro-topic navigation with focused explanations
+- Expandable Q&A notes and practical examples
+- Lazy-loaded pages with route-aware scrolling
+- Responsive fixed header, collapsible navigation, icon-only footer links, and go-to-top control
+- Local logo, favicon, and social preview assets
 
-## Links
+## Tech stack
 
--   **GitHub:** https://github.com/a2rp/javascript-notes
--   **Live (GH Pages):** https://a2rp.github.io/javascript-notes/
+React, Vite, React Router, Material UI, styled-components, React Icons, QRCode, and jsQR.
 
-## Clone & Run (local)
+## Run locally
 
 ```bash
-git clone https://github.com/a2rp/javascript-notes.git
-cd javascript-notes
 npm install
 npm run dev
 ```
 
-## Links
+Build and deploy with `npm run build` and `npm run deploy`.
 
-- Portfolio: [https://www.ashishranjan.net](https://www.ashishranjan.net)
-- GitHub: [https://github.com/a2rp](https://github.com/a2rp)
-- CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
-- LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [https://www.facebook.com/theash.ashish/](https://www.facebook.com/theash.ashish/)
-- YouTube: [https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
+## Screenshot
 
-## Support
-
-- Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me A Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)
-<!-- Project links -->
+![JavaScript Notes preview](screenshot.png)
 
 ## Links
 

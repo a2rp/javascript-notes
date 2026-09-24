@@ -43,7 +43,7 @@ const NumberParsing = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Whole string vs prefix</Styled.H3>
+                <Styled.H3>Example 1 - Whole string vs prefix</Styled.H3>
                 <Styled.Code>{`console.log(Number("42"));          // 42
 console.log(parseInt("42", 10));    // 42
 console.log(parseFloat("42"));      // 42
@@ -54,7 +54,7 @@ console.log(parseFloat("42.5kg"));  // 42.5 (stops at "k")`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Trimming & special tokens</Styled.H3>
+                <Styled.H3>Example 2 - Trimming & special tokens</Styled.H3>
                 <Styled.Code>{`console.log(Number("  \\t\\n 123 ")); // 123 (whitespace trimmed)
 console.log(parseInt("   123", 10)); // 123
 console.log(parseFloat("   -3.5"));  // -3.5
@@ -65,7 +65,7 @@ console.log(parseInt("Infinity",10));// NaN (first char not a digit/sign)`}</Sty
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Radix rules (always pass it)</Styled.H3>
+                <Styled.H3>Example 3 - Radix rules (always pass it)</Styled.H3>
                 <Styled.Code>{`console.log(parseInt("08", 10));   // 8  (explicit decimal)
 console.log(parseInt("0x10", 16)); // 16 (hex with radix)
 console.log(parseInt("0x10", 10)); // 0  (parses "0" then stops at "x")
@@ -77,7 +77,7 @@ console.log(parseInt("1010", 2));   // 10`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Number supports 0x / 0b / 0o (both cases)</Styled.H3>
+                <Styled.H3>Example 4 - Number supports 0x / 0b / 0o (both cases)</Styled.H3>
                 <Styled.Code>{`console.log(Number("0xFF"));  // 255
 console.log(Number("0b1010")); // 10
 console.log(Number("0B1010")); // 10
@@ -88,7 +88,7 @@ console.log(parseFloat("0x10")); // 0  (stops at "x"; float doesn't do hex)`}</S
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Empty strings & oddities</Styled.H3>
+                <Styled.H3>Example 5 - Empty strings & oddities</Styled.H3>
                 <Styled.Code>{`console.log(Number(""));     // 0    (empty string → 0)
 console.log(parseFloat(""));  // NaN
 console.log(parseInt("", 10)); // NaN
@@ -98,7 +98,7 @@ console.log(parseInt("   -0", 10)); // 0 (sign handled)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Arrays/objects first stringify</Styled.H3>
+                <Styled.H3>Example 6 - Arrays/objects first stringify</Styled.H3>
                 <Styled.Code>{`console.log(parseInt([15], 10));   // 15   (["15"] -> "15")
 console.log(parseFloat(["3.14"])); // 3.14
 console.log(Number([1,2]));        // NaN  ("1,2" not a numeric literal)
@@ -106,7 +106,7 @@ console.log(parseInt({ toString(){ return "123"; } }, 10)); // 123`}</Styled.Cod
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Precision limits (Number vs BigInt)</Styled.H3>
+                <Styled.H3>Example 7 - Precision limits (Number vs BigInt)</Styled.H3>
                 <Styled.Code>{`// Exceeds Number's safe integer:
 const s = "9007199254740993";              // 2^53 + 1
 console.log(parseInt(s, 10));              // 9007199254740992 (rounded)
@@ -115,28 +115,28 @@ console.log(BigInt(s));                    // 9007199254740993n (exact)`}</Style
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Exponents & decimals</Styled.H3>
+                <Styled.H3>Example 8 - Exponents & decimals</Styled.H3>
                 <Styled.Code>{`console.log(parseFloat("1.2e3")); // 1200
 console.log(Number("1.2e3"));   // 1200
 console.log(parseInt("1.2e3",10)); // 1 (stops at ".")`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Base 36 and alphabet digits</Styled.H3>
+                <Styled.H3>Example 9 - Base 36 and alphabet digits</Styled.H3>
                 <Styled.Code>{`console.log(parseInt("zzz", 36));  // 46655
 console.log(parseInt("FACE", 16)); // 64206
 console.log(parseInt("101", 2));   // 5`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Locale-formatted numbers are not parsed</Styled.H3>
+                <Styled.H3>Example 10 - Locale-formatted numbers are not parsed</Styled.H3>
                 <Styled.Code>{`console.log(Number("1,234.56"));   // NaN (comma invalid)
 console.log(parseFloat("1,234.56")); // 1  (stops at comma)
 // Clean or use Intl.NumberFormat for locale-aware parsing/formatting.`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 11 — Practical patterns</Styled.H3>
+                <Styled.H3>Example 11 - Practical patterns</Styled.H3>
                 <Styled.UL>
                     <li>
                         Need a strict numeric conversion? Use <code>Number(x)</code>. It fails fast on junk.

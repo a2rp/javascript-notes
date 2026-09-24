@@ -23,7 +23,7 @@ const StringOperations = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — <code>slice</code> basics</Styled.H3>
+                <Styled.H3>Example 1 - <code>slice</code> basics</Styled.H3>
                 <Styled.Code>{`const s = "JavaScript";
 
 // start..end (end excluded)
@@ -42,7 +42,7 @@ console.log(s);               // "JavaScript"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — <code>at</code> (with negatives)</Styled.H3>
+                <Styled.H3>Example 2 - <code>at</code> (with negatives)</Styled.H3>
                 <Styled.Code>{`const t = "ABCDE";
 
 console.log(t.at(0));   // "A"
@@ -58,7 +58,7 @@ console.log(t.charAt(-1)); // ""`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — <code>includes</code> with start position</Styled.H3>
+                <Styled.H3>Example 3 - <code>includes</code> with start position</Styled.H3>
                 <Styled.Code>{`const u = "apple";
 
 // basic checks (case-sensitive)
@@ -74,7 +74,7 @@ console.log(u.includes("ap", 1));  // false
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — <code>padStart</code> for numbers &amp; IDs</Styled.H3>
+                <Styled.H3>Example 4 - <code>padStart</code> for numbers &amp; IDs</Styled.H3>
                 <Styled.Code>{`// zero-pad
 const n = 7;
 console.log(String(n).padStart(3, "0")); // "007"
@@ -89,7 +89,7 @@ console.log(masked); // "••••••••••••5678"`}</Styled.Cod
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — <code>padEnd</code> for simple column layout</Styled.H3>
+                <Styled.H3>Example 5 - <code>padEnd</code> for simple column layout</Styled.H3>
                 <Styled.Code>{`const rows = [
   ["Name", "Qty", "Price"],
   ["Apples", "3", "₹120"],
@@ -109,7 +109,7 @@ Bananas      10      ₹99
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — <code>trim</code>, <code>trimStart</code>, <code>trimEnd</code></Styled.H3>
+                <Styled.H3>Example 6 - <code>trim</code>, <code>trimStart</code>, <code>trimEnd</code></Styled.H3>
                 <Styled.Code>{`const raw = "  \\n\t Hello World \\t\\n  ";
 console.log(raw.length);                 // includes spaces/tabs/newlines
 
@@ -122,7 +122,7 @@ console.log(raw.trimEnd());              // "  \\n\\t Hello World"`}</Styled.Cod
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Combine operations</Styled.H3>
+                <Styled.H3>Example 7 - Combine operations</Styled.H3>
                 <Styled.Code>{`// Clean, check, and take a preview
 function preview(input) {
   const clean = input.trim();

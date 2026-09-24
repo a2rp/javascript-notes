@@ -26,7 +26,7 @@ const SpreadAndRest = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Function calls (expand args)</Styled.H3>
+                <Styled.H3>Example 1 - Function calls (expand args)</Styled.H3>
                 <Styled.Code>{`const nums = [3, 7, 2];
 console.log(Math.max(...nums)); // 7
 
@@ -35,20 +35,20 @@ console.log(sum(...nums)); // 12`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Array literals &amp; concatenation</Styled.H3>
+                <Styled.H3>Example 2 - Array literals &amp; concatenation</Styled.H3>
                 <Styled.Code>{`const a = [1, 2], b = [3, 4];
 const c = [0, ...a, ...b, 5];
 console.log(c); // [0, 1, 2, 3, 4, 5]`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Spreading strings (iterable by code points)</Styled.H3>
+                <Styled.H3>Example 3 - Spreading strings (iterable by code points)</Styled.H3>
                 <Styled.Code>{`const s = "A😀B";
 console.log([...s]); // ["A","😀","B"]`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Convert array-like/iterable to array</Styled.H3>
+                <Styled.H3>Example 4 - Convert array-like/iterable to array</Styled.H3>
                 <Styled.Code>{`function demo() {
   const args = [...arguments]; // arguments is array-like, but iterable -> ok
   return args.join("-");
@@ -57,7 +57,7 @@ console.log(demo("x","y","z")); // "x-y-z"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Rest parameter (collect)</Styled.H3>
+                <Styled.H3>Example 5 - Rest parameter (collect)</Styled.H3>
                 <Styled.Code>{`function joinWith(sep, ...parts) {
   return parts.join(sep);
 }
@@ -66,7 +66,7 @@ console.log(joinWith(" · ", "JS", "ES6+", "React"));
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Array destructuring with rest</Styled.H3>
+                <Styled.H3>Example 6 - Array destructuring with rest</Styled.H3>
                 <Styled.Code>{`const xs = [10, 20, 30, 40];
 const [head, ...tail] = xs;
 console.log(head); // 10
@@ -74,7 +74,7 @@ console.log(tail); // [20, 30, 40]`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Object spread: clone &amp; merge (shallow)</Styled.H3>
+                <Styled.H3>Example 7 - Object spread: clone &amp; merge (shallow)</Styled.H3>
                 <Styled.Code>{`const base = { a: 1, nested: { x: 10 } };
 const extra = { b: 2 };
 const clone = { ...base };
@@ -89,7 +89,7 @@ console.log(base.nested.x); // 99 (same reference)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Object destructuring with rest (exclude some keys)</Styled.H3>
+                <Styled.H3>Example 8 - Object destructuring with rest (exclude some keys)</Styled.H3>
                 <Styled.Code>{`const user = { id: 1, name: "Ada", role: "admin" };
 const { role, ...publicInfo } = user; // drop 'role'
 console.log(role);       // "admin"
@@ -97,7 +97,7 @@ console.log(publicInfo); // { id: 1, name: "Ada" }`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Order matters: later props overwrite earlier</Styled.H3>
+                <Styled.H3>Example 9 - Order matters: later props overwrite earlier</Styled.H3>
                 <Styled.Code>{`const left = { id: 1, name: "Left" };
 const right = { name: "Right", ok: true };
 const out = { ...left, name: "Middle", ...right };
@@ -105,7 +105,7 @@ console.log(out); // { id:1, name:"Right", ok:true }`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — With Sets/Maps</Styled.H3>
+                <Styled.H3>Example 10 - With Sets/Maps</Styled.H3>
                 <Styled.Code>{`// Deduplicate via Set
 const uniq = [...new Set([1,2,2,3])];
 console.log(uniq); // [1,2,3]
@@ -117,7 +117,7 @@ console.log(obj); // { k1:10, k2:20 }`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 11 — Parameter defaults + rest</Styled.H3>
+                <Styled.H3>Example 11 - Parameter defaults + rest</Styled.H3>
                 <Styled.Code>{`function format(prefix = "> ", ...lines) {
   return lines.map(l => prefix + l).join("\\n");
 }
@@ -129,7 +129,7 @@ console.log("\\n" + format(undefined, "one", "two"));
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 12 — Common errors (commented)</Styled.H3>
+                <Styled.H3>Example 12 - Common errors (commented)</Styled.H3>
                 <Styled.Code>{`// Spread needs an iterable in calls/arrays:
 // [...null];             // ❌ TypeError: null is not iterable
 // Math.max(...123);      // ❌ 123 is not iterable

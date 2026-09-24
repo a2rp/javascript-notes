@@ -22,7 +22,7 @@ const StatementsVsExpressions = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Classifying common code</Styled.H3>
+                <Styled.H3>Example 1 - Classifying common code</Styled.H3>
                 <Styled.Code>{`// Statement (control flow):
 if (true) { /* ... */ }
 
@@ -41,7 +41,7 @@ function f() { return 1; }
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Assignment is an expression</Styled.H3>
+                <Styled.H3>Example 2 - Assignment is an expression</Styled.H3>
                 <Styled.Code>{`let a = 1;
 let b;
 b = (a = 5);                   // both assignments are expressions; whole thing evaluates to 5
@@ -55,7 +55,7 @@ console.log(b);                // 5
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Ternary expression vs if-statement</Styled.H3>
+                <Styled.H3>Example 3 - Ternary expression vs if-statement</Styled.H3>
                 <Styled.Code>{`const n = 7;
 
 // Expression form (returns a value):
@@ -70,7 +70,7 @@ console.log(parity);           // "odd"
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Function: declaration vs expression (IIFE)</Styled.H3>
+                <Styled.H3>Example 4 - Function: declaration vs expression (IIFE)</Styled.H3>
                 <Styled.Code>{`// Statement (declaration):
 function add(x, y) { return x + y; }
 console.log(add(2, 3));        // 5
@@ -90,7 +90,7 @@ console.log(result);           // 10
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Arrow functions are expressions</Styled.H3>
+                <Styled.H3>Example 5 - Arrow functions are expressions</Styled.H3>
                 <Styled.Code>{`// Arrow function creates a function value (expression):
 const inc = (x) => x + 1;      // expression produces a function
 console.log(inc(10));          // 11
@@ -103,7 +103,7 @@ console.log(inc(10));          // 11
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Comma operator (single expression, last value wins)</Styled.H3>
+                <Styled.H3>Example 6 - Comma operator (single expression, last value wins)</Styled.H3>
                 <Styled.Code>{`let x = 0;
 const y = (x += 1, x += 2, x); // comma evaluates left→right, returns last sub-expression's value
 console.log(x);                // 3
@@ -118,7 +118,7 @@ console.log(y);                // 3
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Top-level 'this' differs; blocks are not expressions</Styled.H3>
+                <Styled.H3>Example 7 - Top-level 'this' differs; blocks are not expressions</Styled.H3>
                 <Styled.Code>{`// Top-level 'this' is:
 // - global object in scripts
 // - undefined in modules

@@ -138,7 +138,7 @@ export default function LiveRunner({
     }, [debouncedCode, autorun, run]);
 
     const onCopy = async () => {
-        try { await navigator.clipboard.writeText(code); } catch { }
+        try { await navigator.clipboard.writeText(code); } catch { return undefined; }
     };
 
     return (

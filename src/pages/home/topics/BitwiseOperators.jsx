@@ -30,7 +30,7 @@ const BitwiseOperators = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — AND, OR, XOR, NOT</Styled.H3>
+                <Styled.H3>Example 1 - AND, OR, XOR, NOT</Styled.H3>
                 <Styled.Code>{`const a = 0b0101; // 5
 const b = 0b0011; // 3
 
@@ -41,7 +41,7 @@ console.log(~5);                         // -6  (two's complement: ~x === -(x+1)
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Shifts (signed vs unsigned)</Styled.H3>
+                <Styled.H3>Example 2 - Shifts (signed vs unsigned)</Styled.H3>
                 <Styled.Code>{`console.log(5 << 1);         // 10   (0b0101 -> 0b1010)
 console.log(5 >> 1);         // 2    (0b0101 -> 0b0010)
 console.log(5 >>> 1);        // 2    (same for positive numbers)
@@ -51,7 +51,7 @@ console.log(-5 >>> 1);       // 2147483645  (0x7FFFFFFD, zero-filled)`}</Styled.
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Bit flags pattern</Styled.H3>
+                <Styled.H3>Example 3 - Bit flags pattern</Styled.H3>
                 <Styled.Code>{`const READ  = 1 << 0; // 0b001
 const WRITE = 1 << 1; // 0b010
 const EXEC  = 1 << 2; // 0b100
@@ -67,7 +67,7 @@ console.log(perms, perms.toString(2)); // 3 "11"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — 32-bit integer coercion tricks</Styled.H3>
+                <Styled.H3>Example 4 - 32-bit integer coercion tricks</Styled.H3>
                 <Styled.Code>{`console.log(3.9 | 0);     // 3   (truncate toward 0)
 console.log(-3.9 | 0);    // -3
 
@@ -77,7 +77,7 @@ console.log((0xFFFFFFFF >>> 0)); // 4294967295`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Extract bytes (RGBA)</Styled.H3>
+                <Styled.H3>Example 5 - Extract bytes (RGBA)</Styled.H3>
                 <Styled.Code>{`const rgba = 0x11223344; // 0xRR_GG_BB_AA
 const r = (rgba >>> 24) & 0xFF;
 const g = (rgba >>> 16) & 0xFF;
@@ -90,7 +90,7 @@ console.log(r.toString(16), g.toString(16), b.toString(16), a.toString(16));
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — BigInt bitwise (no mixing types)</Styled.H3>
+                <Styled.H3>Example 6 - BigInt bitwise (no mixing types)</Styled.H3>
                 <Styled.Code>{`const x = 0b1010n, y = 0b1100n;
 console.log((x & y).toString(2));   // "1000"
 console.log(1n << 5n);              // 32n
@@ -99,7 +99,7 @@ try { console.log(1n | 1); } catch (e) { console.log("TypeError"); } // mixing n
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Small utilities with masks</Styled.H3>
+                <Styled.H3>Example 7 - Small utilities with masks</Styled.H3>
                 <Styled.Code>{`const n = 13;              // 0b1101
 console.log(n & 1);          // 1   (odd check)
 console.log(n ^ 1);          // 12  (toggle LSB)

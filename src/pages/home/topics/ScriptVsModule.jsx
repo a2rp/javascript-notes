@@ -51,7 +51,7 @@ const ScriptVsModule = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Loading in the browser</Styled.H3>
+                <Styled.H3>Example 1 - Loading in the browser</Styled.H3>
                 <Styled.Code>{`<!-- index.html -->
 <!-- Classic script (runs immediately when encountered unless defer/async) -->
 <script src="./classic.js"></script>
@@ -67,7 +67,7 @@ const ScriptVsModule = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Strictness & top-level <code>this</code></Styled.H3>
+                <Styled.H3>Example 2 - Strictness & top-level <code>this</code></Styled.H3>
                 <Styled.Code>{`// classic.js (script goal)
 console.log(this === window); // true (sloppy mode)
 "use strict";
@@ -78,7 +78,7 @@ console.log(this);            // undefined (modules are always strict)`}</Styled
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Top-level scope & globals</Styled.H3>
+                <Styled.H3>Example 3 - Top-level scope & globals</Styled.H3>
                 <Styled.Code>{`// classic.js (script)
 var a = 1;           // creates window.a
 let b = 2;           // block-scoped; not a window property
@@ -93,7 +93,7 @@ console.log(globalThis.x); // undefined
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Import/export only in modules</Styled.H3>
+                <Styled.H3>Example 4 - Import/export only in modules</Styled.H3>
                 <Styled.Code>{`// lib.js (module)
 export const add = (a, b) => a + b;
 
@@ -106,7 +106,7 @@ console.log(add(2, 3)); // 5
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Top-level <code>await</code> (modules only)</Styled.H3>
+                <Styled.H3>Example 5 - Top-level <code>await</code> (modules only)</Styled.H3>
                 <Styled.Code>{`// main.js (module)
 const res = await fetch('https://example.com/data.json');
 const data = await res.json();
@@ -117,7 +117,7 @@ console.log(Array.isArray(data)); // e.g., true
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Evaluation once per module URL</Styled.H3>
+                <Styled.H3>Example 6 - Evaluation once per module URL</Styled.H3>
                 <Styled.Code>{`// counter.js (module)
 console.log('counter module evaluated');
 let n = 0;
@@ -144,7 +144,7 @@ import './b.js';
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Defer vs immediate execution</Styled.H3>
+                <Styled.H3>Example 7 - Defer vs immediate execution</Styled.H3>
                 <Styled.Code>{`<!-- index.html -->
 <h1>Order demo</h1>
 <script>
@@ -174,7 +174,7 @@ inline module
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Small Node.js note (context only)</Styled.H3>
+                <Styled.H3>Example 8 - Small Node.js note (context only)</Styled.H3>
                 <Styled.Code>{`// package.json
 // { "type": "module" }  // makes .js files load as ESM in Node
 // Alternatively, use .mjs for modules and .cjs for CommonJS.

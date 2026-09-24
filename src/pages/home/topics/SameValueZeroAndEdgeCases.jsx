@@ -5,7 +5,7 @@ import { Styled } from "./styled";
 const SameValueZeroAndEdgeCases = () => {
     return (
         <Styled.Page>
-            <Styled.H1>SameValueZero (e.g., NaN, -0) — edge cases</Styled.H1>
+            <Styled.H1>SameValueZero (e.g., NaN, -0) - edge cases</Styled.H1>
 
             <Styled.Lead>
                 <em>SameValueZero</em> is an equality algorithm used by several JS APIs.
@@ -42,7 +42,7 @@ const SameValueZeroAndEdgeCases = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Quick comparison table</Styled.H3>
+                <Styled.H3>Example 1 - Quick comparison table</Styled.H3>
                 <Styled.Code>{`console.log(NaN === NaN);           // false
 console.log([NaN].includes(NaN)); // true   (SameValueZero)
 console.log(Object.is(NaN, NaN)); // true   (SameValue)
@@ -53,7 +53,7 @@ console.log(Object.is(+0, -0));   // false  (SameValue distinguishes)`}</Styled.
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — <code>includes</code> vs <code>indexOf</code></Styled.H3>
+                <Styled.H3>Example 2 - <code>includes</code> vs <code>indexOf</code></Styled.H3>
                 <Styled.Code>{`const xs = [NaN, 0, -0, 1];
 
 console.log(xs.includes(NaN)); // true   (SameValueZero)
@@ -65,13 +65,13 @@ console.log(xs.indexOf(-0));   // 1 or 2 depending on array but finds 0/-0 equal
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Sets de-duplicate using SameValueZero</Styled.H3>
+                <Styled.H3>Example 3 - Sets de-duplicate using SameValueZero</Styled.H3>
                 <Styled.Code>{`const s = new Set([NaN, NaN, +0, -0, 1, 1]);
 console.log([...s]); // [NaN, 0, 1]  (NaN collapsed; +0 and -0 collapsed)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Map key equality</Styled.H3>
+                <Styled.H3>Example 4 - Map key equality</Styled.H3>
                 <Styled.Code>{`const m = new Map();
 m.set(NaN, "A");
 console.log(m.get(NaN)); // "A" (NaN matches NaN)
@@ -83,14 +83,14 @@ console.log(m.get(+0));  // "neg zero" (+0 and -0 are the same key under SameVal
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Typed arrays: <code>includes</code> honors NaN</Styled.H3>
+                <Styled.H3>Example 5 - Typed arrays: <code>includes</code> honors NaN</Styled.H3>
                 <Styled.Code>{`const ta = new Float64Array([NaN, 1, 2]);
 console.log(ta.includes(NaN)); // true
 console.log(ta.indexOf(NaN));  // -1 (typed array indexOf also uses ===)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Polyfill-style function</Styled.H3>
+                <Styled.H3>Example 6 - Polyfill-style function</Styled.H3>
                 <Styled.Code>{`const sameValueZero = (a, b) => a === b || (a !== a && b !== b);
 // Explanation: only NaN is not equal to itself, so (a !== a) detects NaN.
 console.log(sameValueZero(NaN, NaN)); // true
@@ -99,14 +99,14 @@ console.log(sameValueZero({}, {}));   // false (different objects)`}</Styled.Cod
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Wrapper objects are not primitives</Styled.H3>
+                <Styled.H3>Example 7 - Wrapper objects are not primitives</Styled.H3>
                 <Styled.Code>{`const boxedNaN = new Number(NaN);
 console.log([boxedNaN].includes(NaN)); // false (object !== number; not NaN primitive)
 console.log([boxedNaN].includes(boxedNaN)); // true (same reference)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Choosing the right check</Styled.H3>
+                <Styled.H3>Example 8 - Choosing the right check</Styled.H3>
                 <Styled.UL>
                     <li>
                         Need to know if a collection <em>contains</em> a value (including <code>NaN</code>)? Use{" "}
@@ -123,7 +123,7 @@ console.log([boxedNaN].includes(boxedNaN)); // true (same reference)`}</Styled.C
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Practical patterns</Styled.H3>
+                <Styled.H3>Example 9 - Practical patterns</Styled.H3>
                 <Styled.Code>{`// Deduplicate array, preserving NaN and normalizing ±0:
 const uniq = arr => [...new Set(arr)];
 console.log(uniq([NaN, NaN, -0, +0, 2, 2])); // [NaN, 0, 2]
@@ -138,7 +138,7 @@ console.log(isNegZero(-0)); // true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Summary cheat sheet</Styled.H3>
+                <Styled.H3>Example 10 - Summary cheat sheet</Styled.H3>
                 <Styled.UL>
                     <li>
                         <strong><code>===</code>:</strong> No coercion, <code>NaN !== NaN</code>, <code>+0 === -0</code>.

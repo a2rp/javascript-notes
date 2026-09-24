@@ -39,7 +39,7 @@ const TaggedTemplates = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — What a tag receives</Styled.H3>
+                <Styled.H3>Example 1 - What a tag receives</Styled.H3>
                 <Styled.Code>{`function inspect(strings, ...vals) {
   console.log(strings);       // cooked parts
   console.log(strings.raw);   // raw parts (escapes intact)
@@ -55,7 +55,7 @@ console.log(inspect\\\`Hi \\\\n \${who}!\\\`);
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Safe HTML escaping</Styled.H3>
+                <Styled.H3>Example 2 - Safe HTML escaping</Styled.H3>
                 <Styled.Code>{`const escape = (s) => String(s)
   .replace(/&/g,"&amp;").replace(/</g,"&lt;")
   .replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
@@ -71,7 +71,7 @@ console.log(html\\\`<p>Hello, \${user}</p>\\\`);
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — i18n formatting</Styled.H3>
+                <Styled.H3>Example 3 - i18n formatting</Styled.H3>
                 <Styled.Code>{`const dict = {
   en: (l, v) => \`\${l[0]}\${v[0]}\${l[1]}\${v[1]}\${l[2]}\`,
   fr: (l, v) => \`\${l[0]}\${v[1]} \${l[1]}\${v[0]}\${l[2]}\`, // swap order
@@ -87,7 +87,7 @@ console.log(fr\\\`\${n} new \${item}\\\`); // "messages 3 new"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Dedent helper (clean indentation)</Styled.H3>
+                <Styled.H3>Example 4 - Dedent helper (clean indentation)</Styled.H3>
                 <Styled.Code>{`function dedent(strings, ...vals) {
   const text = strings.reduce((a, s, i) => a + s + (i < vals.length ? vals[i] : ""), "");
   const lines = text.replace(/^\\n/, "").replace(/\\n\\s*$/, "").split("\\n");
@@ -103,7 +103,7 @@ console.log(block);
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Returning non-strings</Styled.H3>
+                <Styled.H3>Example 5 - Returning non-strings</Styled.H3>
                 <Styled.Code>{`function json(strings, ...vals) {
   const text = strings.reduce((a, s, i) =>
     a + s + (i < vals.length ? JSON.stringify(vals[i]) : ""), "");
@@ -114,7 +114,7 @@ console.log(Array.isArray(obj.nums), obj.ok); // true true`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Template object is cached (same identity)</Styled.H3>
+                <Styled.H3>Example 6 - Template object is cached (same identity)</Styled.H3>
                 <Styled.Code>{`let firstStringsRef;
 function remember(strings) {
   if (!firstStringsRef) firstStringsRef = strings;
@@ -126,7 +126,7 @@ console.log(remember\\\`X=\${2}\\\`); // true (same callsite -> same strings obj
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — SQL-like DSL (illustrative)</Styled.H3>
+                <Styled.H3>Example 7 - SQL-like DSL (illustrative)</Styled.H3>
                 <Styled.Code>{`function sql(strings, ...vals) {
   // Build parameterized query: "SELECT * FROM t WHERE id = $1"
   const text = strings.reduce((a, s, i) => a + s + (i < vals.length ? \`$\${i+1}\` : ""), "");
@@ -143,7 +143,7 @@ console.log(q.params); // [42, true]`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Raw vs cooked difference in one place</Styled.H3>
+                <Styled.H3>Example 8 - Raw vs cooked difference in one place</Styled.H3>
                 <Styled.Code>{`function showRaw(strings) {
   return { cooked: strings[0], raw: strings.raw[0] };
 }
@@ -168,7 +168,7 @@ console.log(showRaw\\\`\\n\\t\\\`);
                         values (XSS prevention).
                     </li>
                     <li>
-                        Tags can return any type — you can parse JSON, build ASTs, or return
+                        Tags can return any type - you can parse JSON, build ASTs, or return
                         config objects.
                     </li>
                     <li>

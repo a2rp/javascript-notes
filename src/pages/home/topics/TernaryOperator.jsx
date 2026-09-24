@@ -19,13 +19,13 @@ const TernaryOperator = () => {
                     <li><strong>Syntax:</strong> <code>cond ? x : y</code></li>
                     <li><strong>Result:</strong> evaluates <em>cond</em> with truthiness; returns <em>x</em> if truthy, else <em>y</em>.</li>
                     <li><strong>Evaluation:</strong> Only the chosen branch is evaluated (the other is skipped).</li>
-                    <li><strong>Associativity:</strong> Right-associative — <code>a ? b : c ? d : e</code> ≡ <code>a ? b : (c ? d : e)</code>.</li>
+                    <li><strong>Associativity:</strong> Right-associative - <code>a ? b : c ? d : e</code> ≡ <code>a ? b : (c ? d : e)</code>.</li>
                     <li><strong>Expressions:</strong> Both <em>x</em> and <em>y</em> must be expressions (not statements like <code>if</code>). For multi-steps, compute before or call a function.</li>
                 </Styled.UL>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Basics</Styled.H3>
+                <Styled.H3>Example 1 - Basics</Styled.H3>
                 <Styled.Code>{`const isOnline = true;
 const label = isOnline ? "🟢 Online" : "⚪ Offline";
 console.log(label); 
@@ -33,7 +33,7 @@ console.log(label);
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Only one branch runs</Styled.H3>
+                <Styled.H3>Example 2 - Only one branch runs</Styled.H3>
                 <Styled.Code>{`const L = () => (console.log("LEFT"), "L");
 const R = () => (console.log("RIGHT"), "R");
 
@@ -47,7 +47,7 @@ console.log(false ? L() : R());
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Nesting &amp; right-associativity</Styled.H3>
+                <Styled.H3>Example 3 - Nesting &amp; right-associativity</Styled.H3>
                 <Styled.Code>{`const grade = (score) =>
   score >= 90 ? "A"
 : score >= 75 ? "B"
@@ -61,7 +61,7 @@ const grade2 = (s) => s >= 90 ? "A" : (s >= 75 ? "B" : (s >= 60 ? "C" : "D"));`}
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Inlined selection for values</Styled.H3>
+                <Styled.H3>Example 4 - Inlined selection for values</Styled.H3>
                 <Styled.Code>{`const isDark = false;
 const fg = isDark ? "#fff" : "#000";
 const pad = (compact) => (compact ? 8 : 16);
@@ -70,7 +70,7 @@ console.log(fg, pad(true));
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — With function calls</Styled.H3>
+                <Styled.H3>Example 5 - With function calls</Styled.H3>
                 <Styled.Code>{`function loadCache(){ return "from-cache"; }
 function fetchRemote(){ return "from-network"; }
 
@@ -80,7 +80,7 @@ console.log(data); // one of the two strings`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Defaulting vs truthiness</Styled.H3>
+                <Styled.H3>Example 6 - Defaulting vs truthiness</Styled.H3>
                 <Styled.Code>{`const page = 0;
 
 // Using ternary keeps valid falsy values:
@@ -93,7 +93,7 @@ console.log(p); // 0
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Parentheses when mixing</Styled.H3>
+                <Styled.H3>Example 7 - Parentheses when mixing</Styled.H3>
                 <Styled.Code>{`const ok = false, msg = "hi", alt = "bye";
 
 // Be explicit with grouping:
@@ -105,7 +105,7 @@ console.log(out2); // "bye"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Equivalent if/else</Styled.H3>
+                <Styled.H3>Example 8 - Equivalent if/else</Styled.H3>
                 <Styled.Code>{`// Ternary
 const speed = 55;
 const tag = speed > 60 ? "fast" : "ok";
@@ -121,7 +121,7 @@ console.log(tag, tag2); // "ok" "ok"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — Avoid heavy work in both branches</Styled.H3>
+                <Styled.H3>Example 9 - Avoid heavy work in both branches</Styled.H3>
                 <Styled.Code>{`// Compute once if both branches would repeat work
 const input = "  Ada  ";
 const trimmed = input.trim();

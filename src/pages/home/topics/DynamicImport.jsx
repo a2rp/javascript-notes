@@ -53,7 +53,7 @@ const DynamicImport = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Basic usage</Styled.H3>
+                <Styled.H3>Example 1 - Basic usage</Styled.H3>
                 <Styled.Code>{`// main.js (module)
 const ns = await import('./math.js');
 console.log(typeof ns.add, typeof ns.mul); // "function" "function"
@@ -63,7 +63,7 @@ console.log(add(2, 3)); // 5`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Default export via <code>ns.default</code></Styled.H3>
+                <Styled.H3>Example 2 - Default export via <code>ns.default</code></Styled.H3>
                 <Styled.Code>{`// greeter.js
 export default function greet(name){ return \`Hi, \${name}\`; }
 
@@ -77,7 +77,7 @@ console.log(greet('Lin')); // "Hi, Lin"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Conditional loading (feature flag)</Styled.H3>
+                <Styled.H3>Example 3 - Conditional loading (feature flag)</Styled.H3>
                 <Styled.Code>{`// main.js (module)
 const heavy = Math.random() > 0.5 ? './charts.js' : './table.js';
 const ui = await import(heavy);
@@ -88,7 +88,7 @@ ui.render(); // calls whichever module's render()
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — In classic script (no top-level await)</Styled.H3>
+                <Styled.H3>Example 4 - In classic script (no top-level await)</Styled.H3>
                 <Styled.Code>{`<!-- index.html -->
 <script>
   import('./math.js')
@@ -102,7 +102,7 @@ ui.render(); // calls whichever module's render()
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Parallel loading</Styled.H3>
+                <Styled.H3>Example 5 - Parallel loading</Styled.H3>
                 <Styled.Code>{`// main.js (module)
 const [math, util] = await Promise.all([
   import('./math.js'),
@@ -112,7 +112,7 @@ console.log(math.add(1, 2), util.capitalize('ash')); // 3 "Ash"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Error handling with <code>try/catch</code></Styled.H3>
+                <Styled.H3>Example 6 - Error handling with <code>try/catch</code></Styled.H3>
                 <Styled.Code>{`// main.js (module)
 try {
   const ns = await import('./missing-or-bad.js');
@@ -124,7 +124,7 @@ try {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Event-driven lazy load (on demand)</Styled.H3>
+                <Styled.H3>Example 7 - Event-driven lazy load (on demand)</Styled.H3>
                 <Styled.Code>{`// main.js (module)
 document.getElementById('open-chart').addEventListener('click', async () => {
   const { renderChart } = await import('./charts.js');
@@ -133,7 +133,7 @@ document.getElementById('open-chart').addEventListener('click', async () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Mapping names to modules safely</Styled.H3>
+                <Styled.H3>Example 8 - Mapping names to modules safely</Styled.H3>
                 <Styled.Code>{`// main.js (module)
 const routes = {
   home: './pages/home.js',
@@ -152,7 +152,7 @@ await loadPage('home'); // renders home page`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — URL resolution with <code>import.meta.url</code></Styled.H3>
+                <Styled.H3>Example 9 - URL resolution with <code>import.meta.url</code></Styled.H3>
                 <Styled.Code>{`// utils/loader.js (module)
 const mod = await import(new URL('./math.js', import.meta.url));
 console.log(mod.add(4, 5)); // 9
@@ -161,7 +161,7 @@ console.log(mod.add(4, 5)); // 9
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Single evaluation & caching</Styled.H3>
+                <Styled.H3>Example 10 - Single evaluation & caching</Styled.H3>
                 <Styled.Code>{`// once.js
 console.log('evaluated once');
 export let hits = 0;
@@ -178,7 +178,7 @@ console.log(a.hits, b.hits); // 1 1
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 11 — Node interop (CommonJS via <code>default</code>)</Styled.H3>
+                <Styled.H3>Example 11 - Node interop (CommonJS via <code>default</code>)</Styled.H3>
                 <Styled.Code>{`// In Node.js, importing a CJS module:
 const { default: cjs } = await import('./legacy.cjs');
 console.log(typeof cjs); // depends on what module.exports was
@@ -186,7 +186,7 @@ console.log(typeof cjs); // depends on what module.exports was
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 12 — Fallback load (progressive enhancement)</Styled.H3>
+                <Styled.H3>Example 12 - Fallback load (progressive enhancement)</Styled.H3>
                 <Styled.Code>{`// main.js (module)
 let engine;
 try {

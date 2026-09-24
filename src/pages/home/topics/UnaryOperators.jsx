@@ -27,7 +27,7 @@ const UnaryOperators = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Unary plus (ToNumber)</Styled.H3>
+                <Styled.H3>Example 1 - Unary plus (ToNumber)</Styled.H3>
                 <Styled.Code>{`console.log(+"42");          // 42
 console.log(+"  3.14\\n");    // 3.14
 console.log(+true, +false);   // 1 0
@@ -37,7 +37,7 @@ try { console.log(+10n); } catch (e) { console.log("TypeError (BigInt + not allo
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Unary minus (negation)</Styled.H3>
+                <Styled.H3>Example 2 - Unary minus (negation)</Styled.H3>
                 <Styled.Code>{`console.log(-"8");     // -8
 console.log(-(-5));      // 5
 console.log(-0);         // -0 (distinct signed zero exists)
@@ -45,7 +45,7 @@ console.log(-10n);       // -10n (BigInt allowed)`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Logical NOT <code>!</code> and boolean cast</Styled.H3>
+                <Styled.H3>Example 3 - Logical NOT <code>!</code> and boolean cast</Styled.H3>
                 <Styled.Code>{`console.log(!"");        // true
 console.log(!"hi");      // false
 console.log(!!123);      // true
@@ -55,7 +55,7 @@ console.log(!!NaN);      // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Bitwise NOT <code>~</code> (32-bit)</Styled.H3>
+                <Styled.H3>Example 4 - Bitwise NOT <code>~</code> (32-bit)</Styled.H3>
                 <Styled.Code>{`console.log(~5);          // -6  (-(5+1))
 console.log(~-1);         // 0
 // Double NOT (~~) is a truncation trick to 32-bit int:
@@ -64,7 +64,7 @@ console.log(~~(-3.9));    // -3`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — <code>typeof</code> results</Styled.H3>
+                <Styled.H3>Example 5 - <code>typeof</code> results</Styled.H3>
                 <Styled.Code>{`console.log(typeof 123);              // "number"
 console.log(typeof 10n);              // "bigint"
 console.log(typeof "x");              // "string"
@@ -80,7 +80,7 @@ console.log(typeof notDeclared);      // "undefined"`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — <code>void</code> to force <code>undefined</code></Styled.H3>
+                <Styled.H3>Example 6 - <code>void</code> to force <code>undefined</code></Styled.H3>
                 <Styled.Code>{`console.log(void 0);           // undefined
 console.log(void ("value"));   // undefined
 
@@ -91,7 +91,7 @@ void (function(){ console.log("side effect, result discarded"); })();
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — <code>delete</code> object properties</Styled.H3>
+                <Styled.H3>Example 7 - <code>delete</code> object properties</Styled.H3>
                 <Styled.Code>{`const user = { name: "Ada", role: "admin" };
 console.log(delete user.role);  // true (removed)
 console.log(user.role);         // undefined
@@ -106,7 +106,7 @@ try {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — <code>delete</code> with arrays (creates holes)</Styled.H3>
+                <Styled.H3>Example 8 - <code>delete</code> with arrays (creates holes)</Styled.H3>
                 <Styled.Code>{`const arr = ["A","B","C"];
 console.log(arr.length);     // 3
 delete arr[1];
@@ -119,7 +119,7 @@ console.log(xs);             // ["A","C"]`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 9 — <code>delete</code> on variables/bindings</Styled.H3>
+                <Styled.H3>Example 9 - <code>delete</code> on variables/bindings</Styled.H3>
                 <Styled.Code>{`// In modules/strict mode, deleting a plain identifier is a SyntaxError.
 // The following lines are comments to illustrate:
 // let a = 1; delete a; // ❌ SyntaxError
@@ -133,7 +133,7 @@ console.log("temp" in globalThis);   // false`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 10 — Combining ideas</Styled.H3>
+                <Styled.H3>Example 10 - Combining ideas</Styled.H3>
                 <Styled.Code>{`// Ensure numeric input:
 const qty = +("07");         // 7
 // Guarantee boolean:

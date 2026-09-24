@@ -13,7 +13,7 @@ const EcmaScriptEditions = () => {
             <Styled.Section>
                 <Styled.H3>Definition</Styled.H3>
                 <Styled.UL>
-                    <li><strong>ECMAScript (ECMA-262):</strong> The language spec for JavaScript — syntax, types, semantics, built-ins (e.g., <code>Promise</code>, <code>Map</code>, <code>Array</code> methods).</li>
+                    <li><strong>ECMAScript (ECMA-262):</strong> The language spec for JavaScript - syntax, types, semantics, built-ins (e.g., <code>Promise</code>, <code>Map</code>, <code>Array</code> methods).</li>
                     <li><strong>Editions:</strong> Historical names “ES1…ES5”; from ES2015 onward, editions are named by year (ES2015, ES2016, …). Each edition snapshots finished features.</li>
                     <li><strong>TC39:</strong> The committee that designs JS. Proposals advance through stages (0→4). Only Stage 4 proposals are included in an edition.</li>
                     <li><strong>Hosts vs Spec:</strong> The language spec excludes I/O and environment APIs. Browsers and Node.js add those (DOM, <code>fetch</code>, <code>fs</code>, etc.).</li>
@@ -34,11 +34,11 @@ const EcmaScriptEditions = () => {
             <Styled.Section>
                 <Styled.H3>TC39 proposal stages</Styled.H3>
                 <Styled.UL>
-                    <li><strong>Stage 0:</strong> Strawman — ideas being collected.</li>
-                    <li><strong>Stage 1:</strong> Proposal — problem statement, potential solution, examples.</li>
-                    <li><strong>Stage 2:</strong> Draft — syntax/semantics largely shaped; spec text begins.</li>
-                    <li><strong>Stage 3:</strong> Candidate — spec complete, seeking implementation feedback.</li>
-                    <li><strong>Stage 4:</strong> Finished — approved; will ship in the next edition.</li>
+                    <li><strong>Stage 0:</strong> Strawman - ideas being collected.</li>
+                    <li><strong>Stage 1:</strong> Proposal - problem statement, potential solution, examples.</li>
+                    <li><strong>Stage 2:</strong> Draft - syntax/semantics largely shaped; spec text begins.</li>
+                    <li><strong>Stage 3:</strong> Candidate - spec complete, seeking implementation feedback.</li>
+                    <li><strong>Stage 4:</strong> Finished - approved; will ship in the next edition.</li>
                 </Styled.UL>
             </Styled.Section>
 
@@ -52,7 +52,7 @@ const EcmaScriptEditions = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Modern syntax (ES2015+)</Styled.H3>
+                <Styled.H3>Example 1 - Modern syntax (ES2015+)</Styled.H3>
                 <Styled.Code>{`// let/const, arrow functions, default params, destructuring, template literals, spread
 const greet = (name = "World") => \`Hello, \${name}!\`;
 
@@ -73,7 +73,7 @@ console.log(more.join(","));      // "1,2,3,4"
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Promises and async/await</Styled.H3>
+                <Styled.H3>Example 2 - Promises and async/await</Styled.H3>
                 <Styled.Code>{`function getValue() {
   return Promise.resolve(42);
 }
@@ -94,7 +94,7 @@ console.log("end");
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Optional chaining and nullish coalescing</Styled.H3>
+                <Styled.H3>Example 3 - Optional chaining and nullish coalescing</Styled.H3>
                 <Styled.Code>{`const user = { profile: null };
 
 const city = user?.profile?.address?.city ?? "unknown";
@@ -105,7 +105,7 @@ console.log(city); // "unknown"
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — BigInt for large integers</Styled.H3>
+                <Styled.H3>Example 4 - BigInt for large integers</Styled.H3>
                 <Styled.Code>{`const maxSafe = 9007199254740991n;   // BigInt (note the 'n' suffix)
 const next = maxSafe + 1n;
 
@@ -118,7 +118,7 @@ console.log(next);            // 9007199254740992n
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — ESM modules (illustrative)</Styled.H3>
+                <Styled.H3>Example 5 - ESM modules (illustrative)</Styled.H3>
                 <Styled.Code>{`// math.js (module)
 // export function add(a, b) { return a + b; }
 

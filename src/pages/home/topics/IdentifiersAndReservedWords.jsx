@@ -47,7 +47,7 @@ const IdentifiersAndReservedWords = () => {
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 1 — Valid identifier names</Styled.H3>
+                <Styled.H3>Example 1 - Valid identifier names</Styled.H3>
                 <Styled.Code>{`const $dollar = 1;
 const _under = 2;
 const café = 3;          // non-ASCII letter is fine
@@ -61,7 +61,7 @@ console.log(क);                       // 5`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 2 — Invalid identifier forms</Styled.H3>
+                <Styled.H3>Example 2 - Invalid identifier forms</Styled.H3>
                 <Styled.Code>{`// const 1st = 10;         // ❌ SyntaxError (cannot start with a digit)
 // const user-name = 10;   // ❌ SyntaxError (hyphen not allowed)
 // const hello world = 1;   // ❌ SyntaxError (space not allowed)
@@ -69,7 +69,7 @@ console.log(क);                       // 5`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 3 — Unicode escapes in identifiers</Styled.H3>
+                <Styled.H3>Example 3 - Unicode escapes in identifiers</Styled.H3>
                 <Styled.Code>{`const \\u0061\\u0062 = 10;    // "ab"
 console.log(ab);               // 10
 
@@ -80,7 +80,7 @@ console.log(π);                // 3.14
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 4 — Reserved words (always keywords)</Styled.H3>
+                <Styled.H3>Example 4 - Reserved words (always keywords)</Styled.H3>
                 <Styled.UL>
                     <li>
                         Always reserved: <code>break</code>, <code>case</code>, <code>catch</code>, <code>class</code>,{" "}
@@ -104,7 +104,7 @@ console.log(π);                // 3.14
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 5 — Contextual reservations: <code>await</code> and <code>yield</code></Styled.H3>
+                <Styled.H3>Example 5 - Contextual reservations: <code>await</code> and <code>yield</code></Styled.H3>
                 <Styled.Code>{`// 'yield' is reserved inside generator functions:
 function* gen() {
   // let yield = 1; // ❌ SyntaxError in a generator
@@ -126,7 +126,7 @@ console.log(plain());  // 3`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 6 — Strict mode: <code>eval</code> and <code>arguments</code></Styled.H3>
+                <Styled.H3>Example 6 - Strict mode: <code>eval</code> and <code>arguments</code></Styled.H3>
                 <Styled.Code>{`"use strict";
 // let eval = 1;        // ❌ SyntaxError in strict mode
 // function f(arguments) {} // ❌ SyntaxError in strict mode
@@ -136,7 +136,7 @@ console.log(plain());  // 3`}</Styled.Code>
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 7 — Property keys can be keywords</Styled.H3>
+                <Styled.H3>Example 7 - Property keys can be keywords</Styled.H3>
                 <Styled.Code>{`const obj = {
   default: 1,           // keyword ok as a property key
   class: 2,
@@ -149,10 +149,10 @@ console.log(obj.class + obj["function"] + obj.let); // 2 + 3 + 4 = 9`}</Styled.C
             </Styled.Section>
 
             <Styled.Section>
-                <Styled.H3>Example 8 — Identifier vs IdentifierName (dot access)</Styled.H3>
+                <Styled.H3>Example 8 - Identifier vs IdentifierName (dot access)</Styled.H3>
                 <Styled.UL>
                     <li>
-                        After a dot (<code>.</code>), property access uses an <em>IdentifierName</em> — this allows keywords:
+                        After a dot (<code>.</code>), property access uses an <em>IdentifierName</em> - this allows keywords:
                         <code>obj.default</code>, <code>obj.class</code> are valid.
                     </li>
                     <li>

@@ -19,10 +19,10 @@ const App = () => {
     return (
         <Styled.Wrapper>
             <Styled.Header>
-                <Styled.NavLinkWrapper onClick={handleDisplayNav}>
+                <Styled.NavLinkWrapper as="button" type="button" onClick={handleDisplayNav} aria-label="Toggle notes navigation" aria-expanded={displayNav}>
                     <MdMenuOpen size={20} />
                 </Styled.NavLinkWrapper>
-                <Styled.Heading><NavLink to="/">a2rp: JavaScript Notes</NavLink></Styled.Heading>
+                <Styled.Heading><NavLink to="/"><img src={`${import.meta.env.BASE_URL}logo.png`} alt="Ashish Ranjan logo" /><span>a2rp: JavaScript Notes</span></NavLink></Styled.Heading>
             </Styled.Header>
 
             <Styled.Main>
