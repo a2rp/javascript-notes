@@ -8,7 +8,7 @@ export const Styled = {
         gap: 18px;
         padding: 18px 15px;
         color: #aaa;
-        background: #010409;
+        background: #040404;
         border-top: 1px solid #333;
         font-size: 12px;
 

@@ -62,7 +62,7 @@ const Header = styled.div`
     left: 0;
     width: 100%;
     height: 70px;
-    background-color: #010409;
+    background-color: #040404;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,7 +81,7 @@ const NavLinkWrapper = styled.div`
     align-items: center;
     justify-content: center;
     color: #aaa;
-    background: #010409;
+    background: #040404;
     border: 1px solid #333;
     transition: border-color 180ms ease, box-shadow 180ms ease, text-shadow 180ms ease;
 

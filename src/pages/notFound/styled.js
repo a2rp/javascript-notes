@@ -3,7 +3,7 @@ import styled from "styled-components";
 const border = "1px solid hsl(0 0% 100% / 0.10)";
 const bgPanel = "hsl(0 0% 100% / 0.02)";
 const textMuted = "hsl(0 0% 100% / 0.70)";
-const ring = "0 0 0 3px hsl(200 80% 60% / 0.35)";
+const ring = "0 0 0 3px hsl(0 0% 60% / 0.35)";
 
 export const Styled = {
     Page: styled.main`
@@ -35,21 +35,21 @@ export const Styled = {
         letter-spacing: 2px;
         background: radial-gradient(
                 1200px 1200px at 50% -20%,
-                hsl(200 90% 60% / 0.9),
+                hsl(0 0% 60% / 0.9),
                 transparent 60%
             ),
             conic-gradient(
                 from 200deg at 50% 50%,
-                hsl(280 80% 70%),
-                hsl(200 80% 60%),
-                hsl(160 80% 60%),
-                hsl(320 80% 70%),
-                hsl(280 80% 70%)
+                hsl(0, 0%, 70%),
+                hsl(0, 0%, 60%),
+                hsl(0, 0%, 60%),
+                hsl(0, 0%, 70%),
+                hsl(0, 0%, 70%)
             );
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        filter: drop-shadow(0 6px 28px hsl(200 80% 60% / 0.25));
+        filter: drop-shadow(0 6px 28px hsl(0 0% 60% / 0.25));
     `,
 
     Title: styled.h1`

@@ -7,10 +7,10 @@ export const Styled = {
                 text-decoration: none;
                 color: #666;
                 &.active {
-                    color: orangered;
+                    color: #b3b3b3;
                 }
                 &:hover {
-                    color: orangered;
+                    color: #b3b3b3;
                 }
             }
         }
@@ -30,10 +30,10 @@ export const Styled = {
                     color: #666;
 
                     &.active {
-                        color: orangered;
+                        color: #b3b3b3;
                     }
                     &:hover {
-                        color: orangered;
+                        color: #b3b3b3;
                     }
                 }
             }

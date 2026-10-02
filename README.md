@@ -1,5 +1,8 @@
 # JavaScript Notes
 
+![JavaScript Notes screenshot](./screenshot.jpg)
+
+
 JavaScript Notes is a searchable, single-page reference for JavaScript fundamentals, language internals, browser APIs, asynchronous code, and practical engineering patterns.
 
 ## Features
