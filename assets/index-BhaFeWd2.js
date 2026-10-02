@@ -1,4 +1,4 @@
-import{d as n,r as m,u as b,a as f,j as e,N as i}from"./index-B1SY6Gps.js";const o="1px solid hsl(0 0% 100% / 0.10)",j="hsl(0 0% 100% / 0.02)",s="hsl(0 0% 100% / 0.70)",p="0 0 0 3px hsl(200 80% 60% / 0.35)",t={Page:n.main`
+import{d as n,r as m,u as b,a as f,j as e,N as i}from"./index-BbGT3pG7.js";const o="1px solid hsl(0 0% 100% / 0.10)",j="hsl(0 0% 100% / 0.02)",s="hsl(0 0% 100% / 0.70)",p="0 0 0 3px hsl(0 0% 60% / 0.35)",t={Page:n.main`
         min-height: 100dvh;
         display: grid;
         place-items: center;
@@ -21,21 +21,21 @@ import{d as n,r as m,u as b,a as f,j as e,N as i}from"./index-B1SY6Gps.js";const
         letter-spacing: 2px;
         background: radial-gradient(
                 1200px 1200px at 50% -20%,
-                hsl(200 90% 60% / 0.9),
+                hsl(0 0% 60% / 0.9),
                 transparent 60%
             ),
             conic-gradient(
                 from 200deg at 50% 50%,
-                hsl(280 80% 70%),
-                hsl(200 80% 60%),
-                hsl(160 80% 60%),
-                hsl(320 80% 70%),
-                hsl(280 80% 70%)
+                hsl(0, 0%, 70%),
+                hsl(0, 0%, 60%),
+                hsl(0, 0%, 60%),
+                hsl(0, 0%, 70%),
+                hsl(0, 0%, 70%)
             );
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        filter: drop-shadow(0 6px 28px hsl(200 80% 60% / 0.25));
+        filter: drop-shadow(0 6px 28px hsl(0 0% 60% / 0.25));
     `,Title:n.h1`
         margin: 0;
         font-size: clamp(22px, 3.5vw, 32px);

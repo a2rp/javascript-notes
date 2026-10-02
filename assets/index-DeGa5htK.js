@@ -1,4 +1,4 @@
-import{d as s,j as e}from"./index-B1SY6Gps.js";const i={Wrapper:s.div`
+import{d as s,j as e}from"./index-BbGT3pG7.js";const i={Wrapper:s.div`
         padding: 24px;
 
         h1 {
@@ -13,7 +13,7 @@ import{d as s,j as e}from"./index-B1SY6Gps.js";const i={Wrapper:s.div`
             legend {
                 padding: 0 15px;
                 font-size: 16px;
-                color: #64493d;
+                color: #4f4f4f;
             }
             p {
                 margin-bottom: 15px;
